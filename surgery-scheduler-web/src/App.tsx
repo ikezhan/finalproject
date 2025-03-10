@@ -18,6 +18,7 @@ import {
     Snackbar,
     Alert,
     useTheme,
+    Link,
 } from '@mui/material';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
@@ -27,7 +28,7 @@ import { SurgeryForm } from './components/SurgeryForm';
 import { ScheduleCalendar } from './components/ScheduleCalendar';
 import { BatchImport } from './components/BatchImport';
 import { Surgery, ScheduledSurgery } from './types';
-import { createSchedule } from './services/api';
+import { createSchedule, checkApiConnectivity } from './services/api';
 
 const App: React.FC = () => {
     const theme = useTheme();
@@ -36,6 +37,22 @@ const App: React.FC = () => {
     const [schedule, setSchedule] = useState<ScheduledSurgery[]>([]);
     const [surgeries, setSurgeries] = useState<Surgery[]>([]);
     const [notification, setNotification] = useState<{message: string, type: 'success' | 'error'} | null>(null);
+    const [apiConnected, setApiConnected] = useState<boolean | null>(null);
+
+    // Check API connectivity on component mount
+    useEffect(() => {
+        const checkConnection = async () => {
+            try {
+                const isConnected = await checkApiConnectivity();
+                setApiConnected(isConnected);
+            } catch (error) {
+                console.error('Error checking API connectivity:', error);
+                setApiConnected(false);
+            }
+        };
+        
+        checkConnection();
+    }, []);
 
     // Log schedule changes
     useEffect(() => {
@@ -140,16 +157,40 @@ const App: React.FC = () => {
         }
     };
 
-  return (
+    return (
         <>
             <CssBaseline />
+            
+            {/* API Connectivity Notice - Only shown when API is unavailable */}
+            {apiConnected === false && (
+                <div className="gh-pages-notice" style={{
+                    position: 'fixed',
+                    top: '10px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    background: '#FF5722',
+                    color: 'white',
+                    padding: '10px 20px',
+                    borderRadius: '50px',
+                    fontSize: '14px',
+                    zIndex: 2000,
+                    textAlign: 'center',
+                    maxWidth: '90%',
+                    boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
+                    animation: 'fadeIn 0.5s ease-in-out'
+                }}>
+                    <strong>🚨 API SERVER UNAVAILABLE</strong>: This GitHub Pages site cannot connect to the required API server.
+                    <br />For the interactive class demo, <Link href="./static-demo.html" style={{ color: 'white', textDecoration: 'underline', fontWeight: 'bold' }}>CLICK HERE</Link> to use the standalone demo with mock data.
+                </div>
+            )}
+            
             <Box sx={{ display: 'flex', minHeight: '100vh', bgcolor: '#f5f7fa' }}>
                 <AppBar 
                     position="fixed" 
-                    sx={{ 
+                    sx={{
+                        backgroundColor: theme.palette.mode === 'dark' ? theme.palette.background.paper : theme.palette.primary.main,
+                        boxShadow: 3,
                         zIndex: (theme) => theme.zIndex.drawer + 1,
-                        backgroundColor: '#1a2035',
-                        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
                     }}
                 >
                     <Toolbar>

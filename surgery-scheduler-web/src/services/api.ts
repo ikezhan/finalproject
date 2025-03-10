@@ -17,6 +17,18 @@ const api = axios.create({
 // Add a comment in the console to know which API endpoint is being used
 console.log(`Using API endpoint: ${API_BASE_URL}`);
 
+// Check if the API is available
+export const checkApiConnectivity = async (): Promise<boolean> => {
+    try {
+        // We use a 3 second timeout for quick feedback
+        const response = await axios.get(`${API_BASE_URL}/health`, { timeout: 3000 });
+        return response.status === 200;
+    } catch (error) {
+        console.error('API connectivity check failed:', error);
+        return false;
+    }
+};
+
 export const predictSurgery = async (surgery: Surgery): Promise<Prediction> => {
     const response = await api.post<Prediction>('/predict', surgery);
     return response.data;
