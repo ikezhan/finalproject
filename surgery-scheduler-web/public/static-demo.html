@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surgery Scheduler - Static Demo</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Surgery Scheduler - Efficient operating room management" />
+    <link rel="apple-touch-icon" href="logo192.png" />
+    <link rel="manifest" href="manifest.json" />
+    <title>Surgery Scheduler</title>
+    <!-- Material UI fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
@@ -38,23 +45,154 @@
             user-select: none;
         }
         
-        header {
-            background: linear-gradient(135deg, #2196F3, #1976D2);
+        /* App Bar */
+        .app-bar {
+            background: linear-gradient(135deg, #1976D2, #1565C0);
             color: white;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            z-index: 1100;
         }
         
-        h1 {
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 64px;
+            padding: 0 16px;
+        }
+        
+        .menu-button {
+            margin-right: 16px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+        
+        .menu-button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .menu-icon {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+        
+        .app-title {
+            flex-grow: 1;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        
+        .refresh-button {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background-color 0.3s;
+        }
+        
+        .refresh-button:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+        
+        /* Drawer */
+        .drawer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 240px;
+            background-color: white;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 1200;
+        }
+        
+        .drawer.open {
+            transform: translateX(0);
+        }
+        
+        .drawer-header {
+            height: 64px;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            background-color: #1976D2;
+            color: white;
+        }
+        
+        .menu-list {
+            list-style: none;
+            padding: 0;
             margin: 0;
-            font-size: 28px;
+        }
+        
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .menu-item:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .menu-item.active {
+            background-color: rgba(25, 118, 210, 0.08);
+            color: #1976D2;
+        }
+        
+        .menu-item-icon {
+            margin-right: 16px;
+            width: 24px;
+            height: 24px;
+        }
+        
+        .menu-item-icon.calendar {
+            fill: #1976D2;
+        }
+        
+        .menu-item-icon.add {
+            fill: #4CAF50;
+        }
+        
+        .menu-item-icon.import {
+            fill: #FF9800;
+        }
+        
+        .menu-item-text {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        /* Main content */
+        .main-content {
+            margin-top: 64px;
+            padding: 24px;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
         }
         
         .card {
@@ -72,26 +210,8 @@
             margin-bottom: 20px;
             border-radius: 4px;
         }
-        
-        .tabs {
-            display: flex;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .tab {
-            padding: 10px 20px;
-            cursor: pointer;
-            border-bottom: 3px solid transparent;
-            transition: all 0.3s ease;
-        }
-        
-        .tab.active {
-            border-bottom: 3px solid #2196F3;
-            color: #2196F3;
-            font-weight: 500;
-        }
-        
+                
+        /* Tab content styles */
         .tab-content {
             display: none;
         }
@@ -100,6 +220,7 @@
             display: block;
         }
         
+        /* Schedule table */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -131,6 +252,7 @@
             border-left: 4px solid #4CAF50;
         }
         
+        /* Calendar */
         .calendar {
             display: grid;
             grid-template-columns: 80px repeat(4, 1fr);
@@ -174,6 +296,7 @@
             background-color: rgba(255, 87, 34, 0.2);
         }
         
+        /* Forms */
         form {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -234,8 +357,50 @@
             border-left: 4px solid #F44336;
         }
         
-        /* Navigation button style */
-        .navigation-button {
+        /* Overlay when drawer is open */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1150;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* GitHub Pages notice */
+        .gh-pages-notice {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 193, 7, 0.9);
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            z-index: 2000;
+            text-align: center;
+            max-width: 90%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translate(-50%, -20px); }
+            to { opacity: 1; transform: translate(-50%, 0); }
+        }
+        
+        /* Instruction button */
+        .instruction-button {
             position: fixed;
             bottom: 20px;
             right: 20px;
@@ -255,12 +420,12 @@
             align-items: center;
         }
       
-        .navigation-button:hover {
+        .instruction-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 15px rgba(33, 150, 243, 0.4);
         }
       
-        .navigation-button svg {
+        .instruction-button svg {
             margin-right: 8px;
             width: 20px;
             height: 20px;
@@ -273,221 +438,254 @@
         <span>FINALPROJECT_IKEZHAN</span>
     </div>
     
-    <header>
-        <h1>Surgery Scheduler - Static Demo</h1>
-    </header>
-    
-    <div class="container">
-        <div class="demo-notice">
-            <strong>Static Demo Mode:</strong> This is a standalone demonstration with pre-populated mock data.
-            No server connection is required. This page works entirely offline and is purely for demonstration purposes.
-        </div>
-        
-        <div class="tabs">
-            <div class="tab active" data-tab="schedule">Schedule</div>
-            <div class="tab" data-tab="calendar">Calendar</div>
-            <div class="tab" data-tab="add">Add Surgery</div>
-            <div class="tab" data-tab="import">Batch Import</div>
-        </div>
-        
-        <div id="status" class="status"></div>
-        
-        <!-- Schedule Tab -->
-        <div id="schedule-tab" class="tab-content active">
-            <div class="card">
-                <h2>Surgery Schedule</h2>
-                <p>Current schedule of surgeries with estimated durations and delay risk assessments.</p>
-                
-                <table id="scheduleTable">
-                    <thead>
-                        <tr>
-                            <th>Surgery Type</th>
-                            <th>Patient Age</th>
-                            <th>Surgeon</th>
-                            <th>Date</th>
-                            <th>Time</th>
-                            <th>OR</th>
-                            <th>Duration (min)</th>
-                            <th>Delay Risk</th>
-                        </tr>
-                    </thead>
-                    <tbody id="scheduleBody">
-                        <!-- Schedule data will be inserted here -->
-                    </tbody>
-                </table>
+    <!-- App Bar -->
+    <div class="app-bar">
+        <div class="toolbar">
+            <div class="menu-button" onclick="toggleDrawer()">
+                <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                </svg>
             </div>
+            <div class="app-title">Surgery Scheduler</div>
+            <button class="refresh-button" onclick="refreshData()">Refresh</button>
         </div>
-        
-        <!-- Calendar Tab -->
-        <div id="calendar-tab" class="tab-content">
-            <div class="card">
-                <h2>Calendar View</h2>
-                <p>Visual representation of the surgery schedule.</p>
+    </div>
+    
+    <!-- Drawer -->
+    <div class="drawer" id="drawer">
+        <div class="drawer-header">
+            <div class="app-title">Menu</div>
+        </div>
+        <ul class="menu-list">
+            <li class="menu-item active" onclick="setActiveView('schedule')">
+                <svg class="menu-item-icon calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z" />
+                </svg>
+                <span class="menu-item-text">Schedule</span>
+            </li>
+            <li class="menu-item" onclick="setActiveView('add')">
+                <svg class="menu-item-icon add" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                </svg>
+                <span class="menu-item-text">Add Surgery</span>
+            </li>
+            <li class="menu-item" onclick="setActiveView('import')">
+                <svg class="menu-item-icon import" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z" />
+                </svg>
+                <span class="menu-item-text">Batch Import</span>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="toggleDrawer()"></div>
+    
+    <!-- Demo Notice -->
+    <div class="gh-pages-notice">
+      <strong>STATIC DEMO MODE</strong>: This is a standalone demo with embedded mock data.
+      <br>No server connection required. All functionality works offline.
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <div id="status" class="status"></div>
+            
+            <!-- Schedule Tab -->
+            <div id="schedule-tab" class="tab-content active">
+                <div class="card">
+                    <h2>Surgery Schedule</h2>
+                    <p>Current schedule of surgeries with estimated durations and delay risk assessments.</p>
+                    
+                    <table id="scheduleTable">
+                        <thead>
+                            <tr>
+                                <th>Surgery Type</th>
+                                <th>Patient Age</th>
+                                <th>Surgeon</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>OR</th>
+                                <th>Duration (min)</th>
+                                <th>Delay Risk</th>
+                            </tr>
+                        </thead>
+                        <tbody id="scheduleBody">
+                            <!-- Schedule data will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
                 
-                <div class="calendar">
-                    <div class="time-slot"></div>
-                    <div class="calendar-header">OR-1</div>
-                    <div class="calendar-header">OR-2</div>
-                    <div class="calendar-header">OR-3</div>
-                    <div class="calendar-header">OR-4</div>
+                <div class="card">
+                    <h2>Calendar View</h2>
+                    <p>Visual representation of the surgery schedule.</p>
                     
-                    <div class="time-slot">8:00 AM</div>
-                    <div id="or1-8am"></div>
-                    <div id="or2-8am"></div>
-                    <div id="or3-8am"></div>
-                    <div id="or4-8am"></div>
-                    
-                    <div class="time-slot">9:00 AM</div>
-                    <div id="or1-9am"></div>
-                    <div id="or2-9am"></div>
-                    <div id="or3-9am"></div>
-                    <div id="or4-9am"></div>
-                    
-                    <div class="time-slot">10:00 AM</div>
-                    <div id="or1-10am"></div>
-                    <div id="or2-10am"></div>
-                    <div id="or3-10am"></div>
-                    <div id="or4-10am"></div>
-                    
-                    <div class="time-slot">11:00 AM</div>
-                    <div id="or1-11am"></div>
-                    <div id="or2-11am"></div>
-                    <div id="or3-11am"></div>
-                    <div id="or4-11am"></div>
-                    
-                    <div class="time-slot">12:00 PM</div>
-                    <div id="or1-12pm"></div>
-                    <div id="or2-12pm"></div>
-                    <div id="or3-12pm"></div>
-                    <div id="or4-12pm"></div>
-                    
-                    <div class="time-slot">1:00 PM</div>
-                    <div id="or1-1pm"></div>
-                    <div id="or2-1pm"></div>
-                    <div id="or3-1pm"></div>
-                    <div id="or4-1pm"></div>
-                    
-                    <div class="time-slot">2:00 PM</div>
-                    <div id="or1-2pm"></div>
-                    <div id="or2-2pm"></div>
-                    <div id="or3-2pm"></div>
-                    <div id="or4-2pm"></div>
-                    
-                    <div class="time-slot">3:00 PM</div>
-                    <div id="or1-3pm"></div>
-                    <div id="or2-3pm"></div>
-                    <div id="or3-3pm"></div>
-                    <div id="or4-3pm"></div>
-                    
-                    <div class="time-slot">4:00 PM</div>
-                    <div id="or1-4pm"></div>
-                    <div id="or2-4pm"></div>
-                    <div id="or3-4pm"></div>
-                    <div id="or4-4pm"></div>
+                    <div class="calendar">
+                        <div class="time-slot"></div>
+                        <div class="calendar-header">OR-1</div>
+                        <div class="calendar-header">OR-2</div>
+                        <div class="calendar-header">OR-3</div>
+                        <div class="calendar-header">OR-4</div>
+                        
+                        <div class="time-slot">8:00 AM</div>
+                        <div id="or1-8am"></div>
+                        <div id="or2-8am"></div>
+                        <div id="or3-8am"></div>
+                        <div id="or4-8am"></div>
+                        
+                        <div class="time-slot">9:00 AM</div>
+                        <div id="or1-9am"></div>
+                        <div id="or2-9am"></div>
+                        <div id="or3-9am"></div>
+                        <div id="or4-9am"></div>
+                        
+                        <div class="time-slot">10:00 AM</div>
+                        <div id="or1-10am"></div>
+                        <div id="or2-10am"></div>
+                        <div id="or3-10am"></div>
+                        <div id="or4-10am"></div>
+                        
+                        <div class="time-slot">11:00 AM</div>
+                        <div id="or1-11am"></div>
+                        <div id="or2-11am"></div>
+                        <div id="or3-11am"></div>
+                        <div id="or4-11am"></div>
+                        
+                        <div class="time-slot">12:00 PM</div>
+                        <div id="or1-12pm"></div>
+                        <div id="or2-12pm"></div>
+                        <div id="or3-12pm"></div>
+                        <div id="or4-12pm"></div>
+                        
+                        <div class="time-slot">1:00 PM</div>
+                        <div id="or1-1pm"></div>
+                        <div id="or2-1pm"></div>
+                        <div id="or3-1pm"></div>
+                        <div id="or4-1pm"></div>
+                        
+                        <div class="time-slot">2:00 PM</div>
+                        <div id="or1-2pm"></div>
+                        <div id="or2-2pm"></div>
+                        <div id="or3-2pm"></div>
+                        <div id="or4-2pm"></div>
+                        
+                        <div class="time-slot">3:00 PM</div>
+                        <div id="or1-3pm"></div>
+                        <div id="or2-3pm"></div>
+                        <div id="or3-3pm"></div>
+                        <div id="or4-3pm"></div>
+                        
+                        <div class="time-slot">4:00 PM</div>
+                        <div id="or1-4pm"></div>
+                        <div id="or2-4pm"></div>
+                        <div id="or3-4pm"></div>
+                        <div id="or4-4pm"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Add Surgery Tab -->
-        <div id="add-tab" class="tab-content">
-            <div class="card">
-                <h2>Add New Surgery</h2>
-                <p>Schedule a new surgery by filling out the form below.</p>
-                
-                <form id="surgeryForm">
-                    <div>
-                        <label for="patientAge">Patient Age</label>
-                        <input type="number" id="patientAge" required min="0" value="45">
-                    </div>
-                    <div>
-                        <label for="bmi">BMI</label>
-                        <input type="number" id="bmi" required min="10" step="0.1" value="24.5">
-                    </div>
-                    <div>
-                        <label for="surgeryType">Surgery Type</label>
-                        <select id="surgeryType" required>
-                            <option value="Hip Replacement">Hip Replacement</option>
-                            <option value="Knee Replacement">Knee Replacement</option>
-                            <option value="ACL Repair">ACL Repair</option>
-                            <option value="Arthroscopy">Arthroscopy</option>
-                            <option value="Cataract Surgery">Cataract Surgery</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="surgeon">Surgeon</label>
-                        <select id="surgeon" required>
-                            <option value="Dr. Smith">Dr. Smith</option>
-                            <option value="Dr. Johnson">Dr. Johnson</option>
-                            <option value="Dr. Wilson">Dr. Wilson</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="dayOfWeek">Preferred Day</label>
-                        <select id="dayOfWeek" required>
-                            <option value="Monday">Monday</option>
-                            <option value="Tuesday">Tuesday</option>
-                            <option value="Wednesday">Wednesday</option>
-                            <option value="Thursday">Thursday</option>
-                            <option value="Friday">Friday</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="timePreference">Time Preference</label>
-                        <select id="timePreference" required>
-                            <option value="Morning">Morning</option>
-                            <option value="Afternoon">Afternoon</option>
-                            <option value="No Preference">No Preference</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="comorbidities">Comorbidities</label>
-                        <select id="comorbidities" required>
-                            <option value="None">None</option>
-                            <option value="Hypertension">Hypertension</option>
-                            <option value="Diabetes">Diabetes</option>
-                            <option value="Obesity">Obesity</option>
-                            <option value="Heart Disease">Heart Disease</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="operatingRoom">Operating Room</label>
-                        <select id="operatingRoom" required>
-                            <option value="OR-1">OR-1</option>
-                            <option value="OR-2">OR-2</option>
-                            <option value="OR-3">OR-3</option>
-                            <option value="OR-4">OR-4</option>
-                        </select>
-                    </div>
+            
+            <!-- Add Surgery Tab -->
+            <div id="add-tab" class="tab-content">
+                <div class="card">
+                    <h2>Add New Surgery</h2>
+                    <p>Schedule a new surgery by filling out the form below.</p>
                     
-                    <button type="submit" style="grid-column: span 2; margin-top: 10px;">Schedule Surgery</button>
-                </form>
+                    <form id="surgeryForm">
+                        <div>
+                            <label for="patientAge">Patient Age</label>
+                            <input type="number" id="patientAge" required min="0" value="45">
+                        </div>
+                        <div>
+                            <label for="bmi">BMI</label>
+                            <input type="number" id="bmi" required min="10" step="0.1" value="24.5">
+                        </div>
+                        <div>
+                            <label for="surgeryType">Surgery Type</label>
+                            <select id="surgeryType" required>
+                                <option value="Hip Replacement">Hip Replacement</option>
+                                <option value="Knee Replacement">Knee Replacement</option>
+                                <option value="ACL Repair">ACL Repair</option>
+                                <option value="Arthroscopy">Arthroscopy</option>
+                                <option value="Cataract Surgery">Cataract Surgery</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="surgeon">Surgeon</label>
+                            <select id="surgeon" required>
+                                <option value="Dr. Smith">Dr. Smith</option>
+                                <option value="Dr. Johnson">Dr. Johnson</option>
+                                <option value="Dr. Wilson">Dr. Wilson</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="dayOfWeek">Preferred Day</label>
+                            <select id="dayOfWeek" required>
+                                <option value="Monday">Monday</option>
+                                <option value="Tuesday">Tuesday</option>
+                                <option value="Wednesday">Wednesday</option>
+                                <option value="Thursday">Thursday</option>
+                                <option value="Friday">Friday</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="timePreference">Time Preference</label>
+                            <select id="timePreference" required>
+                                <option value="Morning">Morning</option>
+                                <option value="Afternoon">Afternoon</option>
+                                <option value="No Preference">No Preference</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="comorbidities">Comorbidities</label>
+                            <select id="comorbidities" required>
+                                <option value="None">None</option>
+                                <option value="Hypertension">Hypertension</option>
+                                <option value="Diabetes">Diabetes</option>
+                                <option value="Obesity">Obesity</option>
+                                <option value="Heart Disease">Heart Disease</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="operatingRoom">Operating Room</label>
+                            <select id="operatingRoom" required>
+                                <option value="OR-1">OR-1</option>
+                                <option value="OR-2">OR-2</option>
+                                <option value="OR-3">OR-3</option>
+                                <option value="OR-4">OR-4</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" style="grid-column: span 2; margin-top: 10px;">Schedule Surgery</button>
+                    </form>
+                </div>
             </div>
-        </div>
-        
-        <!-- Batch Import Tab -->
-        <div id="import-tab" class="tab-content">
-            <div class="card">
-                <h2>Batch Import</h2>
-                <p>Upload an Excel file with multiple surgeries to schedule them all at once.</p>
-                
-                <form id="importForm">
-                    <div class="file-input">
-                        <label for="fileInput">Excel File</label>
-                        <input type="file" id="fileInput" accept=".xlsx, .xls">
-                    </div>
-                    <div class="file-input">
-                        <label for="startDate">Start Date</label>
-                        <input type="date" id="startDate" value="2025-03-10">
-                    </div>
+            
+            <!-- Batch Import Tab -->
+            <div id="import-tab" class="tab-content">
+                <div class="card">
+                    <h2>Batch Import</h2>
+                    <p>Upload an Excel file with multiple surgeries to schedule them all at once.</p>
                     
-                    <button type="submit" style="grid-column: span 2; margin-top: 10px;">Import Surgeries</button>
-                </form>
+                    <form id="importForm">
+                        <div class="file-input">
+                            <label for="fileInput">Excel File</label>
+                            <input type="file" id="fileInput" accept=".xlsx, .xls">
+                        </div>
+                        <div class="file-input">
+                            <label for="startDate">Start Date</label>
+                            <input type="date" id="startDate" value="2025-03-10">
+                        </div>
+                        
+                        <button type="submit" style="grid-column: span 2; margin-top: 10px;">Import Surgeries</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
     
     <!-- Add instruction button -->
-    <a href="./system-guide.html" class="navigation-button">
+    <a href="./system-guide.html" class="instruction-button">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
         </svg>
@@ -559,19 +757,55 @@
             }
         ];
         
-        // Tab switching
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove active class from all tabs
-                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                
-                // Add active class to clicked tab
-                tab.classList.add('active');
-                const tabId = tab.getAttribute('data-tab');
-                document.getElementById(`${tabId}-tab`).classList.add('active');
+        // Toggle drawer
+        function toggleDrawer() {
+            const drawer = document.getElementById('drawer');
+            const overlay = document.getElementById('overlay');
+            
+            if (drawer.classList.contains('open')) {
+                drawer.classList.remove('open');
+                overlay.classList.remove('active');
+            } else {
+                drawer.classList.add('open');
+                overlay.classList.add('active');
+            }
+        }
+        
+        // Set active view
+        function setActiveView(view) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
             });
-        });
+            
+            // Show selected tab
+            document.getElementById(`${view}-tab`).classList.add('active');
+            
+            // Update menu item active state
+            document.querySelectorAll('.menu-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Find the menu item that was clicked
+            const menuItems = document.querySelectorAll('.menu-item');
+            for (let i = 0; i < menuItems.length; i++) {
+                if (menuItems[i].onclick.toString().includes(view)) {
+                    menuItems[i].classList.add('active');
+                }
+            }
+            
+            // Close drawer on mobile
+            if (window.innerWidth < 960) {
+                toggleDrawer();
+            }
+        }
+        
+        // Refresh data
+        function refreshData() {
+            populateSchedule();
+            populateCalendar();
+            showStatus('Data refreshed successfully!', 'success');
+        }
         
         // Status message
         function showStatus(message, type) {
@@ -675,7 +909,7 @@
             populateCalendar();
             
             // Switch to schedule tab
-            document.querySelector('.tab[data-tab="schedule"]').click();
+            setActiveView('schedule');
         });
         
         // Handle form submission for batch import
@@ -718,7 +952,7 @@
             populateCalendar();
             
             // Switch to schedule tab
-            document.querySelector('.tab[data-tab="schedule"]').click();
+            setActiveView('schedule');
         });
         
         // Initialize
