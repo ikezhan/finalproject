@@ -171,14 +171,8 @@
         <span>FINALPROJECT_IKEZHAN</span>
     </div>
     
-    <!-- Add GitHub Pages notice -->
-    <div class="gh-pages-notice" style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); background: rgba(255, 193, 7, 0.9); color: #333; padding: 10px 20px; border-radius: 50px; font-size: 14px; z-index: 2000; text-align: center; max-width: 90%; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-        This is a static deployment using mock data. The app is fully functional for demonstration purposes.
-        <br>All actions will work with simulated data that mimics the behavior of the real system.
-    </div>
-    
     <!-- Add instruction button -->
-    <a href="./system-overview.html" class="instruction-button">
+    <a href="./system-guide.html" class="instruction-button">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
         </svg>
@@ -335,45 +329,6 @@
     </div>
 
     <script>
-        // Check if we're in production mode (GitHub Pages)
-        const isProduction = window.location.href.includes('github.io');
-        console.log(`Running in ${isProduction ? 'production' : 'development'} mode`);
-        
-        // Mock data for GitHub Pages deployment
-        const mockScheduleData = {
-            schedule: Array(40).fill(null).map((_, index) => {
-                const surgeryTypes = ['Hip Replacement', 'Knee Replacement', 'Appendectomy', 'Cataract Surgery', 'Coronary Bypass'];
-                const surgeons = ['Dr. Smith', 'Dr. Johnson', 'Dr. Wilson', 'Dr. Martinez'];
-                const orRooms = ['OR 1', 'OR 2', 'OR 3', 'OR 4'];
-                const riskLevels = ['Low Risk', 'Low Risk', 'Low Risk', 'High Risk']; // 3:1 ratio of low:high
-                
-                // Calculate date (distribute across 5 days)
-                const startDate = new Date('2025-03-10');
-                const dayOffset = Math.min(Math.floor(index / 8), 4);
-                const surgeryDate = new Date(startDate);
-                surgeryDate.setDate(startDate.getDate() + dayOffset);
-                
-                // Format date as YYYY-MM-DD
-                const formattedDate = surgeryDate.toISOString().split('T')[0];
-                
-                // Determine time slot
-                const timeSlot = index % 2 === 0 ? 
-                    `0${8 + (index % 3)}:00` : // Morning slots: 08:00, 09:00, 10:00
-                    `${13 + (index % 3)}:00`;  // Afternoon slots: 13:00, 14:00, 15:00
-                
-                return {
-                    surgery_type: surgeryTypes[index % surgeryTypes.length],
-                    patient_age: Math.floor(Math.random() * 60) + 20, // 20-80 years
-                    surgeon: surgeons[index % surgeons.length],
-                    scheduled_date: formattedDate,
-                    scheduled_time: timeSlot,
-                    operating_room: orRooms[index % orRooms.length],
-                    estimated_duration: Math.floor(Math.random() * 60) + 60, // 60-120 minutes
-                    delay_risk: riskLevels[index % riskLevels.length]
-                };
-            })
-        };
-        
         // Tab switching
         document.querySelectorAll('.tab').forEach(tab => {
             tab.addEventListener('click', () => {
@@ -406,55 +361,46 @@
             const scheduleBody = document.getElementById('scheduleBody');
             
             try {
-                let data;
+                // Create a test surgery
+                const testSurgery = {
+                    patient_age: 45,
+                    bmi: 24.5,
+                    surgery_type: 'Hip Replacement',
+                    surgeon: 'Dr. Smith',
+                    anesthesiologist: 'Dr. Brown',
+                    nurse: 'Nurse A',
+                    day_of_week: 'Monday',
+                    time_preference: 'Morning',
+                    pre_op_prep_time: 30,
+                    transfer_to_or_time: 15,
+                    anesthesia_time: 20,
+                    positioning_time: 10,
+                    comorbidities: 'Hypertension',
+                    instrument_ready: 'Y',
+                    pacu_bed_ready: 'Y',
+                    scheduled_start: '09:00'
+                };
                 
-                if (isProduction) {
-                    // Use mock data in production mode
-                    console.log('Using mock schedule data');
-                    data = mockScheduleData;
-                } else {
-                    // Create a test surgery
-                    const testSurgery = {
-                        patient_age: 45,
-                        bmi: 24.5,
-                        surgery_type: 'Hip Replacement',
-                        surgeon: 'Dr. Smith',
-                        anesthesiologist: 'Dr. Brown',
-                        nurse: 'Nurse A',
-                        day_of_week: 'Monday',
-                        time_preference: 'Morning',
-                        pre_op_prep_time: 30,
-                        transfer_to_or_time: 15,
-                        anesthesia_time: 20,
-                        positioning_time: 10,
-                        comorbidities: 'Hypertension',
-                        instrument_ready: 'Y',
-                        pacu_bed_ready: 'Y',
-                        scheduled_start: '09:00'
-                    };
-                    
-                    // Create schedule request
-                    const scheduleRequest = {
-                        surgeries: [testSurgery],
-                        start_date: '2025-03-10'
-                    };
-                    
-                    // Send request to backend
-                    const response = await fetch('http://localhost:8003/schedule', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(scheduleRequest)
-                    });
-                    
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! Status: ${response.status}`);
-                    }
-                    
-                    data = await response.json();
+                // Create schedule request
+                const scheduleRequest = {
+                    surgeries: [testSurgery],
+                    start_date: '2025-03-10'
+                };
+                
+                // Send request to backend
+                const response = await fetch('http://localhost:8003/schedule', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(scheduleRequest)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
                 }
                 
+                const data = await response.json();
                 console.log('Schedule data:', data);
                 
                 // Clear existing rows
@@ -516,34 +462,6 @@
                     scheduled_start: document.getElementById('timePreference').value === 'Morning' ? '09:00' : '13:00'
                 };
                 
-                if (isProduction) {
-                    // In production, just update our mock data
-                    console.log('Adding surgery to mock data:', surgery);
-                    const newSurgery = {
-                        surgery_type: surgery.surgery_type,
-                        patient_age: surgery.patient_age,
-                        surgeon: surgery.surgeon,
-                        scheduled_date: '2025-03-10',
-                        scheduled_time: surgery.time_preference === 'Morning' ? '09:00' : '13:00',
-                        operating_room: 'OR ' + (Math.floor(Math.random() * 4) + 1),
-                        estimated_duration: surgery.pre_op_prep_time + surgery.transfer_to_or_time + 
-                                           surgery.anesthesia_time + surgery.positioning_time + 60,
-                        delay_risk: (surgery.comorbidities !== 'None' || 
-                                    surgery.instrument_ready === 'N' || 
-                                    surgery.pacu_bed_ready === 'N') ? 'High Risk' : 'Low Risk'
-                    };
-                    
-                    // Add to mock data
-                    mockScheduleData.schedule.push(newSurgery);
-                    
-                    showStatus('Surgery scheduled successfully!', 'success');
-                    
-                    // Switch to schedule tab and refresh
-                    document.querySelector('.tab[data-tab="schedule"]').click();
-                    fetchSchedule();
-                    return;
-                }
-                
                 // Create schedule request
                 const scheduleRequest = {
                     surgeries: [surgery],
@@ -590,55 +508,6 @@
             const file = fileInput.files[0];
             
             try {
-                if (isProduction) {
-                    // In production, just generate 40 random surgeries
-                    console.log('Simulating batch import with mock data');
-                    
-                    // Generate 40 more surgeries with different dates
-                    const importDate = startDate || '2025-03-10';
-                    const newSurgeries = Array(40).fill(null).map((_, index) => {
-                        const surgeryTypes = ['Hip Replacement', 'Knee Replacement', 'Appendectomy', 'Cataract Surgery', 'Coronary Bypass'];
-                        const surgeons = ['Dr. Smith', 'Dr. Johnson', 'Dr. Wilson', 'Dr. Martinez'];
-                        const orRooms = ['OR 1', 'OR 2', 'OR 3', 'OR 4'];
-                        const riskLevels = ['Low Risk', 'Low Risk', 'Low Risk', 'High Risk']; // 3:1 ratio of low:high
-                        
-                        // Calculate date (distribute across 5 days)
-                        const startDateObj = new Date(importDate);
-                        const dayOffset = Math.min(Math.floor(index / 8), 4);
-                        const surgeryDate = new Date(startDateObj);
-                        surgeryDate.setDate(startDateObj.getDate() + dayOffset);
-                        
-                        // Format date as YYYY-MM-DD
-                        const formattedDate = surgeryDate.toISOString().split('T')[0];
-                        
-                        // Determine time slot
-                        const timeSlot = index % 2 === 0 ? 
-                            `0${8 + (index % 3)}:00` : // Morning slots: 08:00, 09:00, 10:00
-                            `${13 + (index % 3)}:00`;  // Afternoon slots: 13:00, 14:00, 15:00
-                        
-                        return {
-                            surgery_type: surgeryTypes[index % surgeryTypes.length],
-                            patient_age: Math.floor(Math.random() * 60) + 20, // 20-80 years
-                            surgeon: surgeons[index % surgeons.length],
-                            scheduled_date: formattedDate,
-                            scheduled_time: timeSlot,
-                            operating_room: orRooms[index % orRooms.length],
-                            estimated_duration: Math.floor(Math.random() * 60) + 60, // 60-120 minutes
-                            delay_risk: riskLevels[index % riskLevels.length]
-                        };
-                    });
-                    
-                    // Replace mock data with new surgeries
-                    mockScheduleData.schedule = newSurgeries;
-                    
-                    showStatus(`Successfully imported ${newSurgeries.length} surgeries.`, 'success');
-                    
-                    // Switch to schedule tab and refresh
-                    document.querySelector('.tab[data-tab="schedule"]').click();
-                    fetchSchedule();
-                    return;
-                }
-                
                 const formData = new FormData();
                 formData.append('file', file);
                 formData.append('start_date', startDate);
@@ -672,12 +541,6 @@
         
         // Download template
         function downloadTemplate() {
-            if (isProduction) {
-                // In production, use a shared Google Sheet as template
-                window.open('https://docs.google.com/spreadsheets/d/1MV9bX69nxdD6A-NepE8xCQe_wMJu0Xp8Q6Y0tmJKSXI/edit?usp=sharing', '_blank');
-                return;
-            }
-            
             window.open('http://localhost:8003/template', '_blank');
         }
         
