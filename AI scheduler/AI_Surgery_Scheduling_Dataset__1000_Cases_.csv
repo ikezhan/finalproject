@@ -1,0 +1,1001 @@
+Surgery ID,Patient Age,BMI,Comorbidities,Surgery Type,Surgeon,Anesthesiologist,Nurse,Day of Week,Scheduled Start,Actual Start,Pre-op Prep Time (min),Transfer to OR Time (min),Anesthesia Time (min),Positioning Time (min),Surgery Duration (min),Instrument Ready (Y/N),PACU Bed Ready (Y/N),PACU Delay (min),Readmission (Y/N),Total OR Time (min),Start Delay (min)
+S0001,76,37.5,Obesity,ACL Repair,Dr. Nguyen,Dr. White,Nurse C,Monday,2025-03-10 09:00:00,2025-03-10 09:12:00,54,14,28,28,71,N,N,13,N,195,12.0
+S0002,70,35.8,None,Spine Fusion,Dr. Nguyen,Dr. Green,Nurse A,Tuesday,2025-03-10 15:00:00,2025-03-10 15:00:00,55,15,22,20,157,Y,Y,0,N,269,0.0
+S0003,63,29.0,Multiple,Shoulder Repair,Dr. Kim,Dr. Smith,Nurse E,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,40,14,25,16,88,Y,Y,0,N,183,0.0
+S0004,52,32.4,Diabetes,Shoulder Repair,Dr. Patel,Dr. Black,Nurse C,Thursday,2025-03-10 14:00:00,2025-03-10 14:25:00,59,10,26,26,104,Y,Y,0,N,225,25.0
+S0005,53,35.8,Heart Disease,Shoulder Repair,Dr. Patel,Dr. Black,Nurse C,Monday,2025-03-10 11:00:00,2025-03-10 11:14:00,63,15,26,22,100,Y,Y,0,N,226,14.0
+S0006,79,28.0,Heart Disease,Hip Replacement,Dr. Lee,Dr. Black,Nurse D,Tuesday,2025-03-10 13:00:00,2025-03-10 13:00:00,55,14,26,21,120,Y,Y,0,N,236,0.0
+S0007,76,37.4,Diabetes,Spine Fusion,Dr. Johnson,Dr. White,Nurse A,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,59,8,28,22,160,Y,Y,0,Y,277,0.0
+S0008,54,23.2,Heart Disease,ACL Repair,Dr. Johnson,Dr. Green,Nurse A,Wednesday,2025-03-10 15:00:00,2025-03-10 15:00:00,50,15,22,23,68,N,Y,0,N,178,0.0
+S0009,63,38.0,Multiple,Knee Replacement,Dr. Nguyen,Dr. Smith,Nurse A,Thursday,2025-03-10 09:00:00,2025-03-10 09:00:00,45,8,25,25,89,Y,Y,0,N,192,0.0
+S0010,72,24.3,Hypertension,Shoulder Repair,Dr. Johnson,Dr. Brown,Nurse B,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,52,11,30,22,89,Y,Y,0,N,204,0.0
+S0011,85,26.1,Heart Disease,Knee Replacement,Dr. Nguyen,Dr. White,Nurse E,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,51,12,28,25,88,Y,Y,0,N,204,0.0
+S0012,64,25.2,Obesity,Shoulder Repair,Dr. Kim,Dr. Brown,Nurse D,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,49,8,30,25,85,Y,Y,0,N,197,0.0
+S0013,48,36.6,Multiple,Shoulder Repair,Dr. Patel,Dr. Brown,Nurse E,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,64,12,30,30,89,Y,Y,0,N,225,0.0
+S0014,85,32.3,Heart Disease,Shoulder Repair,Dr. Kim,Dr. Black,Nurse C,Tuesday,2025-03-10 08:00:00,2025-03-10 08:30:00,58,10,26,23,102,Y,Y,0,N,219,30.0
+S0015,68,30.5,Heart Disease,Hip Replacement,Dr. Patel,Dr. Green,Nurse C,Wednesday,2025-03-10 08:00:00,2025-03-10 08:00:00,47,10,22,23,112,Y,Y,0,N,214,0.0
+S0016,80,27.9,Obesity,Knee Replacement,Dr. Patel,Dr. Black,Nurse A,Thursday,2025-03-10 12:00:00,2025-03-10 12:00:00,48,14,26,25,83,Y,Y,0,N,196,0.0
+S0017,75,22.4,Hypertension,ACL Repair,Dr. Johnson,Dr. Brown,Nurse A,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,43,10,30,15,59,Y,Y,0,N,157,0.0
+S0018,52,23.6,Hypertension,Hip Replacement,Dr. Nguyen,Dr. Green,Nurse C,Friday,2025-03-10 13:00:00,2025-03-10 13:00:00,44,14,22,25,136,N,Y,0,N,241,0.0
+S0019,47,33.0,Diabetes,Shoulder Repair,Dr. Nguyen,Dr. Brown,Nurse C,Monday,2025-03-10 12:00:00,2025-03-10 12:15:00,56,8,30,26,88,Y,Y,0,N,208,15.0
+S0020,50,32.6,Multiple,Spine Fusion,Dr. Kim,Dr. Smith,Nurse C,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,51,9,25,28,146,Y,Y,0,N,259,0.0
+S0021,59,27.3,Diabetes,Spine Fusion,Dr. Kim,Dr. White,Nurse B,Tuesday,2025-03-10 15:00:00,2025-03-10 15:00:00,45,9,28,25,144,Y,Y,0,Y,251,0.0
+S0022,60,31.4,None,Hip Replacement,Dr. Patel,Dr. Smith,Nurse B,Thursday,2025-03-10 15:00:00,2025-03-10 15:00:00,42,15,25,27,116,Y,Y,0,N,225,0.0
+S0023,73,30.1,Hypertension,Knee Replacement,Dr. Johnson,Dr. White,Nurse D,Monday,2025-03-10 07:00:00,2025-03-10 07:46:00,48,15,28,27,101,N,Y,0,N,219,46.0
+S0024,62,32.0,Hypertension,Spine Fusion,Dr. Patel,Dr. Green,Nurse E,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,64,14,22,21,143,Y,Y,0,N,264,0.0
+S0025,80,33.5,Diabetes,Shoulder Repair,Dr. Nguyen,Dr. Brown,Nurse D,Wednesday,2025-03-10 14:00:00,2025-03-10 14:00:00,48,13,30,26,93,Y,Y,0,N,210,0.0
+S0026,54,33.0,Obesity,Knee Replacement,Dr. Kim,Dr. Smith,Nurse A,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,56,10,25,28,115,N,Y,0,N,234,0.0
+S0027,52,28.6,Multiple,Shoulder Repair,Dr. Kim,Dr. White,Nurse E,Wednesday,2025-03-10 12:00:00,2025-03-10 12:00:00,56,11,28,17,92,Y,Y,0,N,204,0.0
+S0028,67,35.5,Heart Disease,Knee Replacement,Dr. Patel,Dr. Black,Nurse B,Thursday,2025-03-10 15:00:00,2025-03-10 15:45:00,45,12,26,20,89,Y,Y,0,N,192,45.0
+S0029,67,22.1,Diabetes,Spine Fusion,Dr. Nguyen,Dr. Smith,Nurse B,Monday,2025-03-10 08:00:00,2025-03-10 08:08:00,52,14,25,22,151,Y,Y,0,N,264,8.0
+S0030,81,31.5,None,Hip Replacement,Dr. Lee,Dr. Black,Nurse A,Monday,2025-03-10 11:00:00,2025-03-10 11:11:00,55,15,26,26,116,Y,N,23,N,238,11.0
+S0031,82,29.8,Multiple,ACL Repair,Dr. Kim,Dr. Brown,Nurse D,Friday,2025-03-10 07:00:00,2025-03-10 07:00:00,49,11,30,17,59,Y,Y,0,Y,166,0.0
+S0032,72,24.8,Obesity,Spine Fusion,Dr. Lee,Dr. Black,Nurse E,Wednesday,2025-03-10 08:00:00,2025-03-10 08:00:00,41,14,26,15,142,Y,Y,0,Y,238,0.0
+S0033,65,31.2,Hypertension,Shoulder Repair,Dr. Nguyen,Dr. White,Nurse A,Thursday,2025-03-10 07:00:00,2025-03-10 07:20:00,64,15,28,25,103,N,Y,0,N,235,20.0
+S0034,70,30.4,Obesity,ACL Repair,Dr. Patel,Dr. Brown,Nurse C,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,48,11,30,25,70,Y,Y,0,N,184,0.0
+S0035,60,23.6,Heart Disease,Hip Replacement,Dr. Lee,Dr. Black,Nurse B,Monday,2025-03-10 09:00:00,2025-03-10 09:53:00,58,15,26,25,118,Y,Y,0,N,242,53.0
+S0036,65,35.8,Multiple,ACL Repair,Dr. Lee,Dr. Green,Nurse A,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,53,8,22,25,59,Y,Y,0,N,167,0.0
+S0037,47,22.9,Heart Disease,Knee Replacement,Dr. Kim,Dr. Black,Nurse E,Friday,2025-03-10 13:00:00,2025-03-10 13:00:00,57,8,26,22,98,Y,Y,0,N,211,0.0
+S0038,75,30.0,None,Shoulder Repair,Dr. Kim,Dr. White,Nurse A,Friday,2025-03-10 09:00:00,2025-03-10 09:00:00,49,15,28,23,90,Y,Y,0,N,205,0.0
+S0039,69,28.5,Heart Disease,Spine Fusion,Dr. Kim,Dr. White,Nurse A,Wednesday,2025-03-10 08:00:00,2025-03-10 08:00:00,52,12,28,19,159,Y,Y,0,N,270,0.0
+S0040,66,23.3,Multiple,Hip Replacement,Dr. Patel,Dr. White,Nurse D,Tuesday,2025-03-10 16:00:00,2025-03-10 16:00:00,42,12,28,23,110,Y,Y,0,N,215,0.0
+S0041,78,23.5,Multiple,Shoulder Repair,Dr. Johnson,Dr. White,Nurse A,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,46,13,28,22,89,Y,Y,0,N,198,0.0
+S0042,63,35.5,None,Spine Fusion,Dr. Johnson,Dr. Black,Nurse A,Wednesday,2025-03-10 16:00:00,2025-03-10 16:00:00,52,10,26,22,159,Y,Y,0,N,269,0.0
+S0043,55,33.5,None,Shoulder Repair,Dr. Patel,Dr. Brown,Nurse D,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,54,11,30,28,100,Y,Y,0,N,223,0.0
+S0044,81,37.8,Obesity,ACL Repair,Dr. Nguyen,Dr. Black,Nurse E,Thursday,2025-03-10 09:00:00,2025-03-10 09:18:00,53,8,26,30,61,Y,Y,0,N,178,18.0
+S0045,51,33.4,Hypertension,Knee Replacement,Dr. Patel,Dr. Smith,Nurse B,Wednesday,2025-03-10 14:00:00,2025-03-10 14:19:00,58,9,25,23,91,Y,Y,0,N,206,19.0
+S0046,71,22.9,Hypertension,ACL Repair,Dr. Lee,Dr. Green,Nurse A,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,43,13,22,17,59,Y,Y,0,N,154,0.0
+S0047,75,33.1,Diabetes,Shoulder Repair,Dr. Nguyen,Dr. Black,Nurse A,Monday,2025-03-10 07:00:00,2025-03-10 07:07:00,62,14,26,21,92,Y,Y,0,Y,215,7.0
+S0048,71,32.2,Hypertension,Shoulder Repair,Dr. Kim,Dr. Smith,Nurse D,Friday,2025-03-10 15:00:00,2025-03-10 15:00:00,61,11,25,22,85,Y,Y,0,N,204,0.0
+S0049,71,25.0,Multiple,Knee Replacement,Dr. Johnson,Dr. White,Nurse A,Friday,2025-03-10 15:00:00,2025-03-10 15:00:00,56,8,28,21,81,Y,Y,0,N,194,0.0
+S0050,61,34.0,Heart Disease,Knee Replacement,Dr. Patel,Dr. Brown,Nurse A,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,56,13,30,30,94,Y,Y,0,N,223,0.0
+S0051,56,35.0,None,Shoulder Repair,Dr. Kim,Dr. White,Nurse B,Monday,2025-03-10 10:00:00,2025-03-10 10:39:00,56,14,28,28,86,Y,Y,0,N,212,39.0
+S0052,67,35.8,None,ACL Repair,Dr. Patel,Dr. Smith,Nurse C,Thursday,2025-03-10 13:00:00,2025-03-10 13:00:00,52,13,25,22,65,Y,Y,0,N,177,0.0
+S0053,78,26.3,None,Shoulder Repair,Dr. Kim,Dr. Green,Nurse E,Tuesday,2025-03-10 15:00:00,2025-03-10 15:00:00,38,9,22,20,94,Y,Y,0,N,183,0.0
+S0054,72,24.7,Obesity,ACL Repair,Dr. Nguyen,Dr. Smith,Nurse C,Friday,2025-03-10 13:00:00,2025-03-10 13:00:00,41,9,25,25,61,Y,Y,0,N,161,0.0
+S0055,55,37.2,Diabetes,Spine Fusion,Dr. Nguyen,Dr. Smith,Nurse B,Monday,2025-03-10 10:00:00,2025-03-10 10:43:00,57,8,25,29,154,Y,Y,0,N,273,43.0
+S0056,49,31.2,Hypertension,ACL Repair,Dr. Nguyen,Dr. White,Nurse C,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,50,15,28,28,67,Y,Y,0,N,188,0.0
+S0057,61,33.3,Diabetes,Spine Fusion,Dr. Patel,Dr. Green,Nurse B,Monday,2025-03-10 09:00:00,2025-03-10 09:45:00,59,9,22,30,150,Y,Y,0,N,270,45.0
+S0058,80,30.7,Heart Disease,Hip Replacement,Dr. Lee,Dr. White,Nurse E,Tuesday,2025-03-10 08:00:00,2025-03-10 08:18:00,52,15,28,20,118,Y,Y,0,N,233,18.0
+S0059,80,24.1,None,Knee Replacement,Dr. Patel,Dr. Green,Nurse D,Friday,2025-03-10 13:00:00,2025-03-10 13:00:00,53,9,22,17,100,Y,N,24,N,201,0.0
+S0060,67,24.1,Hypertension,Spine Fusion,Dr. Lee,Dr. Brown,Nurse D,Friday,2025-03-10 07:00:00,2025-03-10 07:43:00,44,12,30,17,147,Y,Y,0,N,250,43.0
+S0061,63,35.5,Heart Disease,Hip Replacement,Dr. Johnson,Dr. White,Nurse B,Wednesday,2025-03-10 16:00:00,2025-03-10 16:00:00,61,10,28,29,104,Y,Y,0,N,232,0.0
+S0062,84,33.5,Hypertension,ACL Repair,Dr. Johnson,Dr. Smith,Nurse A,Monday,2025-03-10 07:00:00,2025-03-10 07:41:00,51,14,25,29,65,Y,Y,0,N,184,41.0
+S0063,64,29.7,Multiple,Shoulder Repair,Dr. Patel,Dr. Green,Nurse A,Monday,2025-03-10 09:00:00,2025-03-10 09:12:00,54,11,22,20,95,Y,Y,0,N,202,12.0
+S0064,67,37.6,Diabetes,ACL Repair,Dr. Johnson,Dr. Black,Nurse A,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,53,15,26,23,51,Y,Y,0,N,168,0.0
+S0065,69,35.8,Obesity,Hip Replacement,Dr. Lee,Dr. White,Nurse E,Wednesday,2025-03-10 10:00:00,2025-03-10 10:41:00,61,15,28,27,115,Y,Y,0,Y,246,41.0
+S0066,70,30.1,Diabetes,Hip Replacement,Dr. Johnson,Dr. White,Nurse A,Monday,2025-03-10 11:00:00,2025-03-10 11:15:00,60,12,28,28,124,N,N,18,N,252,15.0
+S0067,70,27.9,Obesity,Knee Replacement,Dr. Johnson,Dr. Black,Nurse B,Wednesday,2025-03-10 15:00:00,2025-03-10 15:00:00,52,15,26,23,99,Y,Y,0,N,215,0.0
+S0068,52,24.1,None,Shoulder Repair,Dr. Patel,Dr. White,Nurse E,Wednesday,2025-03-10 09:00:00,2025-03-10 09:00:00,51,14,28,23,99,N,Y,0,N,215,0.0
+S0069,75,30.3,Diabetes,Spine Fusion,Dr. Johnson,Dr. Brown,Nurse C,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,64,12,30,29,156,Y,Y,0,Y,291,0.0
+S0070,81,26.8,None,ACL Repair,Dr. Patel,Dr. Smith,Nurse D,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,55,8,25,24,70,Y,Y,0,N,182,0.0
+S0071,81,25.6,None,Spine Fusion,Dr. Nguyen,Dr. Brown,Nurse E,Friday,2025-03-10 13:00:00,2025-03-10 13:00:00,42,8,30,24,143,Y,N,24,Y,247,0.0
+S0072,65,28.7,Obesity,Hip Replacement,Dr. Nguyen,Dr. Black,Nurse E,Thursday,2025-03-10 07:00:00,2025-03-10 07:00:00,56,11,26,23,115,Y,Y,0,N,231,0.0
+S0073,65,37.3,Obesity,Spine Fusion,Dr. Patel,Dr. Black,Nurse C,Wednesday,2025-03-10 16:00:00,2025-03-10 16:00:00,52,12,26,28,149,Y,Y,0,N,267,0.0
+S0074,58,33.0,Obesity,ACL Repair,Dr. Nguyen,Dr. White,Nurse E,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,62,14,28,26,54,Y,Y,0,N,184,0.0
+S0075,63,37.3,None,ACL Repair,Dr. Nguyen,Dr. White,Nurse D,Tuesday,2025-03-10 10:00:00,2025-03-10 10:27:00,57,12,28,22,68,Y,Y,0,N,187,27.0
+S0076,48,32.7,Hypertension,Hip Replacement,Dr. Lee,Dr. Smith,Nurse A,Thursday,2025-03-10 12:00:00,2025-03-10 12:16:00,49,8,25,28,105,Y,Y,0,N,215,16.0
+S0077,75,29.6,Diabetes,ACL Repair,Dr. Patel,Dr. White,Nurse A,Monday,2025-03-10 16:00:00,2025-03-10 16:05:00,45,14,28,17,51,Y,Y,0,N,155,5.0
+S0078,76,25.0,Multiple,ACL Repair,Dr. Kim,Dr. Smith,Nurse C,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,50,12,25,22,67,Y,Y,0,N,176,0.0
+S0079,53,35.6,Obesity,ACL Repair,Dr. Lee,Dr. Smith,Nurse C,Tuesday,2025-03-10 14:00:00,2025-03-10 14:00:00,50,8,25,25,68,Y,Y,0,N,176,0.0
+S0080,57,24.8,Multiple,Shoulder Repair,Dr. Nguyen,Dr. Black,Nurse C,Monday,2025-03-10 13:00:00,2025-03-10 13:07:00,44,15,26,20,85,Y,N,17,N,190,7.0
+S0081,62,37.3,Heart Disease,Spine Fusion,Dr. Johnson,Dr. Smith,Nurse C,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,48,15,25,24,156,Y,Y,0,N,268,0.0
+S0082,64,33.0,Multiple,ACL Repair,Dr. Patel,Dr. Black,Nurse B,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,59,13,26,26,65,Y,Y,0,N,189,0.0
+S0083,58,34.2,Multiple,Spine Fusion,Dr. Kim,Dr. Black,Nurse D,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,63,9,26,20,156,Y,N,27,N,274,0.0
+S0084,65,35.7,Obesity,Knee Replacement,Dr. Lee,Dr. Black,Nurse D,Monday,2025-03-10 15:00:00,2025-03-10 15:05:00,59,10,26,28,98,Y,N,24,N,221,5.0
+S0085,64,33.6,Obesity,ACL Repair,Dr. Kim,Dr. Brown,Nurse E,Monday,2025-03-10 07:00:00,2025-03-10 07:06:00,62,8,30,21,65,Y,N,23,N,186,6.0
+S0086,53,34.3,Multiple,Shoulder Repair,Dr. Patel,Dr. Green,Nurse D,Thursday,2025-03-10 13:00:00,2025-03-10 13:00:00,62,10,22,30,88,Y,Y,0,N,212,0.0
+S0087,79,28.3,Diabetes,Hip Replacement,Dr. Kim,Dr. Smith,Nurse C,Thursday,2025-03-10 15:00:00,2025-03-10 15:00:00,52,11,25,18,104,Y,Y,0,N,210,0.0
+S0088,52,22.5,Multiple,Shoulder Repair,Dr. Johnson,Dr. Smith,Nurse B,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,41,15,25,24,86,Y,Y,0,N,191,0.0
+S0089,47,28.4,Diabetes,Spine Fusion,Dr. Lee,Dr. Smith,Nurse B,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,58,13,25,24,150,Y,N,14,N,270,0.0
+S0090,78,25.5,Heart Disease,ACL Repair,Dr. Kim,Dr. Black,Nurse E,Tuesday,2025-03-10 13:00:00,2025-03-10 13:00:00,41,13,26,25,66,Y,Y,0,N,171,0.0
+S0091,71,28.5,Heart Disease,Shoulder Repair,Dr. Lee,Dr. Black,Nurse D,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,44,15,26,15,98,Y,Y,0,N,198,0.0
+S0092,53,28.2,Heart Disease,Hip Replacement,Dr. Patel,Dr. Smith,Nurse D,Wednesday,2025-03-10 08:00:00,2025-03-10 08:00:00,46,8,25,19,119,Y,Y,0,N,217,0.0
+S0093,49,25.0,Hypertension,Spine Fusion,Dr. Lee,Dr. Green,Nurse B,Wednesday,2025-03-10 11:00:00,2025-03-10 11:10:00,46,11,22,16,155,Y,Y,0,N,250,10.0
+S0094,83,33.3,Obesity,Hip Replacement,Dr. Johnson,Dr. White,Nurse C,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,56,12,28,24,115,Y,Y,0,N,235,0.0
+S0095,75,34.2,Heart Disease,Hip Replacement,Dr. Patel,Dr. White,Nurse D,Monday,2025-03-10 16:00:00,2025-03-10 16:24:00,53,14,28,24,110,Y,N,28,N,229,24.0
+S0096,76,30.8,Multiple,ACL Repair,Dr. Patel,Dr. Green,Nurse D,Thursday,2025-03-10 09:00:00,2025-03-10 09:00:00,56,10,22,22,65,Y,Y,0,N,175,0.0
+S0097,79,37.8,None,Spine Fusion,Dr. Kim,Dr. Smith,Nurse A,Monday,2025-03-10 13:00:00,2025-03-10 13:15:00,47,9,25,22,172,N,Y,0,Y,275,15.0
+S0098,84,32.2,Hypertension,Shoulder Repair,Dr. Nguyen,Dr. Smith,Nurse A,Friday,2025-03-10 15:00:00,2025-03-10 15:00:00,45,12,25,28,85,Y,Y,0,N,195,0.0
+S0099,72,34.9,Diabetes,Knee Replacement,Dr. Kim,Dr. Black,Nurse B,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,53,13,26,24,82,Y,Y,0,N,198,0.0
+S0100,70,29.3,Diabetes,Hip Replacement,Dr. Patel,Dr. Smith,Nurse A,Monday,2025-03-10 13:00:00,2025-03-10 13:13:00,55,8,25,25,114,N,Y,0,N,227,13.0
+S0101,66,31.1,None,Spine Fusion,Dr. Kim,Dr. Brown,Nurse B,Friday,2025-03-10 14:00:00,2025-03-10 14:00:00,42,12,30,28,141,Y,N,20,Y,253,0.0
+S0102,58,31.4,Multiple,Shoulder Repair,Dr. Kim,Dr. White,Nurse B,Friday,2025-03-10 10:00:00,2025-03-10 10:00:00,57,13,28,26,89,Y,Y,0,N,213,0.0
+S0103,50,30.0,Heart Disease,Knee Replacement,Dr. Kim,Dr. Green,Nurse B,Monday,2025-03-10 12:00:00,2025-03-10 12:14:00,59,14,22,20,108,N,Y,0,N,223,14.0
+S0104,69,28.9,Multiple,Spine Fusion,Dr. Nguyen,Dr. Smith,Nurse E,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,42,12,25,17,160,Y,Y,0,N,256,0.0
+S0105,69,27.1,None,Knee Replacement,Dr. Kim,Dr. White,Nurse D,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,37,10,28,21,97,Y,Y,0,N,193,0.0
+S0106,51,22.4,Heart Disease,Spine Fusion,Dr. Kim,Dr. Black,Nurse E,Wednesday,2025-03-10 13:00:00,2025-03-10 13:00:00,53,14,26,16,157,Y,Y,0,N,266,0.0
+S0107,60,31.2,Diabetes,Shoulder Repair,Dr. Lee,Dr. Brown,Nurse C,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,47,10,30,26,94,Y,Y,0,N,207,0.0
+S0108,49,27.8,Diabetes,Shoulder Repair,Dr. Johnson,Dr. Black,Nurse B,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,40,14,26,20,97,Y,Y,0,N,197,0.0
+S0109,66,29.0,Obesity,Spine Fusion,Dr. Lee,Dr. White,Nurse C,Friday,2025-03-10 10:00:00,2025-03-10 10:00:00,45,14,28,20,160,Y,Y,0,N,267,0.0
+S0110,60,27.2,Heart Disease,Shoulder Repair,Dr. Patel,Dr. Smith,Nurse E,Tuesday,2025-03-10 16:00:00,2025-03-10 16:21:00,57,8,25,22,91,Y,Y,0,N,203,21.0
+S0111,63,35.3,None,Shoulder Repair,Dr. Nguyen,Dr. Brown,Nurse C,Tuesday,2025-03-10 11:00:00,2025-03-10 11:00:00,53,14,30,21,104,Y,Y,0,N,222,0.0
+S0112,70,30.5,Multiple,Shoulder Repair,Dr. Johnson,Dr. Smith,Nurse C,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,47,9,25,23,96,Y,N,29,Y,200,0.0
+S0113,70,37.5,Heart Disease,Shoulder Repair,Dr. Kim,Dr. Smith,Nurse A,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,61,11,25,27,99,Y,Y,0,N,223,0.0
+S0114,82,33.0,Diabetes,ACL Repair,Dr. Kim,Dr. Green,Nurse A,Wednesday,2025-03-10 13:00:00,2025-03-10 13:15:00,48,10,22,25,64,Y,Y,0,N,169,15.0
+S0115,78,29.7,Obesity,Knee Replacement,Dr. Nguyen,Dr. Green,Nurse C,Monday,2025-03-10 11:00:00,2025-03-10 11:06:00,40,13,22,25,85,Y,Y,0,N,185,6.0
+S0116,78,24.8,Diabetes,ACL Repair,Dr. Johnson,Dr. Green,Nurse D,Tuesday,2025-03-10 13:00:00,2025-03-10 13:00:00,45,14,22,21,75,N,Y,0,N,177,0.0
+S0117,72,28.2,Multiple,Hip Replacement,Dr. Lee,Dr. White,Nurse A,Friday,2025-03-10 08:00:00,2025-03-10 08:44:00,45,13,28,20,103,Y,N,25,N,209,44.0
+S0118,85,27.0,Obesity,Spine Fusion,Dr. Nguyen,Dr. Black,Nurse A,Wednesday,2025-03-10 12:00:00,2025-03-10 12:21:00,49,9,26,25,143,Y,Y,0,Y,252,21.0
+S0119,60,26.9,Diabetes,ACL Repair,Dr. Lee,Dr. Black,Nurse D,Thursday,2025-03-10 16:00:00,2025-03-10 16:00:00,52,14,26,17,67,Y,Y,0,N,176,0.0
+S0120,56,30.9,Obesity,ACL Repair,Dr. Lee,Dr. Brown,Nurse C,Thursday,2025-03-10 16:00:00,2025-03-10 16:00:00,56,8,30,27,62,Y,Y,0,N,183,0.0
+S0121,77,32.4,Obesity,Shoulder Repair,Dr. Nguyen,Dr. Green,Nurse D,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,52,12,22,20,102,Y,Y,0,N,208,0.0
+S0122,74,31.1,Obesity,Spine Fusion,Dr. Johnson,Dr. Smith,Nurse E,Monday,2025-03-10 11:00:00,2025-03-10 11:10:00,62,8,25,27,153,Y,N,30,Y,275,10.0
+S0123,60,26.8,None,Shoulder Repair,Dr. Patel,Dr. White,Nurse A,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,42,11,28,24,104,Y,Y,0,N,209,0.0
+S0124,55,31.9,Diabetes,Hip Replacement,Dr. Kim,Dr. Black,Nurse C,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,50,13,26,24,108,Y,Y,0,N,221,0.0
+S0125,51,24.2,Obesity,Knee Replacement,Dr. Patel,Dr. Brown,Nurse B,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,47,14,30,22,100,Y,Y,0,N,213,0.0
+S0126,71,28.0,None,Knee Replacement,Dr. Nguyen,Dr. Black,Nurse C,Wednesday,2025-03-10 14:00:00,2025-03-10 14:30:00,53,8,26,16,94,Y,Y,0,N,197,30.0
+S0127,67,35.6,Hypertension,Shoulder Repair,Dr. Lee,Dr. Green,Nurse B,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,54,13,22,28,103,Y,Y,0,N,220,0.0
+S0128,66,36.3,None,Knee Replacement,Dr. Kim,Dr. Green,Nurse A,Monday,2025-03-10 09:00:00,2025-03-10 09:05:00,53,11,22,22,89,Y,N,18,N,197,5.0
+S0129,68,26.0,Heart Disease,Hip Replacement,Dr. Kim,Dr. Green,Nurse C,Tuesday,2025-03-10 13:00:00,2025-03-10 13:00:00,43,8,22,18,104,Y,Y,0,N,195,0.0
+S0130,78,32.9,None,Knee Replacement,Dr. Patel,Dr. Smith,Nurse D,Tuesday,2025-03-10 14:00:00,2025-03-10 14:00:00,52,9,25,21,91,Y,Y,0,N,198,0.0
+S0131,53,28.1,Diabetes,Hip Replacement,Dr. Kim,Dr. Black,Nurse E,Monday,2025-03-10 16:00:00,2025-03-10 16:12:00,51,11,26,25,113,Y,Y,0,N,226,12.0
+S0132,58,23.4,None,Hip Replacement,Dr. Kim,Dr. Black,Nurse D,Wednesday,2025-03-10 13:00:00,2025-03-10 13:00:00,39,11,26,19,107,Y,Y,0,N,202,0.0
+S0133,83,33.5,Heart Disease,Knee Replacement,Dr. Patel,Dr. Brown,Nurse E,Friday,2025-03-10 15:00:00,2025-03-10 15:00:00,57,12,30,30,108,N,Y,0,N,237,0.0
+S0134,85,31.5,Hypertension,Knee Replacement,Dr. Patel,Dr. White,Nurse B,Thursday,2025-03-10 16:00:00,2025-03-10 16:00:00,62,10,28,27,82,Y,Y,0,Y,209,0.0
+S0135,49,22.2,Diabetes,Knee Replacement,Dr. Kim,Dr. Green,Nurse E,Wednesday,2025-03-10 15:00:00,2025-03-10 15:00:00,53,14,22,16,97,Y,Y,0,N,202,0.0
+S0136,62,23.3,None,Spine Fusion,Dr. Lee,Dr. Brown,Nurse E,Wednesday,2025-03-10 13:00:00,2025-03-10 13:00:00,55,9,30,19,147,Y,Y,0,N,260,0.0
+S0137,50,36.8,None,Shoulder Repair,Dr. Johnson,Dr. Black,Nurse A,Wednesday,2025-03-10 09:00:00,2025-03-10 09:00:00,44,8,26,22,96,Y,Y,0,N,196,0.0
+S0138,61,24.7,Diabetes,ACL Repair,Dr. Kim,Dr. Smith,Nurse C,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,48,9,25,22,61,Y,Y,0,N,165,0.0
+S0139,81,24.7,Diabetes,ACL Repair,Dr. Kim,Dr. Black,Nurse A,Tuesday,2025-03-10 15:00:00,2025-03-10 15:00:00,40,11,26,15,62,Y,Y,0,N,154,0.0
+S0140,56,36.9,None,Spine Fusion,Dr. Nguyen,Dr. Brown,Nurse C,Tuesday,2025-03-10 13:00:00,2025-03-10 13:30:00,48,9,30,29,156,Y,Y,0,N,272,30.0
+S0141,48,24.9,Hypertension,Knee Replacement,Dr. Nguyen,Dr. Smith,Nurse D,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,57,15,25,15,89,Y,Y,0,N,201,0.0
+S0142,64,33.8,Diabetes,Shoulder Repair,Dr. Patel,Dr. Black,Nurse D,Tuesday,2025-03-10 15:00:00,2025-03-10 15:00:00,52,10,26,20,85,Y,Y,0,N,193,0.0
+S0143,67,32.2,Multiple,Knee Replacement,Dr. Patel,Dr. Smith,Nurse D,Wednesday,2025-03-10 08:00:00,2025-03-10 08:00:00,52,14,25,27,84,Y,Y,0,N,202,0.0
+S0144,50,22.7,Diabetes,Spine Fusion,Dr. Nguyen,Dr. White,Nurse D,Monday,2025-03-10 16:00:00,2025-03-10 16:07:00,60,14,28,16,141,Y,Y,0,N,259,7.0
+S0145,60,26.7,Heart Disease,Shoulder Repair,Dr. Patel,Dr. White,Nurse D,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,46,10,28,24,88,Y,Y,0,N,196,0.0
+S0146,74,27.0,None,Spine Fusion,Dr. Patel,Dr. Brown,Nurse D,Wednesday,2025-03-10 14:00:00,2025-03-10 14:00:00,38,9,30,17,149,Y,Y,0,Y,243,0.0
+S0147,83,22.6,Heart Disease,Hip Replacement,Dr. Kim,Dr. Brown,Nurse C,Thursday,2025-03-10 15:00:00,2025-03-10 15:00:00,49,12,30,17,130,N,Y,0,N,238,0.0
+S0148,80,26.0,Obesity,Knee Replacement,Dr. Lee,Dr. Smith,Nurse A,Monday,2025-03-10 10:00:00,2025-03-10 10:11:00,51,9,25,24,82,Y,N,12,N,191,11.0
+S0149,73,34.9,None,ACL Repair,Dr. Kim,Dr. Smith,Nurse D,Monday,2025-03-10 09:00:00,2025-03-10 09:48:00,55,8,25,26,55,Y,Y,0,N,169,48.0
+S0150,62,26.5,Diabetes,Knee Replacement,Dr. Johnson,Dr. Black,Nurse E,Tuesday,2025-03-10 11:00:00,2025-03-10 11:00:00,57,15,26,15,100,N,Y,0,N,213,0.0
+S0151,78,26.0,Hypertension,Knee Replacement,Dr. Nguyen,Dr. White,Nurse D,Friday,2025-03-10 14:00:00,2025-03-10 14:00:00,58,13,28,21,80,Y,Y,0,N,200,0.0
+S0152,62,22.9,Obesity,Spine Fusion,Dr. Patel,Dr. Black,Nurse B,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,47,12,26,23,141,Y,Y,0,N,249,0.0
+S0153,59,31.2,Obesity,ACL Repair,Dr. Lee,Dr. Brown,Nurse B,Friday,2025-03-10 12:00:00,2025-03-10 12:32:00,63,8,30,25,68,Y,N,16,N,194,32.0
+S0154,76,30.7,Diabetes,Shoulder Repair,Dr. Kim,Dr. Smith,Nurse A,Tuesday,2025-03-10 16:00:00,2025-03-10 16:00:00,61,15,25,20,104,Y,Y,0,N,225,0.0
+S0155,53,27.5,Diabetes,ACL Repair,Dr. Kim,Dr. Smith,Nurse B,Friday,2025-03-10 09:00:00,2025-03-10 09:00:00,56,13,25,16,62,Y,Y,0,N,172,0.0
+S0156,65,24.2,Diabetes,Shoulder Repair,Dr. Nguyen,Dr. White,Nurse B,Friday,2025-03-10 16:00:00,2025-03-10 16:24:00,58,10,28,21,94,Y,N,10,N,211,24.0
+S0157,81,28.3,Hypertension,Knee Replacement,Dr. Lee,Dr. Black,Nurse C,Friday,2025-03-10 10:00:00,2025-03-10 10:00:00,43,15,26,17,82,Y,N,20,N,183,0.0
+S0158,50,35.1,Multiple,ACL Repair,Dr. Nguyen,Dr. Smith,Nurse C,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,56,12,25,21,51,Y,Y,0,N,165,0.0
+S0159,71,37.5,Obesity,Shoulder Repair,Dr. Nguyen,Dr. White,Nurse E,Thursday,2025-03-10 08:00:00,2025-03-10 08:24:00,50,15,28,21,86,Y,Y,0,N,200,24.0
+S0160,65,26.2,None,Knee Replacement,Dr. Patel,Dr. Brown,Nurse D,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,37,13,30,24,95,Y,Y,0,N,199,0.0
+S0161,72,37.1,Diabetes,Spine Fusion,Dr. Nguyen,Dr. Brown,Nurse A,Monday,2025-03-10 12:00:00,2025-03-10 12:08:00,58,12,30,30,147,Y,N,22,Y,277,8.0
+S0162,81,30.8,Obesity,Hip Replacement,Dr. Kim,Dr. White,Nurse A,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,65,15,28,23,118,N,Y,0,N,249,0.0
+S0163,50,29.6,None,ACL Repair,Dr. Nguyen,Dr. Green,Nurse D,Wednesday,2025-03-10 08:00:00,2025-03-10 08:00:00,47,10,22,20,61,Y,Y,0,N,160,0.0
+S0164,47,26.2,Obesity,ACL Repair,Dr. Lee,Dr. White,Nurse E,Monday,2025-03-10 09:00:00,2025-03-10 09:22:00,51,14,28,24,51,Y,Y,0,N,168,22.0
+S0165,71,37.5,Multiple,Shoulder Repair,Dr. Johnson,Dr. Brown,Nurse D,Wednesday,2025-03-10 08:00:00,2025-03-10 08:00:00,46,10,30,21,99,Y,Y,0,N,206,0.0
+S0166,55,37.6,Diabetes,Hip Replacement,Dr. Kim,Dr. Green,Nurse A,Thursday,2025-03-10 10:00:00,2025-03-10 10:19:00,64,12,22,25,102,Y,Y,0,N,225,19.0
+S0167,80,28.4,Heart Disease,ACL Repair,Dr. Johnson,Dr. Green,Nurse A,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,53,9,22,21,68,Y,Y,0,N,173,0.0
+S0168,51,36.8,Hypertension,Knee Replacement,Dr. Patel,Dr. Black,Nurse C,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,60,15,26,20,92,Y,Y,0,N,213,0.0
+S0169,83,32.9,Obesity,Knee Replacement,Dr. Nguyen,Dr. White,Nurse B,Monday,2025-03-10 14:00:00,2025-03-10 14:38:00,55,12,28,24,95,Y,Y,0,N,214,38.0
+S0170,59,24.2,Multiple,Shoulder Repair,Dr. Patel,Dr. White,Nurse D,Friday,2025-03-10 08:00:00,2025-03-10 08:00:00,46,14,28,22,96,Y,Y,0,N,206,0.0
+S0171,55,23.0,Multiple,Spine Fusion,Dr. Nguyen,Dr. Brown,Nurse E,Friday,2025-03-10 07:00:00,2025-03-10 07:00:00,46,8,30,18,161,N,Y,0,N,263,0.0
+S0172,74,30.1,Multiple,Knee Replacement,Dr. Kim,Dr. Brown,Nurse C,Thursday,2025-03-10 16:00:00,2025-03-10 16:00:00,60,13,30,25,88,Y,Y,0,N,216,0.0
+S0173,50,26.6,Obesity,Knee Replacement,Dr. Lee,Dr. Black,Nurse B,Tuesday,2025-03-10 10:00:00,2025-03-10 10:27:00,60,14,26,23,100,N,Y,0,N,223,27.0
+S0174,53,32.4,Hypertension,Knee Replacement,Dr. Lee,Dr. White,Nurse E,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,57,13,28,27,94,Y,Y,0,N,219,0.0
+S0175,78,35.2,Obesity,Spine Fusion,Dr. Kim,Dr. Smith,Nurse E,Wednesday,2025-03-10 15:00:00,2025-03-10 15:00:00,64,12,25,24,155,Y,Y,0,Y,280,0.0
+S0176,49,27.4,Heart Disease,ACL Repair,Dr. Patel,Dr. White,Nurse C,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,47,8,28,24,60,Y,Y,0,N,167,0.0
+S0177,46,32.5,Heart Disease,ACL Repair,Dr. Nguyen,Dr. Green,Nurse D,Monday,2025-03-10 16:00:00,2025-03-10 16:14:00,51,13,22,23,70,Y,Y,0,N,179,14.0
+S0178,67,30.1,Diabetes,Spine Fusion,Dr. Lee,Dr. White,Nurse A,Thursday,2025-03-10 09:00:00,2025-03-10 09:45:00,50,13,28,30,162,N,Y,0,N,283,45.0
+S0179,64,28.7,Heart Disease,ACL Repair,Dr. Patel,Dr. Black,Nurse C,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,60,9,26,22,66,Y,Y,0,N,183,0.0
+S0180,69,30.5,Obesity,Knee Replacement,Dr. Lee,Dr. Brown,Nurse B,Wednesday,2025-03-10 13:00:00,2025-03-10 13:39:00,49,13,30,22,95,Y,Y,0,N,209,39.0
+S0181,56,27.0,None,Knee Replacement,Dr. Nguyen,Dr. White,Nurse B,Tuesday,2025-03-10 16:00:00,2025-03-10 16:41:00,37,10,28,24,93,Y,Y,0,N,192,41.0
+S0182,75,28.1,None,Spine Fusion,Dr. Lee,Dr. White,Nurse A,Wednesday,2025-03-10 15:00:00,2025-03-10 15:00:00,35,11,28,18,151,Y,Y,0,Y,243,0.0
+S0183,64,24.1,Obesity,Spine Fusion,Dr. Johnson,Dr. White,Nurse B,Monday,2025-03-10 07:00:00,2025-03-10 07:09:00,54,13,28,21,144,Y,Y,0,N,260,9.0
+S0184,67,34.0,Diabetes,Shoulder Repair,Dr. Kim,Dr. Brown,Nurse B,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,63,10,30,21,105,Y,Y,0,N,229,0.0
+S0185,69,36.0,Heart Disease,Spine Fusion,Dr. Johnson,Dr. Smith,Nurse E,Monday,2025-03-10 08:00:00,2025-03-10 08:05:00,46,9,25,26,143,Y,Y,0,N,249,5.0
+S0186,54,25.3,Multiple,Knee Replacement,Dr. Patel,Dr. Green,Nurse A,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,44,14,22,16,99,Y,N,13,N,195,0.0
+S0187,76,25.2,Diabetes,ACL Repair,Dr. Johnson,Dr. Brown,Nurse C,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,57,15,30,18,65,Y,Y,0,N,185,0.0
+S0188,45,22.2,None,Knee Replacement,Dr. Johnson,Dr. Green,Nurse B,Monday,2025-03-10 15:00:00,2025-03-10 15:06:00,43,11,22,22,89,Y,N,11,N,187,6.0
+S0189,56,36.0,Heart Disease,ACL Repair,Dr. Patel,Dr. Green,Nurse A,Monday,2025-03-10 07:00:00,2025-03-10 07:07:00,65,10,22,25,64,Y,Y,0,N,186,7.0
+S0190,50,28.0,Heart Disease,Hip Replacement,Dr. Kim,Dr. Green,Nurse D,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,55,14,22,25,105,Y,Y,0,N,221,0.0
+S0191,48,37.7,Diabetes,Knee Replacement,Dr. Nguyen,Dr. Black,Nurse D,Friday,2025-03-10 14:00:00,2025-03-10 14:00:00,57,13,26,29,104,N,Y,0,N,229,0.0
+S0192,71,29.1,None,ACL Repair,Dr. Patel,Dr. Smith,Nurse E,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,45,9,25,21,57,Y,Y,0,N,157,0.0
+S0193,69,24.4,Hypertension,Spine Fusion,Dr. Kim,Dr. Smith,Nurse B,Friday,2025-03-10 14:00:00,2025-03-10 14:20:00,42,15,25,20,148,Y,N,17,N,250,20.0
+S0194,69,28.5,Diabetes,Knee Replacement,Dr. Nguyen,Dr. Green,Nurse E,Thursday,2025-03-10 08:00:00,2025-03-10 08:38:00,50,9,22,22,80,Y,Y,0,N,183,38.0
+S0195,71,22.6,Hypertension,Knee Replacement,Dr. Kim,Dr. Black,Nurse E,Wednesday,2025-03-10 15:00:00,2025-03-10 15:00:00,60,15,26,20,81,Y,Y,0,N,202,0.0
+S0196,74,27.3,Hypertension,Spine Fusion,Dr. Nguyen,Dr. White,Nurse D,Monday,2025-03-10 08:00:00,2025-03-10 08:29:00,50,13,28,25,149,Y,Y,0,Y,265,29.0
+S0197,68,33.2,None,Hip Replacement,Dr. Nguyen,Dr. Brown,Nurse D,Monday,2025-03-10 11:00:00,2025-03-10 11:08:00,43,14,30,23,106,Y,Y,0,N,216,8.0
+S0198,71,22.7,Multiple,Spine Fusion,Dr. Kim,Dr. Green,Nurse D,Friday,2025-03-10 15:00:00,2025-03-10 15:00:00,55,8,22,23,157,Y,Y,0,Y,265,0.0
+S0199,82,29.7,Hypertension,Hip Replacement,Dr. Johnson,Dr. Brown,Nurse B,Monday,2025-03-10 13:00:00,2025-03-10 13:14:00,50,14,30,21,107,Y,N,20,N,222,14.0
+S0200,73,34.9,Diabetes,Shoulder Repair,Dr. Johnson,Dr. Black,Nurse C,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,62,11,26,23,94,Y,Y,0,N,216,0.0
+S0201,53,37.7,Multiple,Hip Replacement,Dr. Johnson,Dr. Black,Nurse C,Monday,2025-03-10 12:00:00,2025-03-10 12:14:00,63,14,26,30,117,Y,N,23,N,250,14.0
+S0202,78,23.7,Obesity,Hip Replacement,Dr. Kim,Dr. Smith,Nurse B,Wednesday,2025-03-10 09:00:00,2025-03-10 09:26:00,44,8,25,19,117,Y,Y,0,Y,213,26.0
+S0203,73,23.6,Multiple,Spine Fusion,Dr. Lee,Dr. Black,Nurse D,Tuesday,2025-03-10 15:00:00,2025-03-10 15:28:00,41,14,26,21,150,Y,Y,0,Y,252,28.0
+S0204,80,22.9,Multiple,ACL Repair,Dr. Lee,Dr. Black,Nurse D,Tuesday,2025-03-10 12:00:00,2025-03-10 12:44:00,59,11,26,18,55,Y,Y,0,N,169,44.0
+S0205,49,25.0,Diabetes,Spine Fusion,Dr. Kim,Dr. Green,Nurse A,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,44,10,22,24,140,Y,Y,0,N,240,0.0
+S0206,54,22.6,Heart Disease,Spine Fusion,Dr. Kim,Dr. Black,Nurse C,Thursday,2025-03-10 16:00:00,2025-03-10 16:00:00,42,13,26,23,145,Y,Y,0,N,249,0.0
+S0207,77,24.5,Hypertension,Spine Fusion,Dr. Nguyen,Dr. Smith,Nurse C,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,50,13,25,19,159,Y,Y,0,Y,266,0.0
+S0208,78,29.6,Hypertension,Knee Replacement,Dr. Kim,Dr. White,Nurse D,Tuesday,2025-03-10 16:00:00,2025-03-10 16:25:00,41,13,28,21,83,Y,Y,0,N,186,25.0
+S0209,79,33.6,None,Spine Fusion,Dr. Patel,Dr. Black,Nurse E,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,60,11,26,25,143,Y,Y,0,Y,265,0.0
+S0210,55,37.5,Hypertension,Spine Fusion,Dr. Kim,Dr. Smith,Nurse B,Tuesday,2025-03-10 13:00:00,2025-03-10 13:00:00,51,14,25,30,142,Y,Y,0,N,262,0.0
+S0211,54,22.4,Multiple,ACL Repair,Dr. Kim,Dr. Smith,Nurse A,Monday,2025-03-10 09:00:00,2025-03-10 09:13:00,42,11,25,19,64,Y,Y,0,N,161,13.0
+S0212,46,28.2,None,Spine Fusion,Dr. Kim,Dr. Black,Nurse A,Friday,2025-03-10 07:00:00,2025-03-10 07:00:00,37,13,26,23,149,Y,Y,0,N,248,0.0
+S0213,73,28.1,Multiple,Knee Replacement,Dr. Nguyen,Dr. Brown,Nurse E,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,57,12,30,25,100,Y,Y,0,N,224,0.0
+S0214,45,30.9,Hypertension,Hip Replacement,Dr. Kim,Dr. Smith,Nurse A,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,62,9,25,24,111,Y,N,30,N,231,0.0
+S0215,54,24.6,Diabetes,Spine Fusion,Dr. Patel,Dr. Brown,Nurse A,Tuesday,2025-03-10 16:00:00,2025-03-10 16:45:00,54,9,30,19,148,Y,Y,0,N,260,45.0
+S0216,82,29.8,Heart Disease,ACL Repair,Dr. Lee,Dr. Brown,Nurse A,Wednesday,2025-03-10 16:00:00,2025-03-10 16:00:00,46,13,30,22,69,Y,Y,0,N,180,0.0
+S0217,82,24.4,Hypertension,ACL Repair,Dr. Patel,Dr. Green,Nurse B,Monday,2025-03-10 12:00:00,2025-03-10 12:08:00,60,14,22,19,54,Y,Y,0,N,169,8.0
+S0218,75,29.4,Heart Disease,ACL Repair,Dr. Nguyen,Dr. Black,Nurse A,Tuesday,2025-03-10 16:00:00,2025-03-10 16:00:00,48,10,26,23,70,Y,Y,0,N,177,0.0
+S0219,49,36.3,Hypertension,Knee Replacement,Dr. Johnson,Dr. Black,Nurse D,Friday,2025-03-10 10:00:00,2025-03-10 10:45:00,53,15,26,30,91,Y,Y,0,N,215,45.0
+S0220,82,33.7,Heart Disease,Hip Replacement,Dr. Nguyen,Dr. Black,Nurse E,Monday,2025-03-10 13:00:00,2025-03-10 13:05:00,52,10,26,28,105,Y,N,28,N,221,5.0
+S0221,54,33.8,Obesity,ACL Repair,Dr. Kim,Dr. Brown,Nurse D,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,52,8,30,30,61,Y,Y,0,N,181,0.0
+S0222,74,36.1,None,ACL Repair,Dr. Kim,Dr. Black,Nurse C,Wednesday,2025-03-10 16:00:00,2025-03-10 16:00:00,45,14,26,30,68,Y,Y,0,N,183,0.0
+S0223,49,30.3,Obesity,Hip Replacement,Dr. Johnson,Dr. Green,Nurse C,Wednesday,2025-03-10 14:00:00,2025-03-10 14:00:00,64,8,22,28,114,Y,Y,0,N,236,0.0
+S0224,49,30.2,Heart Disease,Hip Replacement,Dr. Lee,Dr. Brown,Nurse B,Wednesday,2025-03-10 16:00:00,2025-03-10 16:17:00,52,14,30,25,115,Y,Y,0,N,236,17.0
+S0225,75,25.4,Diabetes,Shoulder Repair,Dr. Kim,Dr. Brown,Nurse A,Tuesday,2025-03-10 16:00:00,2025-03-10 16:00:00,44,8,30,24,90,Y,Y,0,N,196,0.0
+S0226,56,30.3,Obesity,Spine Fusion,Dr. Johnson,Dr. Smith,Nurse C,Monday,2025-03-10 10:00:00,2025-03-10 10:12:00,60,10,25,23,159,Y,N,28,N,277,12.0
+S0227,56,32.0,Hypertension,ACL Repair,Dr. Lee,Dr. White,Nurse D,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,57,14,28,22,56,Y,Y,0,N,177,0.0
+S0228,71,35.2,Hypertension,Knee Replacement,Dr. Lee,Dr. Green,Nurse E,Friday,2025-03-10 07:00:00,2025-03-10 07:44:00,61,9,22,21,84,Y,Y,0,N,197,44.0
+S0229,45,36.4,Multiple,Shoulder Repair,Dr. Johnson,Dr. Green,Nurse C,Monday,2025-03-10 15:00:00,2025-03-10 15:12:00,57,13,22,29,103,Y,N,14,N,224,12.0
+S0230,59,36.6,None,ACL Repair,Dr. Johnson,Dr. Black,Nurse D,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,40,9,26,28,76,N,Y,0,N,179,0.0
+S0231,65,28.5,None,Hip Replacement,Dr. Nguyen,Dr. Black,Nurse C,Wednesday,2025-03-10 15:00:00,2025-03-10 15:00:00,46,12,26,25,106,Y,Y,0,N,215,0.0
+S0232,80,29.7,Heart Disease,Spine Fusion,Dr. Johnson,Dr. Green,Nurse C,Wednesday,2025-03-10 16:00:00,2025-03-10 16:00:00,52,10,22,25,147,Y,Y,0,Y,256,0.0
+S0233,73,34.5,Diabetes,Knee Replacement,Dr. Lee,Dr. Black,Nurse D,Wednesday,2025-03-10 15:00:00,2025-03-10 15:00:00,46,10,26,26,80,Y,Y,0,N,188,0.0
+S0234,54,29.5,Hypertension,Shoulder Repair,Dr. Kim,Dr. Smith,Nurse C,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,41,14,25,21,101,Y,Y,0,N,202,0.0
+S0235,83,22.9,Diabetes,Shoulder Repair,Dr. Nguyen,Dr. Smith,Nurse B,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,59,11,25,24,86,Y,Y,0,N,205,0.0
+S0236,55,23.4,Heart Disease,Shoulder Repair,Dr. Patel,Dr. Green,Nurse D,Friday,2025-03-10 10:00:00,2025-03-10 10:00:00,42,9,22,23,102,Y,Y,0,N,198,0.0
+S0237,62,25.6,Diabetes,Shoulder Repair,Dr. Nguyen,Dr. Black,Nurse A,Wednesday,2025-03-10 09:00:00,2025-03-10 09:00:00,43,9,26,23,88,Y,Y,0,N,189,0.0
+S0238,61,36.0,Hypertension,ACL Repair,Dr. Nguyen,Dr. Green,Nurse E,Thursday,2025-03-10 10:00:00,2025-03-10 10:39:00,59,8,22,27,52,Y,Y,0,N,168,39.0
+S0239,59,32.8,Diabetes,ACL Repair,Dr. Nguyen,Dr. White,Nurse E,Friday,2025-03-10 07:00:00,2025-03-10 07:00:00,53,11,28,24,80,N,N,15,N,196,0.0
+S0240,67,25.5,Hypertension,ACL Repair,Dr. Lee,Dr. Brown,Nurse D,Tuesday,2025-03-10 10:00:00,2025-03-10 10:26:00,46,11,30,18,69,Y,Y,0,N,174,26.0
+S0241,51,23.9,None,Shoulder Repair,Dr. Johnson,Dr. Smith,Nurse E,Monday,2025-03-10 14:00:00,2025-03-10 14:10:00,50,12,25,22,101,Y,N,17,N,210,10.0
+S0242,53,22.9,Obesity,Shoulder Repair,Dr. Johnson,Dr. Smith,Nurse E,Wednesday,2025-03-10 13:00:00,2025-03-10 13:00:00,45,15,25,16,99,Y,Y,0,N,200,0.0
+S0243,45,22.2,Diabetes,Shoulder Repair,Dr. Johnson,Dr. Smith,Nurse C,Wednesday,2025-03-10 16:00:00,2025-03-10 16:00:00,45,12,25,18,104,Y,Y,0,N,204,0.0
+S0244,56,30.0,Diabetes,Shoulder Repair,Dr. Patel,Dr. White,Nurse D,Wednesday,2025-03-10 14:00:00,2025-03-10 14:00:00,44,11,28,16,92,Y,Y,0,N,191,0.0
+S0245,69,25.1,Multiple,Hip Replacement,Dr. Nguyen,Dr. Smith,Nurse B,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,60,13,25,22,117,Y,Y,0,N,237,0.0
+S0246,48,28.4,Multiple,Hip Replacement,Dr. Kim,Dr. Brown,Nurse C,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,50,12,30,20,117,Y,Y,0,N,229,0.0
+S0247,61,27.5,Obesity,Knee Replacement,Dr. Patel,Dr. Black,Nurse B,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,57,10,26,19,96,Y,Y,0,N,208,0.0
+S0248,50,28.1,Heart Disease,Shoulder Repair,Dr. Lee,Dr. Brown,Nurse C,Thursday,2025-03-10 16:00:00,2025-03-10 16:00:00,42,9,30,17,95,Y,Y,0,N,193,0.0
+S0249,63,33.4,Hypertension,Shoulder Repair,Dr. Patel,Dr. Green,Nurse C,Friday,2025-03-10 15:00:00,2025-03-10 15:36:00,50,10,22,20,92,Y,Y,0,N,194,36.0
+S0250,50,25.4,Obesity,Knee Replacement,Dr. Kim,Dr. Smith,Nurse D,Friday,2025-03-10 07:00:00,2025-03-10 07:00:00,52,9,25,16,84,Y,N,22,N,186,0.0
+S0251,60,33.8,Obesity,Hip Replacement,Dr. Lee,Dr. Black,Nurse B,Monday,2025-03-10 07:00:00,2025-03-10 07:42:00,59,12,26,28,117,Y,N,29,N,242,42.0
+S0252,85,36.0,Obesity,Spine Fusion,Dr. Johnson,Dr. White,Nurse C,Thursday,2025-03-10 15:00:00,2025-03-10 15:00:00,47,15,28,24,148,Y,Y,0,Y,262,0.0
+S0253,54,26.9,None,Spine Fusion,Dr. Lee,Dr. White,Nurse C,Thursday,2025-03-10 15:00:00,2025-03-10 15:00:00,50,15,28,19,165,N,Y,0,N,277,0.0
+S0254,45,30.8,Diabetes,Shoulder Repair,Dr. Johnson,Dr. Green,Nurse D,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,65,14,22,26,87,Y,Y,0,N,214,0.0
+S0255,60,30.3,Hypertension,ACL Repair,Dr. Patel,Dr. Black,Nurse C,Thursday,2025-03-10 10:00:00,2025-03-10 10:21:00,49,12,26,21,69,Y,Y,0,N,177,21.0
+S0256,84,29.9,Heart Disease,Knee Replacement,Dr. Lee,Dr. Smith,Nurse E,Monday,2025-03-10 09:00:00,2025-03-10 09:37:00,44,15,25,15,84,Y,N,16,N,183,37.0
+S0257,64,34.6,Obesity,ACL Repair,Dr. Nguyen,Dr. Smith,Nurse C,Monday,2025-03-10 09:00:00,2025-03-10 09:11:00,47,15,25,22,58,Y,Y,0,N,167,11.0
+S0258,52,37.6,Multiple,Hip Replacement,Dr. Nguyen,Dr. Green,Nurse B,Monday,2025-03-10 10:00:00,2025-03-10 10:06:00,61,11,22,27,109,Y,Y,0,N,230,6.0
+S0259,47,33.9,Hypertension,Spine Fusion,Dr. Kim,Dr. White,Nurse D,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,46,11,28,21,153,Y,Y,0,N,259,0.0
+S0260,55,34.7,Hypertension,Knee Replacement,Dr. Nguyen,Dr. Brown,Nurse A,Monday,2025-03-10 16:00:00,2025-03-10 16:54:00,49,13,30,21,95,Y,N,29,N,208,54.0
+S0261,85,23.0,Heart Disease,Hip Replacement,Dr. Johnson,Dr. Smith,Nurse B,Thursday,2025-03-10 10:00:00,2025-03-10 10:00:00,57,13,25,22,100,Y,Y,0,N,217,0.0
+S0262,67,33.6,Heart Disease,Knee Replacement,Dr. Nguyen,Dr. Green,Nurse E,Wednesday,2025-03-10 15:00:00,2025-03-10 15:00:00,51,10,22,28,94,Y,Y,0,N,205,0.0
+S0263,83,36.6,Hypertension,Hip Replacement,Dr. Kim,Dr. Black,Nurse B,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,62,13,26,27,136,N,Y,0,N,264,0.0
+S0264,56,36.1,Hypertension,ACL Repair,Dr. Johnson,Dr. Brown,Nurse C,Monday,2025-03-10 15:00:00,2025-03-10 15:08:00,61,15,30,28,59,Y,Y,0,N,193,8.0
+S0265,52,23.5,Multiple,Knee Replacement,Dr. Kim,Dr. Brown,Nurse B,Monday,2025-03-10 10:00:00,2025-03-10 10:08:00,43,8,30,24,92,Y,Y,0,N,197,8.0
+S0266,82,26.1,Heart Disease,Hip Replacement,Dr. Johnson,Dr. Smith,Nurse A,Tuesday,2025-03-10 14:00:00,2025-03-10 14:15:00,54,8,25,20,113,Y,Y,0,N,220,15.0
+S0267,48,35.2,Heart Disease,Spine Fusion,Dr. Kim,Dr. Smith,Nurse C,Monday,2025-03-10 10:00:00,2025-03-10 10:22:00,52,14,25,23,147,Y,Y,0,N,261,22.0
+S0268,80,34.0,Obesity,Knee Replacement,Dr. Johnson,Dr. White,Nurse D,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,50,14,28,28,85,Y,Y,0,N,205,0.0
+S0269,83,29.1,Heart Disease,ACL Repair,Dr. Johnson,Dr. White,Nurse C,Thursday,2025-03-10 13:00:00,2025-03-10 13:00:00,50,11,28,24,62,Y,Y,0,N,175,0.0
+S0270,61,27.8,Obesity,Shoulder Repair,Dr. Nguyen,Dr. Smith,Nurse A,Wednesday,2025-03-10 16:00:00,2025-03-10 16:00:00,44,12,25,15,92,Y,Y,0,N,188,0.0
+S0271,65,22.3,Multiple,ACL Repair,Dr. Johnson,Dr. Black,Nurse E,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,41,15,26,20,58,Y,Y,0,N,160,0.0
+S0272,59,26.1,Heart Disease,Knee Replacement,Dr. Johnson,Dr. Green,Nurse E,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,55,10,22,22,98,Y,Y,0,N,207,0.0
+S0273,51,31.5,Heart Disease,Knee Replacement,Dr. Johnson,Dr. Green,Nurse A,Monday,2025-03-10 12:00:00,2025-03-10 12:11:00,58,9,22,23,99,Y,Y,0,N,211,11.0
+S0274,85,28.1,Heart Disease,Spine Fusion,Dr. Kim,Dr. White,Nurse E,Friday,2025-03-10 09:00:00,2025-03-10 09:00:00,47,10,28,15,152,Y,Y,0,Y,252,0.0
+S0275,83,31.2,None,Hip Replacement,Dr. Nguyen,Dr. White,Nurse D,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,55,8,28,28,102,Y,Y,0,N,221,0.0
+S0276,72,34.4,Diabetes,Hip Replacement,Dr. Nguyen,Dr. Black,Nurse B,Thursday,2025-03-10 13:00:00,2025-03-10 13:00:00,51,11,26,23,126,N,Y,0,N,237,0.0
+S0277,81,23.4,Multiple,Shoulder Repair,Dr. Nguyen,Dr. White,Nurse C,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,60,8,28,19,96,Y,Y,0,N,211,0.0
+S0278,73,32.0,Obesity,Knee Replacement,Dr. Lee,Dr. Brown,Nurse C,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,46,11,30,29,89,Y,Y,0,Y,205,0.0
+S0279,52,26.9,Obesity,Knee Replacement,Dr. Patel,Dr. Brown,Nurse E,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,48,15,30,24,84,Y,Y,0,N,201,0.0
+S0280,46,28.0,Multiple,Spine Fusion,Dr. Kim,Dr. White,Nurse B,Monday,2025-03-10 11:00:00,2025-03-10 11:14:00,48,8,28,22,140,Y,N,18,N,246,14.0
+S0281,68,35.8,None,ACL Repair,Dr. Nguyen,Dr. Brown,Nurse D,Friday,2025-03-10 08:00:00,2025-03-10 08:41:00,59,9,30,22,64,Y,Y,0,N,184,41.0
+S0282,47,26.0,Hypertension,ACL Repair,Dr. Patel,Dr. Green,Nurse D,Tuesday,2025-03-10 07:00:00,2025-03-10 07:00:00,51,13,22,25,66,Y,Y,0,N,177,0.0
+S0283,48,32.0,Obesity,Knee Replacement,Dr. Johnson,Dr. White,Nurse B,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,49,9,28,26,99,Y,Y,0,N,211,0.0
+S0284,59,28.7,Hypertension,Hip Replacement,Dr. Nguyen,Dr. White,Nurse E,Wednesday,2025-03-10 14:00:00,2025-03-10 14:00:00,46,10,28,24,106,Y,Y,0,N,214,0.0
+S0285,64,33.0,Hypertension,Hip Replacement,Dr. Nguyen,Dr. Brown,Nurse E,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,62,9,30,22,104,Y,Y,0,N,227,0.0
+S0286,65,36.1,Obesity,Shoulder Repair,Dr. Patel,Dr. Green,Nurse C,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,50,8,22,29,104,Y,Y,0,N,213,0.0
+S0287,59,31.5,Diabetes,Knee Replacement,Dr. Patel,Dr. Smith,Nurse D,Tuesday,2025-03-10 15:00:00,2025-03-10 15:40:00,65,13,25,22,95,Y,Y,0,N,220,40.0
+S0288,55,25.1,None,Shoulder Repair,Dr. Kim,Dr. White,Nurse D,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,37,10,28,22,100,Y,Y,0,N,197,0.0
+S0289,74,36.2,Obesity,Shoulder Repair,Dr. Kim,Dr. Black,Nurse D,Wednesday,2025-03-10 13:00:00,2025-03-10 13:00:00,63,8,26,28,99,Y,Y,0,N,224,0.0
+S0290,47,36.0,Diabetes,Spine Fusion,Dr. Johnson,Dr. Green,Nurse A,Friday,2025-03-10 13:00:00,2025-03-10 13:00:00,65,8,22,23,152,Y,Y,0,N,270,0.0
+S0291,63,29.4,Obesity,ACL Repair,Dr. Johnson,Dr. Smith,Nurse E,Tuesday,2025-03-10 14:00:00,2025-03-10 14:00:00,54,9,25,23,68,Y,Y,0,N,179,0.0
+S0292,79,24.2,Obesity,ACL Repair,Dr. Nguyen,Dr. Smith,Nurse B,Thursday,2025-03-10 16:00:00,2025-03-10 16:22:00,54,9,25,19,70,Y,Y,0,N,177,22.0
+S0293,55,33.5,None,Knee Replacement,Dr. Kim,Dr. Green,Nurse C,Monday,2025-03-10 15:00:00,2025-03-10 15:13:00,59,10,22,26,81,Y,Y,0,N,198,13.0
+S0294,81,35.9,Diabetes,Hip Replacement,Dr. Lee,Dr. Brown,Nurse A,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,59,12,30,30,104,Y,Y,0,N,235,0.0
+S0295,45,32.0,Heart Disease,Knee Replacement,Dr. Nguyen,Dr. Green,Nurse D,Friday,2025-03-10 07:00:00,2025-03-10 07:00:00,60,11,22,23,95,Y,Y,0,N,211,0.0
+S0296,83,31.6,Diabetes,Spine Fusion,Dr. Patel,Dr. Black,Nurse E,Tuesday,2025-03-10 07:00:00,2025-03-10 07:00:00,46,13,26,20,141,Y,Y,0,Y,246,0.0
+S0297,81,35.4,Heart Disease,ACL Repair,Dr. Kim,Dr. Smith,Nurse A,Thursday,2025-03-10 09:00:00,2025-03-10 09:00:00,54,10,25,27,61,Y,Y,0,N,177,0.0
+S0298,50,34.3,Heart Disease,ACL Repair,Dr. Nguyen,Dr. Smith,Nurse D,Friday,2025-03-10 08:00:00,2025-03-10 08:00:00,49,9,25,24,63,Y,Y,0,N,170,0.0
+S0299,84,22.9,Hypertension,Spine Fusion,Dr. Kim,Dr. Green,Nurse E,Wednesday,2025-03-10 13:00:00,2025-03-10 13:00:00,50,12,22,23,159,Y,Y,0,Y,266,0.0
+S0300,67,36.8,Hypertension,Spine Fusion,Dr. Nguyen,Dr. Black,Nurse D,Thursday,2025-03-10 09:00:00,2025-03-10 09:24:00,54,11,26,20,154,Y,Y,0,N,265,24.0
+S0301,52,33.8,Diabetes,Spine Fusion,Dr. Nguyen,Dr. Green,Nurse A,Wednesday,2025-03-10 12:00:00,2025-03-10 12:00:00,65,11,22,20,149,Y,Y,0,N,267,0.0
+S0302,49,26.9,Hypertension,Spine Fusion,Dr. Patel,Dr. Smith,Nurse A,Wednesday,2025-03-10 12:00:00,2025-03-10 12:00:00,58,8,25,17,150,Y,Y,0,N,258,0.0
+S0303,75,36.7,None,Hip Replacement,Dr. Nguyen,Dr. Brown,Nurse D,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,53,8,30,28,110,Y,Y,0,Y,229,0.0
+S0304,81,33.0,Heart Disease,Knee Replacement,Dr. Lee,Dr. White,Nurse A,Wednesday,2025-03-10 13:00:00,2025-03-10 13:00:00,50,14,28,22,89,Y,Y,0,N,203,0.0
+S0305,65,33.4,Heart Disease,Shoulder Repair,Dr. Kim,Dr. Green,Nurse B,Wednesday,2025-03-10 14:00:00,2025-03-10 14:00:00,54,11,22,28,88,Y,Y,0,N,203,0.0
+S0306,47,34.4,None,Shoulder Repair,Dr. Johnson,Dr. Smith,Nurse D,Friday,2025-03-10 09:00:00,2025-03-10 09:00:00,55,12,25,25,88,Y,Y,0,N,205,0.0
+S0307,53,25.3,None,Shoulder Repair,Dr. Nguyen,Dr. Black,Nurse A,Monday,2025-03-10 11:00:00,2025-03-10 11:25:00,49,8,26,16,94,Y,N,19,N,193,25.0
+S0308,58,27.1,Diabetes,ACL Repair,Dr. Patel,Dr. Black,Nurse C,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,45,12,26,16,86,N,Y,0,N,185,0.0
+S0309,58,30.7,Hypertension,ACL Repair,Dr. Patel,Dr. Brown,Nurse C,Friday,2025-03-10 10:00:00,2025-03-10 10:00:00,54,13,30,28,54,Y,N,11,N,179,0.0
+S0310,48,23.4,Obesity,Hip Replacement,Dr. Johnson,Dr. Black,Nurse D,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,46,9,26,22,102,Y,Y,0,N,205,0.0
+S0311,74,23.6,Heart Disease,Shoulder Repair,Dr. Nguyen,Dr. Brown,Nurse B,Tuesday,2025-03-10 16:00:00,2025-03-10 16:00:00,51,14,30,17,95,Y,Y,0,N,207,0.0
+S0312,65,29.3,None,Knee Replacement,Dr. Nguyen,Dr. Smith,Nurse C,Thursday,2025-03-10 14:00:00,2025-03-10 14:28:00,46,10,25,23,83,Y,Y,0,N,187,28.0
+S0313,49,34.7,Hypertension,Shoulder Repair,Dr. Nguyen,Dr. Black,Nurse D,Tuesday,2025-03-10 16:00:00,2025-03-10 16:00:00,50,15,26,26,116,N,Y,0,N,233,0.0
+S0314,72,31.1,Heart Disease,Spine Fusion,Dr. Lee,Dr. Brown,Nurse A,Friday,2025-03-10 14:00:00,2025-03-10 14:00:00,64,15,30,25,154,Y,N,22,Y,288,0.0
+S0315,49,31.6,Multiple,Spine Fusion,Dr. Nguyen,Dr. White,Nurse D,Monday,2025-03-10 08:00:00,2025-03-10 08:07:00,63,8,28,22,154,Y,Y,0,N,275,7.0
+S0316,81,29.2,Diabetes,ACL Repair,Dr. Patel,Dr. Black,Nurse C,Thursday,2025-03-10 12:00:00,2025-03-10 12:10:00,59,14,26,17,51,Y,Y,0,N,167,10.0
+S0317,80,37.5,None,Spine Fusion,Dr. Patel,Dr. Smith,Nurse C,Monday,2025-03-10 10:00:00,2025-03-10 10:14:00,52,13,25,26,153,Y,Y,0,Y,269,14.0
+S0318,56,29.6,Diabetes,Spine Fusion,Dr. Nguyen,Dr. White,Nurse D,Tuesday,2025-03-10 11:00:00,2025-03-10 11:18:00,44,8,28,16,144,Y,Y,0,N,240,18.0
+S0319,76,32.5,Diabetes,Knee Replacement,Dr. Lee,Dr. Green,Nurse D,Friday,2025-03-10 13:00:00,2025-03-10 13:00:00,59,14,22,28,92,Y,Y,0,N,215,0.0
+S0320,83,22.1,Obesity,Hip Replacement,Dr. Johnson,Dr. White,Nurse D,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,41,15,28,20,115,Y,Y,0,N,219,0.0
+S0321,78,37.7,Heart Disease,Shoulder Repair,Dr. Johnson,Dr. Smith,Nurse E,Friday,2025-03-10 08:00:00,2025-03-10 08:00:00,65,9,25,30,103,Y,Y,0,N,232,0.0
+S0322,66,30.6,None,Shoulder Repair,Dr. Nguyen,Dr. Black,Nurse D,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,49,12,26,22,113,N,Y,0,N,222,0.0
+S0323,48,32.1,Hypertension,Hip Replacement,Dr. Johnson,Dr. Smith,Nurse C,Friday,2025-03-10 07:00:00,2025-03-10 07:00:00,47,10,25,28,122,N,N,18,N,232,0.0
+S0324,61,22.2,None,Spine Fusion,Dr. Lee,Dr. Black,Nurse B,Thursday,2025-03-10 12:00:00,2025-03-10 12:26:00,42,15,26,17,141,Y,Y,0,N,241,26.0
+S0325,50,37.5,Hypertension,Hip Replacement,Dr. Nguyen,Dr. Green,Nurse D,Tuesday,2025-03-10 14:00:00,2025-03-10 14:00:00,50,11,22,29,111,Y,Y,0,N,223,0.0
+S0326,61,34.1,None,Knee Replacement,Dr. Lee,Dr. Green,Nurse D,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,57,11,22,26,92,Y,Y,0,N,208,0.0
+S0327,54,30.5,Obesity,Knee Replacement,Dr. Patel,Dr. Green,Nurse D,Wednesday,2025-03-10 15:00:00,2025-03-10 15:00:00,46,9,22,28,93,Y,Y,0,N,198,0.0
+S0328,62,27.4,Heart Disease,Knee Replacement,Dr. Patel,Dr. Black,Nurse D,Thursday,2025-03-10 10:00:00,2025-03-10 10:00:00,58,11,26,23,85,Y,Y,0,N,203,0.0
+S0329,45,32.8,None,Knee Replacement,Dr. Nguyen,Dr. Smith,Nurse E,Monday,2025-03-10 14:00:00,2025-03-10 14:09:00,48,11,25,20,92,N,Y,0,N,196,9.0
+S0330,58,37.2,Multiple,Knee Replacement,Dr. Kim,Dr. Smith,Nurse E,Tuesday,2025-03-10 13:00:00,2025-03-10 13:00:00,65,10,25,21,88,Y,Y,0,N,209,0.0
+S0331,49,32.2,Heart Disease,Shoulder Repair,Dr. Patel,Dr. White,Nurse B,Monday,2025-03-10 11:00:00,2025-03-10 11:11:00,57,13,28,20,93,Y,N,12,N,211,11.0
+S0332,57,31.8,Diabetes,Shoulder Repair,Dr. Kim,Dr. Brown,Nurse E,Thursday,2025-03-10 10:00:00,2025-03-10 10:00:00,48,15,30,24,87,Y,Y,0,N,204,0.0
+S0333,61,34.4,None,Shoulder Repair,Dr. Lee,Dr. Smith,Nurse A,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,50,14,25,29,117,N,Y,0,N,235,0.0
+S0334,49,30.6,None,Shoulder Repair,Dr. Nguyen,Dr. Smith,Nurse E,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,49,14,25,20,105,Y,N,27,N,213,0.0
+S0335,66,23.3,Obesity,ACL Repair,Dr. Lee,Dr. Brown,Nurse E,Monday,2025-03-10 13:00:00,2025-03-10 13:40:00,43,13,30,22,84,N,Y,0,N,192,40.0
+S0336,57,22.4,Hypertension,Hip Replacement,Dr. Nguyen,Dr. Green,Nurse A,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,54,8,22,15,110,Y,Y,0,Y,209,0.0
+S0337,52,25.4,Multiple,Spine Fusion,Dr. Nguyen,Dr. Black,Nurse B,Friday,2025-03-10 10:00:00,2025-03-10 10:12:00,44,15,26,25,160,N,N,30,N,270,12.0
+S0338,56,32.1,Heart Disease,Knee Replacement,Dr. Nguyen,Dr. Black,Nurse B,Friday,2025-03-10 08:00:00,2025-03-10 08:16:00,48,15,26,29,87,Y,N,16,N,205,16.0
+S0339,70,27.2,Multiple,Spine Fusion,Dr. Johnson,Dr. Brown,Nurse C,Tuesday,2025-03-10 07:00:00,2025-03-10 07:00:00,50,9,30,16,153,Y,Y,0,N,258,0.0
+S0340,68,30.9,Obesity,Hip Replacement,Dr. Johnson,Dr. Smith,Nurse B,Monday,2025-03-10 16:00:00,2025-03-10 16:07:00,45,15,25,21,114,N,Y,0,N,220,7.0
+S0341,63,28.7,Obesity,Hip Replacement,Dr. Lee,Dr. Brown,Nurse C,Friday,2025-03-10 14:00:00,2025-03-10 14:00:00,45,8,30,24,115,Y,Y,0,N,222,0.0
+S0342,64,27.6,None,Spine Fusion,Dr. Lee,Dr. Brown,Nurse A,Friday,2025-03-10 08:00:00,2025-03-10 08:00:00,52,11,30,22,146,Y,N,16,N,261,0.0
+S0343,54,33.0,Obesity,Shoulder Repair,Dr. Lee,Dr. Brown,Nurse A,Monday,2025-03-10 12:00:00,2025-03-10 12:11:00,53,13,30,29,99,Y,N,11,N,224,11.0
+S0344,56,24.5,None,Shoulder Repair,Dr. Johnson,Dr. Smith,Nurse A,Tuesday,2025-03-10 14:00:00,2025-03-10 14:00:00,45,14,25,18,95,Y,Y,0,N,197,0.0
+S0345,52,27.2,None,Hip Replacement,Dr. Nguyen,Dr. Brown,Nurse D,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,50,8,30,21,119,Y,Y,0,N,228,0.0
+S0346,69,28.0,Obesity,Hip Replacement,Dr. Patel,Dr. White,Nurse B,Wednesday,2025-03-10 09:00:00,2025-03-10 09:00:00,58,8,28,19,114,Y,Y,0,N,227,0.0
+S0347,55,34.2,Diabetes,ACL Repair,Dr. Johnson,Dr. Brown,Nurse E,Tuesday,2025-03-10 16:00:00,2025-03-10 16:24:00,47,14,30,28,56,Y,Y,0,N,175,24.0
+S0348,74,26.5,Multiple,Shoulder Repair,Dr. Lee,Dr. Brown,Nurse C,Thursday,2025-03-10 16:00:00,2025-03-10 16:00:00,58,10,30,24,98,Y,Y,0,N,220,0.0
+S0349,47,37.9,Multiple,Spine Fusion,Dr. Kim,Dr. Green,Nurse E,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,48,15,22,27,157,Y,Y,0,N,269,0.0
+S0350,71,37.2,Diabetes,ACL Repair,Dr. Patel,Dr. Brown,Nurse A,Monday,2025-03-10 14:00:00,2025-03-10 14:07:00,59,8,30,27,54,Y,Y,0,N,178,7.0
+S0351,68,32.0,Multiple,Knee Replacement,Dr. Kim,Dr. Green,Nurse C,Friday,2025-03-10 07:00:00,2025-03-10 07:00:00,53,11,22,30,96,N,Y,0,N,212,0.0
+S0352,68,36.2,None,Shoulder Repair,Dr. Patel,Dr. Green,Nurse E,Monday,2025-03-10 12:00:00,2025-03-10 12:15:00,57,9,22,28,91,Y,N,20,N,207,15.0
+S0353,52,32.4,Multiple,Spine Fusion,Dr. Lee,Dr. Brown,Nurse C,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,58,12,30,20,169,N,Y,0,N,289,0.0
+S0354,78,35.3,Obesity,Spine Fusion,Dr. Johnson,Dr. White,Nurse D,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,47,11,28,27,161,N,N,12,Y,274,0.0
+S0355,51,24.6,None,Hip Replacement,Dr. Nguyen,Dr. Brown,Nurse B,Friday,2025-03-10 07:00:00,2025-03-10 07:00:00,52,10,30,22,114,Y,Y,0,Y,228,0.0
+S0356,57,23.0,Diabetes,Spine Fusion,Dr. Patel,Dr. Green,Nurse E,Wednesday,2025-03-10 12:00:00,2025-03-10 12:00:00,56,15,22,22,144,Y,Y,0,N,259,0.0
+S0357,64,24.7,Heart Disease,Hip Replacement,Dr. Nguyen,Dr. White,Nurse C,Monday,2025-03-10 09:00:00,2025-03-10 09:12:00,45,10,28,23,105,Y,Y,0,N,211,12.0
+S0358,54,24.6,None,Knee Replacement,Dr. Patel,Dr. Black,Nurse B,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,41,8,26,25,91,Y,Y,0,N,191,0.0
+S0359,73,30.6,Diabetes,Spine Fusion,Dr. Patel,Dr. Smith,Nurse A,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,59,13,25,22,174,N,Y,0,Y,293,0.0
+S0360,66,32.4,Heart Disease,Shoulder Repair,Dr. Patel,Dr. Black,Nurse B,Friday,2025-03-10 14:00:00,2025-03-10 14:00:00,48,15,26,20,102,Y,N,10,N,211,0.0
+S0361,59,29.1,None,ACL Repair,Dr. Kim,Dr. Black,Nurse B,Friday,2025-03-10 15:00:00,2025-03-10 15:00:00,43,11,26,15,69,N,Y,0,N,164,0.0
+S0362,76,27.1,Hypertension,Spine Fusion,Dr. Kim,Dr. White,Nurse D,Tuesday,2025-03-10 13:00:00,2025-03-10 13:00:00,51,8,28,19,149,Y,Y,0,Y,255,0.0
+S0363,73,36.0,None,Hip Replacement,Dr. Nguyen,Dr. Green,Nurse D,Wednesday,2025-03-10 09:00:00,2025-03-10 09:37:00,53,10,22,29,104,Y,Y,0,N,218,37.0
+S0364,75,37.8,Hypertension,ACL Repair,Dr. Kim,Dr. Black,Nurse D,Monday,2025-03-10 07:00:00,2025-03-10 07:09:00,58,10,26,28,68,Y,Y,0,N,190,9.0
+S0365,56,35.3,Heart Disease,Spine Fusion,Dr. Nguyen,Dr. Smith,Nurse C,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,59,11,25,20,144,Y,N,30,N,259,0.0
+S0366,75,24.0,Multiple,ACL Repair,Dr. Nguyen,Dr. Brown,Nurse D,Tuesday,2025-03-10 07:00:00,2025-03-10 07:00:00,48,15,30,16,61,Y,Y,0,N,170,0.0
+S0367,81,29.0,Heart Disease,Shoulder Repair,Dr. Kim,Dr. White,Nurse E,Friday,2025-03-10 07:00:00,2025-03-10 07:00:00,45,8,28,17,89,Y,Y,0,N,187,0.0
+S0368,68,28.7,Heart Disease,Knee Replacement,Dr. Patel,Dr. White,Nurse E,Monday,2025-03-10 15:00:00,2025-03-10 15:15:00,45,9,28,24,97,Y,Y,0,N,203,15.0
+S0369,64,26.3,Multiple,ACL Repair,Dr. Kim,Dr. Black,Nurse E,Wednesday,2025-03-10 09:00:00,2025-03-10 09:00:00,56,12,26,20,63,Y,Y,0,N,177,0.0
+S0370,55,23.6,Diabetes,Spine Fusion,Dr. Lee,Dr. Brown,Nurse E,Friday,2025-03-10 15:00:00,2025-03-10 15:45:00,43,14,30,22,143,Y,Y,0,N,252,45.0
+S0371,75,27.6,Multiple,ACL Repair,Dr. Lee,Dr. Green,Nurse E,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,49,8,22,16,54,Y,Y,0,N,149,0.0
+S0372,58,24.1,None,Shoulder Repair,Dr. Kim,Dr. Smith,Nurse A,Thursday,2025-03-10 13:00:00,2025-03-10 13:00:00,38,8,25,25,86,Y,Y,0,N,182,0.0
+S0373,61,22.7,Heart Disease,Knee Replacement,Dr. Kim,Dr. Smith,Nurse E,Tuesday,2025-03-10 16:00:00,2025-03-10 16:21:00,51,8,25,16,88,Y,Y,0,N,188,21.0
+S0374,67,27.6,Hypertension,Spine Fusion,Dr. Lee,Dr. Black,Nurse E,Monday,2025-03-10 08:00:00,2025-03-10 08:23:00,46,11,26,19,157,Y,N,13,N,259,23.0
+S0375,77,35.6,Obesity,ACL Repair,Dr. Johnson,Dr. Brown,Nurse D,Monday,2025-03-10 09:00:00,2025-03-10 09:11:00,58,11,30,28,53,Y,Y,0,N,180,11.0
+S0376,74,23.8,Diabetes,Shoulder Repair,Dr. Patel,Dr. White,Nurse E,Monday,2025-03-10 08:00:00,2025-03-10 08:06:00,52,12,28,22,94,Y,Y,0,N,208,6.0
+S0377,59,30.9,Heart Disease,Shoulder Repair,Dr. Lee,Dr. Smith,Nurse D,Wednesday,2025-03-10 09:00:00,2025-03-10 09:00:00,60,9,25,26,87,Y,Y,0,N,207,0.0
+S0378,70,28.4,Hypertension,Knee Replacement,Dr. Lee,Dr. Smith,Nurse C,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,52,9,25,18,95,Y,Y,0,N,199,0.0
+S0379,82,31.5,Multiple,Shoulder Repair,Dr. Patel,Dr. Green,Nurse E,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,49,15,22,21,100,Y,Y,0,N,207,0.0
+S0380,85,37.1,None,Knee Replacement,Dr. Kim,Dr. Smith,Nurse D,Monday,2025-03-10 09:00:00,2025-03-10 09:15:00,50,10,25,24,83,Y,Y,0,N,192,15.0
+S0381,78,34.3,Obesity,Hip Replacement,Dr. Patel,Dr. Green,Nurse D,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,62,8,22,20,103,Y,Y,0,N,215,0.0
+S0382,69,29.1,None,Knee Replacement,Dr. Lee,Dr. Black,Nurse C,Tuesday,2025-03-10 14:00:00,2025-03-10 14:00:00,44,14,26,22,98,Y,Y,0,N,204,0.0
+S0383,80,33.0,Hypertension,Shoulder Repair,Dr. Nguyen,Dr. Black,Nurse B,Friday,2025-03-10 07:00:00,2025-03-10 07:00:00,60,14,26,29,94,Y,Y,0,Y,223,0.0
+S0384,47,24.1,Heart Disease,ACL Repair,Dr. Johnson,Dr. Smith,Nurse C,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,51,14,25,20,70,N,Y,0,N,180,0.0
+S0385,64,31.5,Multiple,Knee Replacement,Dr. Patel,Dr. Smith,Nurse C,Tuesday,2025-03-10 07:00:00,2025-03-10 07:00:00,46,15,25,30,98,Y,Y,0,N,214,0.0
+S0386,71,26.3,Multiple,Shoulder Repair,Dr. Johnson,Dr. Smith,Nurse C,Thursday,2025-03-10 16:00:00,2025-03-10 16:00:00,58,9,25,22,91,Y,Y,0,N,205,0.0
+S0387,77,35.0,Multiple,ACL Repair,Dr. Lee,Dr. Black,Nurse C,Wednesday,2025-03-10 13:00:00,2025-03-10 13:00:00,65,9,26,28,58,Y,Y,0,Y,186,0.0
+S0388,81,28.4,Diabetes,Spine Fusion,Dr. Kim,Dr. Black,Nurse A,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,58,15,26,21,142,Y,Y,0,Y,262,0.0
+S0389,64,30.1,Heart Disease,Shoulder Repair,Dr. Johnson,Dr. White,Nurse B,Thursday,2025-03-10 13:00:00,2025-03-10 13:00:00,61,15,28,30,90,Y,Y,0,N,224,0.0
+S0390,85,33.3,Diabetes,Spine Fusion,Dr. Nguyen,Dr. Brown,Nurse D,Wednesday,2025-03-10 15:00:00,2025-03-10 15:37:00,63,8,30,28,154,Y,Y,0,Y,283,37.0
+S0391,54,25.8,Multiple,ACL Repair,Dr. Nguyen,Dr. Green,Nurse C,Monday,2025-03-10 10:00:00,2025-03-10 10:36:00,60,10,22,19,57,Y,Y,0,N,168,36.0
+S0392,57,22.4,Heart Disease,Shoulder Repair,Dr. Nguyen,Dr. Black,Nurse D,Thursday,2025-03-10 07:00:00,2025-03-10 07:00:00,48,10,26,15,93,Y,Y,0,N,192,0.0
+S0393,56,32.3,None,Shoulder Repair,Dr. Kim,Dr. Smith,Nurse A,Wednesday,2025-03-10 16:00:00,2025-03-10 16:00:00,42,14,25,25,87,Y,Y,0,N,193,0.0
+S0394,53,25.8,Hypertension,Spine Fusion,Dr. Kim,Dr. Black,Nurse E,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,42,11,26,24,150,Y,Y,0,N,253,0.0
+S0395,69,34.9,Multiple,Hip Replacement,Dr. Nguyen,Dr. Brown,Nurse B,Monday,2025-03-10 09:00:00,2025-03-10 09:09:00,59,14,30,24,101,Y,Y,0,N,228,9.0
+S0396,52,27.1,Obesity,Shoulder Repair,Dr. Lee,Dr. White,Nurse B,Wednesday,2025-03-10 14:00:00,2025-03-10 14:29:00,40,8,28,25,86,Y,Y,0,N,187,29.0
+S0397,60,26.0,Obesity,ACL Repair,Dr. Patel,Dr. Smith,Nurse E,Tuesday,2025-03-10 14:00:00,2025-03-10 14:00:00,52,12,25,19,72,N,Y,0,N,180,0.0
+S0398,55,36.7,Multiple,ACL Repair,Dr. Nguyen,Dr. Smith,Nurse C,Monday,2025-03-10 14:00:00,2025-03-10 14:11:00,55,14,25,21,58,Y,Y,0,N,173,11.0
+S0399,83,33.7,Hypertension,ACL Repair,Dr. Nguyen,Dr. Smith,Nurse A,Tuesday,2025-03-10 14:00:00,2025-03-10 14:18:00,45,14,25,23,60,Y,Y,0,N,167,18.0
+S0400,52,24.5,Hypertension,Hip Replacement,Dr. Johnson,Dr. Green,Nurse C,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,44,12,22,17,110,Y,Y,0,N,205,0.0
+S0401,57,23.4,Heart Disease,Hip Replacement,Dr. Nguyen,Dr. Green,Nurse E,Tuesday,2025-03-10 07:00:00,2025-03-10 07:45:00,60,11,22,16,106,Y,Y,0,N,215,45.0
+S0402,55,22.8,Hypertension,Shoulder Repair,Dr. Johnson,Dr. White,Nurse B,Monday,2025-03-10 12:00:00,2025-03-10 12:14:00,43,8,28,23,99,Y,Y,0,N,201,14.0
+S0403,59,33.4,Diabetes,ACL Repair,Dr. Patel,Dr. Green,Nurse D,Tuesday,2025-03-10 13:00:00,2025-03-10 13:23:00,54,11,22,26,54,Y,Y,0,Y,167,23.0
+S0404,61,25.8,Obesity,Hip Replacement,Dr. Patel,Dr. Black,Nurse D,Monday,2025-03-10 07:00:00,2025-03-10 07:10:00,52,11,26,21,119,Y,N,13,N,229,10.0
+S0405,48,27.3,Diabetes,Shoulder Repair,Dr. Patel,Dr. Black,Nurse E,Monday,2025-03-10 07:00:00,2025-03-10 07:14:00,52,12,26,21,89,Y,Y,0,N,200,14.0
+S0406,82,24.9,Diabetes,Spine Fusion,Dr. Nguyen,Dr. White,Nurse D,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,56,14,28,17,150,Y,Y,0,Y,265,0.0
+S0407,47,37.7,Obesity,ACL Repair,Dr. Patel,Dr. Green,Nurse C,Wednesday,2025-03-10 16:00:00,2025-03-10 16:26:00,61,13,22,26,60,Y,Y,0,N,182,26.0
+S0408,76,34.2,Diabetes,Spine Fusion,Dr. Nguyen,Dr. Smith,Nurse B,Tuesday,2025-03-10 07:00:00,2025-03-10 07:00:00,46,15,25,24,154,Y,Y,0,Y,264,0.0
+S0409,72,23.9,Obesity,Knee Replacement,Dr. Nguyen,Dr. White,Nurse E,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,44,9,28,20,99,N,Y,0,N,200,0.0
+S0410,77,35.2,Hypertension,Spine Fusion,Dr. Lee,Dr. Black,Nurse A,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,47,11,26,27,150,Y,N,13,Y,261,0.0
+S0411,70,28.0,None,ACL Repair,Dr. Lee,Dr. Smith,Nurse A,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,43,8,25,20,70,Y,Y,0,N,166,0.0
+S0412,73,27.2,Multiple,Spine Fusion,Dr. Lee,Dr. Brown,Nurse A,Wednesday,2025-03-10 12:00:00,2025-03-10 12:14:00,57,14,30,16,145,Y,Y,0,Y,262,14.0
+S0413,60,37.4,Obesity,Knee Replacement,Dr. Kim,Dr. Brown,Nurse B,Thursday,2025-03-10 13:00:00,2025-03-10 13:00:00,65,10,30,21,93,Y,Y,0,N,219,0.0
+S0414,64,36.5,Hypertension,Hip Replacement,Dr. Patel,Dr. Smith,Nurse C,Friday,2025-03-10 10:00:00,2025-03-10 10:00:00,57,15,25,24,113,Y,N,23,N,234,0.0
+S0415,84,25.0,Multiple,Shoulder Repair,Dr. Kim,Dr. Smith,Nurse E,Wednesday,2025-03-10 14:00:00,2025-03-10 14:00:00,60,10,25,22,105,Y,Y,0,N,222,0.0
+S0416,63,29.5,None,Shoulder Repair,Dr. Patel,Dr. Brown,Nurse B,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,44,8,30,23,111,N,Y,0,N,216,0.0
+S0417,72,28.6,Obesity,Spine Fusion,Dr. Patel,Dr. White,Nurse C,Friday,2025-03-10 08:00:00,2025-03-10 08:00:00,40,9,28,25,145,Y,Y,0,Y,247,0.0
+S0418,47,23.3,Multiple,ACL Repair,Dr. Patel,Dr. Black,Nurse D,Thursday,2025-03-10 16:00:00,2025-03-10 16:31:00,45,11,26,17,77,N,Y,0,N,176,31.0
+S0419,51,28.9,None,Knee Replacement,Dr. Nguyen,Dr. Smith,Nurse A,Tuesday,2025-03-10 14:00:00,2025-03-10 14:00:00,47,15,25,19,99,Y,Y,0,N,205,0.0
+S0420,70,34.9,None,Hip Replacement,Dr. Lee,Dr. Smith,Nurse B,Monday,2025-03-10 07:00:00,2025-03-10 07:27:00,46,15,25,30,107,Y,Y,0,N,223,27.0
+S0421,79,25.1,Heart Disease,Shoulder Repair,Dr. Lee,Dr. Green,Nurse D,Monday,2025-03-10 08:00:00,2025-03-10 08:07:00,54,15,22,22,120,N,N,19,N,233,7.0
+S0422,70,22.8,None,Knee Replacement,Dr. Nguyen,Dr. Green,Nurse D,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,44,8,22,22,96,Y,Y,0,N,192,0.0
+S0423,76,25.7,None,Spine Fusion,Dr. Kim,Dr. Green,Nurse E,Wednesday,2025-03-10 15:00:00,2025-03-10 15:00:00,55,14,22,22,159,Y,Y,0,Y,272,0.0
+S0424,67,29.2,Obesity,Knee Replacement,Dr. Lee,Dr. White,Nurse B,Thursday,2025-03-10 12:00:00,2025-03-10 12:00:00,56,11,28,24,90,Y,Y,0,N,209,0.0
+S0425,74,24.1,Heart Disease,Shoulder Repair,Dr. Nguyen,Dr. White,Nurse D,Tuesday,2025-03-10 16:00:00,2025-03-10 16:00:00,42,15,28,17,90,Y,Y,0,N,192,0.0
+S0426,51,34.7,Obesity,ACL Repair,Dr. Lee,Dr. Brown,Nurse E,Monday,2025-03-10 07:00:00,2025-03-10 07:09:00,56,10,30,22,66,Y,N,12,N,184,9.0
+S0427,52,31.9,None,Spine Fusion,Dr. Lee,Dr. Green,Nurse C,Wednesday,2025-03-10 12:00:00,2025-03-10 12:45:00,48,10,22,28,143,Y,Y,0,N,251,45.0
+S0428,73,34.8,None,Knee Replacement,Dr. Johnson,Dr. Black,Nurse A,Friday,2025-03-10 07:00:00,2025-03-10 07:00:00,45,9,26,23,85,Y,Y,0,N,188,0.0
+S0429,77,30.0,None,Hip Replacement,Dr. Patel,Dr. White,Nurse B,Monday,2025-03-10 10:00:00,2025-03-10 10:11:00,35,11,28,22,116,Y,N,18,N,212,11.0
+S0430,71,27.8,Multiple,Hip Replacement,Dr. Lee,Dr. Black,Nurse D,Tuesday,2025-03-10 09:00:00,2025-03-10 09:36:00,53,15,26,23,111,Y,Y,0,N,228,36.0
+S0431,73,24.3,None,Spine Fusion,Dr. Kim,Dr. Smith,Nurse C,Wednesday,2025-03-10 13:00:00,2025-03-10 13:20:00,48,8,25,21,160,Y,Y,0,Y,262,20.0
+S0432,54,36.4,None,Spine Fusion,Dr. Patel,Dr. Green,Nurse D,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,50,13,22,20,156,Y,Y,0,N,261,0.0
+S0433,70,29.1,Diabetes,Spine Fusion,Dr. Johnson,Dr. Black,Nurse D,Wednesday,2025-03-10 13:00:00,2025-03-10 13:00:00,49,9,26,15,152,Y,Y,0,N,251,0.0
+S0434,53,30.3,Hypertension,ACL Repair,Dr. Lee,Dr. Smith,Nurse E,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,65,10,25,20,86,N,N,19,N,206,0.0
+S0435,77,23.8,None,ACL Repair,Dr. Patel,Dr. Black,Nurse C,Monday,2025-03-10 07:00:00,2025-03-10 07:06:00,49,12,26,24,64,Y,Y,0,N,175,6.0
+S0436,82,31.0,Multiple,Spine Fusion,Dr. Johnson,Dr. Brown,Nurse C,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,63,10,30,26,147,Y,Y,0,Y,276,0.0
+S0437,51,27.2,Hypertension,Hip Replacement,Dr. Patel,Dr. Green,Nurse A,Tuesday,2025-03-10 13:00:00,2025-03-10 13:15:00,42,8,22,21,115,Y,Y,0,N,208,15.0
+S0438,49,27.9,Hypertension,Shoulder Repair,Dr. Johnson,Dr. Black,Nurse E,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,60,14,26,22,100,Y,Y,0,N,222,0.0
+S0439,71,35.2,Diabetes,Spine Fusion,Dr. Lee,Dr. Green,Nurse D,Tuesday,2025-03-10 15:00:00,2025-03-10 15:17:00,51,15,22,27,169,N,Y,0,Y,284,17.0
+S0440,68,36.7,None,Spine Fusion,Dr. Nguyen,Dr. Smith,Nurse A,Wednesday,2025-03-10 16:00:00,2025-03-10 16:00:00,56,10,25,21,151,Y,Y,0,N,263,0.0
+S0441,76,22.4,Diabetes,Hip Replacement,Dr. Johnson,Dr. Green,Nurse A,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,55,8,22,16,102,Y,Y,0,N,203,0.0
+S0442,71,29.7,Heart Disease,Spine Fusion,Dr. Nguyen,Dr. White,Nurse D,Thursday,2025-03-10 16:00:00,2025-03-10 16:00:00,44,15,28,22,144,Y,Y,0,Y,253,0.0
+S0443,65,23.4,Hypertension,Spine Fusion,Dr. Nguyen,Dr. Green,Nurse B,Thursday,2025-03-10 12:00:00,2025-03-10 12:00:00,54,12,22,25,152,N,Y,0,N,265,0.0
+S0444,64,31.0,None,Spine Fusion,Dr. Kim,Dr. Brown,Nurse E,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,58,11,30,27,140,Y,N,27,N,266,0.0
+S0445,46,26.4,Diabetes,Hip Replacement,Dr. Johnson,Dr. Green,Nurse A,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,58,8,22,22,100,Y,Y,0,N,210,0.0
+S0446,46,35.8,Heart Disease,Shoulder Repair,Dr. Patel,Dr. Smith,Nurse A,Monday,2025-03-10 15:00:00,2025-03-10 15:07:00,50,12,25,21,98,Y,Y,0,N,206,7.0
+S0447,65,24.9,Multiple,Knee Replacement,Dr. Patel,Dr. Green,Nurse A,Wednesday,2025-03-10 09:00:00,2025-03-10 09:00:00,50,12,22,21,83,Y,Y,0,N,188,0.0
+S0448,60,34.0,Hypertension,Hip Replacement,Dr. Nguyen,Dr. Black,Nurse E,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,55,15,26,28,115,Y,Y,0,Y,239,0.0
+S0449,85,25.7,None,ACL Repair,Dr. Johnson,Dr. Black,Nurse A,Tuesday,2025-03-10 15:00:00,2025-03-10 15:00:00,39,12,26,24,52,Y,Y,0,N,153,0.0
+S0450,77,25.3,Diabetes,ACL Repair,Dr. Johnson,Dr. Brown,Nurse B,Friday,2025-03-10 13:00:00,2025-03-10 13:45:00,54,8,30,15,69,Y,N,15,Y,176,45.0
+S0451,75,26.4,Heart Disease,Shoulder Repair,Dr. Patel,Dr. Brown,Nurse E,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,57,9,30,19,100,N,Y,0,N,215,0.0
+S0452,72,25.4,Hypertension,ACL Repair,Dr. Patel,Dr. White,Nurse D,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,50,13,28,18,69,Y,Y,0,N,178,0.0
+S0453,53,32.3,None,Spine Fusion,Dr. Nguyen,Dr. Smith,Nurse A,Tuesday,2025-03-10 13:00:00,2025-03-10 13:00:00,55,14,25,28,180,N,Y,0,N,302,0.0
+S0454,46,36.3,Multiple,Shoulder Repair,Dr. Kim,Dr. White,Nurse D,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,45,9,28,27,91,Y,Y,0,N,200,0.0
+S0455,46,34.1,Multiple,ACL Repair,Dr. Lee,Dr. Smith,Nurse E,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,60,13,25,20,69,Y,Y,0,N,187,0.0
+S0456,57,37.7,Multiple,Shoulder Repair,Dr. Kim,Dr. White,Nurse E,Friday,2025-03-10 14:00:00,2025-03-10 14:00:00,51,10,28,21,87,Y,N,28,N,197,0.0
+S0457,78,33.7,Heart Disease,Hip Replacement,Dr. Kim,Dr. Black,Nurse E,Wednesday,2025-03-10 15:00:00,2025-03-10 15:10:00,58,8,26,25,113,Y,Y,0,N,230,10.0
+S0458,78,29.5,Heart Disease,Spine Fusion,Dr. Kim,Dr. Brown,Nurse A,Wednesday,2025-03-10 13:00:00,2025-03-10 13:00:00,50,8,30,21,142,Y,Y,0,Y,251,0.0
+S0459,81,34.9,Multiple,Hip Replacement,Dr. Nguyen,Dr. Smith,Nurse B,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,47,9,25,20,100,Y,Y,0,N,201,0.0
+S0460,85,37.0,Heart Disease,Hip Replacement,Dr. Kim,Dr. Green,Nurse B,Wednesday,2025-03-10 07:00:00,2025-03-10 07:00:00,61,11,22,21,119,Y,Y,0,N,234,0.0
+S0461,51,32.0,Hypertension,Knee Replacement,Dr. Kim,Dr. Smith,Nurse A,Thursday,2025-03-10 12:00:00,2025-03-10 12:14:00,49,8,25,27,119,N,Y,0,N,228,14.0
+S0462,51,32.8,Hypertension,Knee Replacement,Dr. Patel,Dr. Green,Nurse D,Monday,2025-03-10 16:00:00,2025-03-10 16:08:00,64,8,22,27,93,Y,Y,0,N,214,8.0
+S0463,66,32.4,Multiple,Knee Replacement,Dr. Nguyen,Dr. Black,Nurse C,Friday,2025-03-10 10:00:00,2025-03-10 10:00:00,45,9,26,29,86,Y,Y,0,N,195,0.0
+S0464,77,26.1,Obesity,Shoulder Repair,Dr. Johnson,Dr. Green,Nurse B,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,41,10,22,19,101,Y,Y,0,N,193,0.0
+S0465,67,27.0,Hypertension,Hip Replacement,Dr. Lee,Dr. Green,Nurse C,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,40,10,22,15,117,Y,Y,0,N,204,0.0
+S0466,57,37.6,Multiple,Hip Replacement,Dr. Kim,Dr. White,Nurse B,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,55,13,28,29,110,Y,Y,0,N,235,0.0
+S0467,74,36.0,None,Shoulder Repair,Dr. Lee,Dr. Smith,Nurse B,Tuesday,2025-03-10 14:00:00,2025-03-10 14:00:00,47,15,25,25,97,Y,Y,0,N,209,0.0
+S0468,56,35.2,None,ACL Repair,Dr. Kim,Dr. Smith,Nurse C,Monday,2025-03-10 15:00:00,2025-03-10 15:09:00,54,11,25,30,61,Y,N,10,N,181,9.0
+S0469,63,24.8,Heart Disease,Hip Replacement,Dr. Patel,Dr. Black,Nurse B,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,48,9,26,15,104,Y,Y,0,N,202,0.0
+S0470,52,27.4,Diabetes,ACL Repair,Dr. Nguyen,Dr. Brown,Nurse C,Wednesday,2025-03-10 09:00:00,2025-03-10 09:37:00,42,9,30,17,54,Y,Y,0,N,152,37.0
+S0471,57,30.5,Multiple,ACL Repair,Dr. Patel,Dr. Black,Nurse D,Tuesday,2025-03-10 07:00:00,2025-03-10 07:00:00,63,11,26,28,54,Y,Y,0,N,182,0.0
+S0472,48,32.1,Heart Disease,Hip Replacement,Dr. Johnson,Dr. Black,Nurse D,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,64,9,26,22,120,Y,Y,0,N,241,0.0
+S0473,68,30.0,Obesity,Hip Replacement,Dr. Patel,Dr. White,Nurse E,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,58,14,28,25,118,Y,Y,0,N,243,0.0
+S0474,58,25.5,Diabetes,Shoulder Repair,Dr. Lee,Dr. Green,Nurse B,Wednesday,2025-03-10 13:00:00,2025-03-10 13:20:00,51,12,22,23,105,N,Y,0,N,213,20.0
+S0475,67,25.7,None,Shoulder Repair,Dr. Johnson,Dr. Black,Nurse C,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,48,13,26,22,97,Y,Y,0,Y,206,0.0
+S0476,73,25.7,Multiple,Knee Replacement,Dr. Patel,Dr. Smith,Nurse C,Friday,2025-03-10 15:00:00,2025-03-10 15:00:00,42,12,25,18,102,N,N,16,N,199,0.0
+S0477,66,26.0,Multiple,ACL Repair,Dr. Lee,Dr. Black,Nurse B,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,49,12,26,20,62,Y,Y,0,N,169,0.0
+S0478,45,29.6,Hypertension,Hip Replacement,Dr. Nguyen,Dr. Brown,Nurse B,Tuesday,2025-03-10 14:00:00,2025-03-10 14:00:00,58,15,30,22,102,Y,Y,0,N,227,0.0
+S0479,57,28.9,Multiple,Shoulder Repair,Dr. Lee,Dr. Green,Nurse D,Friday,2025-03-10 07:00:00,2025-03-10 07:00:00,58,10,22,19,85,Y,Y,0,N,194,0.0
+S0480,67,27.4,Obesity,Shoulder Repair,Dr. Nguyen,Dr. Black,Nurse C,Wednesday,2025-03-10 16:00:00,2025-03-10 16:00:00,41,10,26,17,95,Y,Y,0,N,189,0.0
+S0481,83,36.6,Hypertension,Shoulder Repair,Dr. Nguyen,Dr. Brown,Nurse D,Monday,2025-03-10 15:00:00,2025-03-10 15:12:00,48,13,30,29,105,Y,Y,0,N,225,12.0
+S0482,51,32.8,Diabetes,Knee Replacement,Dr. Johnson,Dr. Green,Nurse A,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,57,12,22,23,96,Y,Y,0,N,210,0.0
+S0483,48,27.9,None,Hip Replacement,Dr. Patel,Dr. Green,Nurse D,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,48,15,22,16,106,Y,Y,0,N,207,0.0
+S0484,58,27.0,Multiple,Shoulder Repair,Dr. Lee,Dr. Black,Nurse E,Wednesday,2025-03-10 16:00:00,2025-03-10 16:00:00,54,12,26,18,111,N,Y,0,N,221,0.0
+S0485,70,31.7,Diabetes,Spine Fusion,Dr. Patel,Dr. Black,Nurse D,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,47,12,26,30,154,Y,Y,0,N,269,0.0
+S0486,64,28.3,Diabetes,Shoulder Repair,Dr. Lee,Dr. Brown,Nurse E,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,45,9,30,21,86,Y,Y,0,N,191,0.0
+S0487,55,26.4,Multiple,Spine Fusion,Dr. Patel,Dr. Smith,Nurse B,Thursday,2025-03-10 13:00:00,2025-03-10 13:45:00,43,13,25,16,156,Y,Y,0,N,253,45.0
+S0488,65,28.6,Diabetes,ACL Repair,Dr. Lee,Dr. Black,Nurse A,Thursday,2025-03-10 07:00:00,2025-03-10 07:00:00,54,14,26,20,56,Y,Y,0,N,170,0.0
+S0489,45,26.0,Multiple,Hip Replacement,Dr. Patel,Dr. Green,Nurse D,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,47,15,22,17,108,Y,Y,0,N,209,0.0
+S0490,55,35.4,Hypertension,Knee Replacement,Dr. Lee,Dr. White,Nurse A,Friday,2025-03-10 13:00:00,2025-03-10 13:00:00,45,12,28,22,85,Y,N,11,N,192,0.0
+S0491,79,25.5,Multiple,Knee Replacement,Dr. Johnson,Dr. Smith,Nurse D,Wednesday,2025-03-10 14:00:00,2025-03-10 14:00:00,40,8,25,21,87,Y,Y,0,N,181,0.0
+S0492,60,25.2,None,Shoulder Repair,Dr. Kim,Dr. Smith,Nurse C,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,38,10,25,17,106,N,Y,0,N,196,0.0
+S0493,65,31.0,Diabetes,Spine Fusion,Dr. Lee,Dr. Black,Nurse D,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,48,13,26,25,152,Y,Y,0,N,264,0.0
+S0494,45,28.2,Obesity,Hip Replacement,Dr. Kim,Dr. White,Nurse E,Wednesday,2025-03-10 07:00:00,2025-03-10 07:00:00,46,14,28,19,115,Y,Y,0,N,222,0.0
+S0495,51,33.4,Hypertension,Hip Replacement,Dr. Patel,Dr. Smith,Nurse E,Wednesday,2025-03-10 13:00:00,2025-03-10 13:00:00,49,13,25,22,110,Y,Y,0,N,219,0.0
+S0496,75,23.1,None,Spine Fusion,Dr. Johnson,Dr. Green,Nurse D,Friday,2025-03-10 10:00:00,2025-03-10 10:00:00,35,11,22,15,143,Y,Y,0,Y,226,0.0
+S0497,72,34.1,Hypertension,Knee Replacement,Dr. Kim,Dr. Brown,Nurse C,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,57,11,30,30,113,N,Y,0,N,241,0.0
+S0498,66,24.1,Heart Disease,Knee Replacement,Dr. Johnson,Dr. Green,Nurse C,Monday,2025-03-10 10:00:00,2025-03-10 10:10:00,50,11,22,18,87,Y,Y,0,N,188,10.0
+S0499,59,31.7,Obesity,Spine Fusion,Dr. Patel,Dr. Brown,Nurse D,Monday,2025-03-10 08:00:00,2025-03-10 08:22:00,46,10,30,23,145,Y,Y,0,N,254,22.0
+S0500,58,25.8,None,Shoulder Repair,Dr. Nguyen,Dr. White,Nurse B,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,54,11,28,19,99,Y,Y,0,N,211,0.0
+S0501,57,26.3,Obesity,Knee Replacement,Dr. Patel,Dr. Green,Nurse D,Tuesday,2025-03-10 14:00:00,2025-03-10 14:00:00,56,14,22,17,95,Y,Y,0,Y,204,0.0
+S0502,69,28.8,None,ACL Repair,Dr. Johnson,Dr. Black,Nurse B,Friday,2025-03-10 09:00:00,2025-03-10 09:00:00,49,12,26,22,67,Y,Y,0,N,176,0.0
+S0503,53,33.4,Diabetes,Hip Replacement,Dr. Lee,Dr. Smith,Nurse A,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,58,14,25,25,109,Y,Y,0,N,231,0.0
+S0504,71,36.2,None,Shoulder Repair,Dr. Johnson,Dr. Brown,Nurse B,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,51,15,30,30,86,Y,Y,0,N,212,0.0
+S0505,72,33.8,Diabetes,Shoulder Repair,Dr. Kim,Dr. White,Nurse A,Tuesday,2025-03-10 11:00:00,2025-03-10 11:00:00,49,12,28,23,90,Y,Y,0,Y,202,0.0
+S0506,50,32.3,Obesity,Shoulder Repair,Dr. Johnson,Dr. Smith,Nurse E,Tuesday,2025-03-10 13:00:00,2025-03-10 13:00:00,58,12,25,24,102,Y,Y,0,N,221,0.0
+S0507,69,31.4,Multiple,Shoulder Repair,Dr. Kim,Dr. Smith,Nurse E,Wednesday,2025-03-10 09:00:00,2025-03-10 09:00:00,51,14,25,24,112,N,Y,0,Y,226,0.0
+S0508,49,34.4,Obesity,Spine Fusion,Dr. Nguyen,Dr. White,Nurse D,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,49,11,28,27,143,Y,Y,0,N,258,0.0
+S0509,58,25.0,None,Hip Replacement,Dr. Lee,Dr. White,Nurse D,Thursday,2025-03-10 16:00:00,2025-03-10 16:00:00,55,10,28,16,112,Y,Y,0,N,221,0.0
+S0510,49,27.5,Hypertension,Hip Replacement,Dr. Nguyen,Dr. Green,Nurse A,Monday,2025-03-10 07:00:00,2025-03-10 07:05:00,58,8,22,16,100,Y,Y,0,N,204,5.0
+S0511,62,36.9,Obesity,ACL Repair,Dr. Johnson,Dr. Green,Nurse C,Wednesday,2025-03-10 12:00:00,2025-03-10 12:25:00,56,14,22,26,61,Y,Y,0,N,179,25.0
+S0512,51,22.0,Multiple,Shoulder Repair,Dr. Lee,Dr. Smith,Nurse E,Monday,2025-03-10 15:00:00,2025-03-10 15:08:00,51,15,25,24,100,Y,Y,0,N,215,8.0
+S0513,45,37.8,Heart Disease,Knee Replacement,Dr. Patel,Dr. Smith,Nurse C,Thursday,2025-03-10 10:00:00,2025-03-10 10:00:00,57,9,25,25,95,Y,Y,0,N,211,0.0
+S0514,51,33.7,Heart Disease,Spine Fusion,Dr. Lee,Dr. Brown,Nurse E,Friday,2025-03-10 15:00:00,2025-03-10 15:00:00,60,9,30,24,157,Y,Y,0,N,280,0.0
+S0515,73,37.3,Obesity,Spine Fusion,Dr. Lee,Dr. Brown,Nurse B,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,45,10,30,25,148,Y,Y,0,Y,258,0.0
+S0516,59,33.5,Multiple,Shoulder Repair,Dr. Kim,Dr. Brown,Nurse E,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,55,11,30,29,104,Y,Y,0,N,229,0.0
+S0517,66,28.0,Multiple,Shoulder Repair,Dr. Johnson,Dr. Green,Nurse B,Tuesday,2025-03-10 11:00:00,2025-03-10 11:00:00,42,9,22,16,103,Y,Y,0,N,192,0.0
+S0518,52,31.2,Diabetes,ACL Repair,Dr. Nguyen,Dr. Black,Nurse A,Wednesday,2025-03-10 07:00:00,2025-03-10 07:00:00,51,14,26,26,61,Y,Y,0,N,178,0.0
+S0519,53,30.3,Hypertension,Spine Fusion,Dr. Lee,Dr. Smith,Nurse D,Monday,2025-03-10 15:00:00,2025-03-10 15:37:00,54,11,25,27,144,Y,Y,0,N,261,37.0
+S0520,47,31.6,Heart Disease,Spine Fusion,Dr. Kim,Dr. White,Nurse E,Thursday,2025-03-10 10:00:00,2025-03-10 10:00:00,57,8,28,25,146,Y,Y,0,N,264,0.0
+S0521,59,33.2,None,Hip Replacement,Dr. Nguyen,Dr. Green,Nurse C,Tuesday,2025-03-10 07:00:00,2025-03-10 07:00:00,50,14,22,30,111,Y,Y,0,N,227,0.0
+S0522,70,23.1,Multiple,ACL Repair,Dr. Patel,Dr. Brown,Nurse E,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,58,8,30,19,55,Y,Y,0,N,170,0.0
+S0523,73,33.1,Heart Disease,Hip Replacement,Dr. Lee,Dr. Brown,Nurse B,Monday,2025-03-10 12:00:00,2025-03-10 12:31:00,49,14,30,26,105,Y,Y,0,N,224,31.0
+S0524,75,24.9,None,Knee Replacement,Dr. Johnson,Dr. White,Nurse E,Thursday,2025-03-10 09:00:00,2025-03-10 09:00:00,47,11,28,15,92,Y,Y,0,N,193,0.0
+S0525,83,37.3,Multiple,Shoulder Repair,Dr. Kim,Dr. Green,Nurse D,Wednesday,2025-03-10 14:00:00,2025-03-10 14:00:00,48,9,22,21,105,Y,Y,0,N,205,0.0
+S0526,77,25.6,Hypertension,Spine Fusion,Dr. Johnson,Dr. Green,Nurse C,Monday,2025-03-10 16:00:00,2025-03-10 16:12:00,60,14,22,19,143,Y,Y,0,Y,258,12.0
+S0527,79,25.0,Multiple,Knee Replacement,Dr. Nguyen,Dr. Black,Nurse E,Friday,2025-03-10 14:00:00,2025-03-10 14:00:00,58,9,26,18,83,Y,N,29,N,194,0.0
+S0528,45,30.9,Heart Disease,Knee Replacement,Dr. Kim,Dr. Brown,Nurse E,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,53,8,30,21,96,Y,Y,0,N,208,0.0
+S0529,79,24.7,Multiple,Knee Replacement,Dr. Lee,Dr. White,Nurse A,Friday,2025-03-10 11:00:00,2025-03-10 11:38:00,44,15,28,20,91,Y,Y,0,N,198,38.0
+S0530,51,32.6,None,Hip Replacement,Dr. Kim,Dr. Brown,Nurse B,Wednesday,2025-03-10 10:00:00,2025-03-10 10:45:00,46,13,30,24,119,Y,Y,0,N,232,45.0
+S0531,80,26.1,Obesity,Hip Replacement,Dr. Nguyen,Dr. Green,Nurse A,Wednesday,2025-03-10 13:00:00,2025-03-10 13:19:00,57,11,22,16,108,Y,Y,0,N,214,19.0
+S0532,57,33.4,Hypertension,Spine Fusion,Dr. Johnson,Dr. Brown,Nurse D,Tuesday,2025-03-10 12:00:00,2025-03-10 12:37:00,57,8,30,29,148,Y,Y,0,N,272,37.0
+S0533,52,32.9,Obesity,Knee Replacement,Dr. Patel,Dr. Smith,Nurse C,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,52,12,25,20,105,N,Y,0,N,214,0.0
+S0534,52,24.8,Multiple,ACL Repair,Dr. Johnson,Dr. Green,Nurse A,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,49,12,22,24,65,N,Y,0,N,172,0.0
+S0535,56,27.5,Multiple,Spine Fusion,Dr. Johnson,Dr. Black,Nurse D,Thursday,2025-03-10 16:00:00,2025-03-10 16:00:00,40,10,26,25,152,Y,Y,0,N,253,0.0
+S0536,62,22.8,Multiple,ACL Repair,Dr. Lee,Dr. Black,Nurse D,Thursday,2025-03-10 09:00:00,2025-03-10 09:00:00,51,15,26,23,63,Y,Y,0,N,178,0.0
+S0537,59,26.9,None,ACL Repair,Dr. Nguyen,Dr. White,Nurse A,Monday,2025-03-10 08:00:00,2025-03-10 08:06:00,40,8,28,16,67,Y,Y,0,N,159,6.0
+S0538,45,37.4,Obesity,Spine Fusion,Dr. Lee,Dr. Green,Nurse D,Friday,2025-03-10 15:00:00,2025-03-10 15:35:00,45,11,22,20,157,Y,Y,0,N,255,35.0
+S0539,78,32.9,None,Spine Fusion,Dr. Nguyen,Dr. Brown,Nurse E,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,44,13,30,20,152,Y,Y,0,Y,259,0.0
+S0540,55,28.0,None,ACL Repair,Dr. Lee,Dr. Black,Nurse A,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,43,11,26,15,68,Y,Y,0,N,163,0.0
+S0541,64,36.9,Multiple,Spine Fusion,Dr. Kim,Dr. Green,Nurse E,Thursday,2025-03-10 07:00:00,2025-03-10 07:00:00,64,15,22,25,143,Y,Y,0,Y,269,0.0
+S0542,56,28.4,None,Knee Replacement,Dr. Nguyen,Dr. Green,Nurse B,Monday,2025-03-10 15:00:00,2025-03-10 15:07:00,48,9,22,22,108,N,N,22,N,209,7.0
+S0543,68,28.9,Diabetes,Spine Fusion,Dr. Patel,Dr. Smith,Nurse D,Thursday,2025-03-10 09:00:00,2025-03-10 09:00:00,53,8,25,20,146,Y,Y,0,N,252,0.0
+S0544,63,22.6,Obesity,Shoulder Repair,Dr. Patel,Dr. Smith,Nurse B,Tuesday,2025-03-10 14:00:00,2025-03-10 14:27:00,43,14,25,22,89,Y,Y,0,N,193,27.0
+S0545,70,30.0,Multiple,Shoulder Repair,Dr. Lee,Dr. Smith,Nurse A,Monday,2025-03-10 09:00:00,2025-03-10 09:13:00,40,11,25,15,95,Y,Y,0,N,186,13.0
+S0546,45,28.9,Heart Disease,ACL Repair,Dr. Nguyen,Dr. Smith,Nurse D,Tuesday,2025-03-10 16:00:00,2025-03-10 16:00:00,56,10,25,18,53,Y,Y,0,N,162,0.0
+S0547,60,32.7,Obesity,Hip Replacement,Dr. Nguyen,Dr. Smith,Nurse E,Friday,2025-03-10 09:00:00,2025-03-10 09:00:00,63,10,25,23,112,Y,N,16,N,233,0.0
+S0548,72,22.3,Diabetes,Knee Replacement,Dr. Kim,Dr. Green,Nurse D,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,47,11,22,20,81,Y,Y,0,N,181,0.0
+S0549,64,23.8,Heart Disease,ACL Repair,Dr. Patel,Dr. Green,Nurse B,Wednesday,2025-03-10 07:00:00,2025-03-10 07:00:00,40,8,22,25,56,Y,Y,0,N,151,0.0
+S0550,62,36.5,None,Shoulder Repair,Dr. Lee,Dr. White,Nurse D,Wednesday,2025-03-10 12:00:00,2025-03-10 12:00:00,43,8,28,30,89,Y,Y,0,N,198,0.0
+S0551,68,33.9,Hypertension,Spine Fusion,Dr. Johnson,Dr. White,Nurse B,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,47,9,28,22,159,Y,Y,0,N,265,0.0
+S0552,82,37.5,Multiple,Hip Replacement,Dr. Lee,Dr. Green,Nurse A,Monday,2025-03-10 15:00:00,2025-03-10 15:09:00,60,11,22,28,101,Y,N,23,N,222,9.0
+S0553,61,36.3,Hypertension,ACL Repair,Dr. Patel,Dr. Green,Nurse A,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,61,8,22,22,54,Y,Y,0,N,167,0.0
+S0554,81,23.0,Multiple,Hip Replacement,Dr. Nguyen,Dr. Green,Nurse E,Friday,2025-03-10 08:00:00,2025-03-10 08:00:00,56,14,22,23,112,Y,Y,0,N,227,0.0
+S0555,45,24.6,Diabetes,Spine Fusion,Dr. Kim,Dr. Black,Nurse D,Friday,2025-03-10 15:00:00,2025-03-10 15:00:00,47,12,26,19,145,Y,N,27,N,249,0.0
+S0556,47,32.2,Heart Disease,Hip Replacement,Dr. Patel,Dr. Smith,Nurse B,Tuesday,2025-03-10 15:00:00,2025-03-10 15:00:00,65,13,25,30,111,Y,Y,0,N,244,0.0
+S0557,80,26.2,Diabetes,Shoulder Repair,Dr. Johnson,Dr. White,Nurse C,Monday,2025-03-10 07:00:00,2025-03-10 07:08:00,48,10,28,19,102,Y,Y,0,N,207,8.0
+S0558,82,23.7,Multiple,Shoulder Repair,Dr. Patel,Dr. Black,Nurse E,Tuesday,2025-03-10 14:00:00,2025-03-10 14:00:00,48,11,26,24,97,Y,Y,0,N,206,0.0
+S0559,59,33.7,Obesity,ACL Repair,Dr. Lee,Dr. Green,Nurse A,Thursday,2025-03-10 09:00:00,2025-03-10 09:00:00,50,11,22,29,55,Y,Y,0,N,167,0.0
+S0560,46,27.0,Diabetes,Shoulder Repair,Dr. Johnson,Dr. Brown,Nurse A,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,54,14,30,16,89,Y,Y,0,N,203,0.0
+S0561,45,31.7,Obesity,Shoulder Repair,Dr. Kim,Dr. Smith,Nurse A,Monday,2025-03-10 09:00:00,2025-03-10 09:06:00,53,10,25,30,85,Y,Y,0,N,203,6.0
+S0562,66,35.6,None,Hip Replacement,Dr. Lee,Dr. Green,Nurse E,Thursday,2025-03-10 09:00:00,2025-03-10 09:00:00,55,10,22,23,134,N,Y,0,N,244,0.0
+S0563,46,35.2,None,Spine Fusion,Dr. Patel,Dr. Smith,Nurse E,Thursday,2025-03-10 09:00:00,2025-03-10 09:00:00,47,8,25,23,144,Y,Y,0,N,247,0.0
+S0564,63,25.6,Multiple,Shoulder Repair,Dr. Kim,Dr. Green,Nurse B,Monday,2025-03-10 10:00:00,2025-03-10 10:09:00,51,9,22,24,96,Y,Y,0,N,202,9.0
+S0565,47,31.7,Diabetes,Shoulder Repair,Dr. Johnson,Dr. White,Nurse E,Tuesday,2025-03-10 13:00:00,2025-03-10 13:00:00,54,12,28,25,93,Y,Y,0,N,212,0.0
+S0566,68,36.9,Multiple,Knee Replacement,Dr. Kim,Dr. Brown,Nurse B,Wednesday,2025-03-10 09:00:00,2025-03-10 09:00:00,60,9,30,21,88,Y,Y,0,N,208,0.0
+S0567,65,37.9,Diabetes,Shoulder Repair,Dr. Patel,Dr. White,Nurse D,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,58,13,28,22,105,Y,Y,0,N,226,0.0
+S0568,69,28.7,Obesity,Spine Fusion,Dr. Johnson,Dr. Green,Nurse E,Friday,2025-03-10 10:00:00,2025-03-10 10:00:00,58,14,22,23,147,Y,Y,0,N,264,0.0
+S0569,45,25.3,None,ACL Repair,Dr. Johnson,Dr. Green,Nurse B,Monday,2025-03-10 07:00:00,2025-03-10 07:40:00,44,15,22,17,67,Y,Y,0,N,165,40.0
+S0570,60,25.4,Diabetes,Knee Replacement,Dr. Lee,Dr. Smith,Nurse B,Thursday,2025-03-10 07:00:00,2025-03-10 07:37:00,51,8,25,16,82,Y,Y,0,N,182,37.0
+S0571,83,35.9,None,Hip Replacement,Dr. Patel,Dr. Brown,Nurse A,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,53,10,30,22,104,Y,Y,0,N,219,0.0
+S0572,64,29.5,Multiple,ACL Repair,Dr. Nguyen,Dr. Smith,Nurse C,Monday,2025-03-10 09:00:00,2025-03-10 09:15:00,41,10,25,23,62,Y,Y,0,N,161,15.0
+S0573,74,30.9,Heart Disease,Spine Fusion,Dr. Johnson,Dr. White,Nurse B,Thursday,2025-03-10 09:00:00,2025-03-10 09:00:00,47,14,28,22,152,Y,Y,0,Y,263,0.0
+S0574,84,22.9,Obesity,Hip Replacement,Dr. Johnson,Dr. Black,Nurse A,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,60,14,26,21,111,Y,Y,0,N,232,0.0
+S0575,57,26.3,None,Knee Replacement,Dr. Patel,Dr. Black,Nurse C,Monday,2025-03-10 10:00:00,2025-03-10 10:13:00,38,9,26,18,89,Y,N,16,N,180,13.0
+S0576,47,25.8,None,Spine Fusion,Dr. Johnson,Dr. Smith,Nurse E,Thursday,2025-03-10 07:00:00,2025-03-10 07:00:00,37,12,25,15,149,Y,Y,0,N,238,0.0
+S0577,77,25.1,Obesity,ACL Repair,Dr. Lee,Dr. Smith,Nurse C,Thursday,2025-03-10 15:00:00,2025-03-10 15:00:00,44,8,25,24,65,Y,Y,0,N,166,0.0
+S0578,47,26.6,Diabetes,Shoulder Repair,Dr. Kim,Dr. Smith,Nurse B,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,45,13,25,22,95,Y,Y,0,N,200,0.0
+S0579,84,35.7,Obesity,Knee Replacement,Dr. Nguyen,Dr. Brown,Nurse B,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,49,15,30,21,84,Y,Y,0,N,199,0.0
+S0580,50,30.0,Obesity,ACL Repair,Dr. Lee,Dr. White,Nurse B,Monday,2025-03-10 11:00:00,2025-03-10 11:10:00,42,9,28,17,64,Y,N,25,N,160,10.0
+S0581,73,32.4,Diabetes,Knee Replacement,Dr. Johnson,Dr. Green,Nurse A,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,64,10,22,27,99,Y,Y,0,N,222,0.0
+S0582,68,23.3,Obesity,Spine Fusion,Dr. Nguyen,Dr. White,Nurse A,Friday,2025-03-10 07:00:00,2025-03-10 07:00:00,47,8,28,17,149,Y,Y,0,N,249,0.0
+S0583,49,25.6,Obesity,Knee Replacement,Dr. Patel,Dr. Green,Nurse D,Friday,2025-03-10 14:00:00,2025-03-10 14:00:00,45,9,22,21,86,Y,Y,0,N,183,0.0
+S0584,66,37.9,Obesity,Hip Replacement,Dr. Nguyen,Dr. Smith,Nurse C,Thursday,2025-03-10 07:00:00,2025-03-10 07:00:00,60,10,25,30,118,Y,Y,0,Y,243,0.0
+S0585,83,34.4,None,ACL Repair,Dr. Nguyen,Dr. Green,Nurse B,Monday,2025-03-10 10:00:00,2025-03-10 10:46:00,48,10,22,21,58,Y,Y,0,N,159,46.0
+S0586,73,35.9,Hypertension,Hip Replacement,Dr. Patel,Dr. Brown,Nurse A,Monday,2025-03-10 13:00:00,2025-03-10 13:09:00,50,11,30,25,115,Y,Y,0,N,231,9.0
+S0587,55,37.4,Obesity,ACL Repair,Dr. Johnson,Dr. Green,Nurse A,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,63,10,22,25,60,Y,N,24,N,180,0.0
+S0588,76,35.8,None,Shoulder Repair,Dr. Patel,Dr. Black,Nurse A,Thursday,2025-03-10 09:00:00,2025-03-10 09:00:00,60,9,26,20,91,Y,Y,0,N,206,0.0
+S0589,79,34.4,Hypertension,Shoulder Repair,Dr. Lee,Dr. White,Nurse B,Tuesday,2025-03-10 16:00:00,2025-03-10 16:33:00,56,8,28,24,101,Y,Y,0,N,217,33.0
+S0590,52,33.2,Multiple,Shoulder Repair,Dr. Nguyen,Dr. Green,Nurse C,Wednesday,2025-03-10 15:00:00,2025-03-10 15:00:00,55,9,22,22,96,Y,Y,0,N,204,0.0
+S0591,83,24.6,Obesity,Shoulder Repair,Dr. Patel,Dr. Green,Nurse C,Friday,2025-03-10 08:00:00,2025-03-10 08:16:00,42,8,22,24,88,Y,Y,0,N,184,16.0
+S0592,79,23.6,Obesity,Spine Fusion,Dr. Johnson,Dr. Smith,Nurse C,Thursday,2025-03-10 10:00:00,2025-03-10 10:00:00,54,14,25,16,155,Y,Y,0,Y,264,0.0
+S0593,52,27.6,Obesity,Shoulder Repair,Dr. Nguyen,Dr. Smith,Nurse C,Tuesday,2025-03-10 15:00:00,2025-03-10 15:00:00,48,12,25,21,85,Y,Y,0,N,191,0.0
+S0594,71,22.5,None,Hip Replacement,Dr. Patel,Dr. Black,Nurse E,Wednesday,2025-03-10 12:00:00,2025-03-10 12:00:00,53,14,26,18,112,Y,Y,0,N,223,0.0
+S0595,70,35.3,Hypertension,Shoulder Repair,Dr. Lee,Dr. Green,Nurse B,Thursday,2025-03-10 12:00:00,2025-03-10 12:00:00,58,11,22,21,89,Y,Y,0,N,201,0.0
+S0596,85,31.2,Obesity,ACL Repair,Dr. Johnson,Dr. Brown,Nurse C,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,58,8,30,30,54,Y,Y,0,Y,180,0.0
+S0597,79,36.7,None,Spine Fusion,Dr. Nguyen,Dr. Smith,Nurse B,Thursday,2025-03-10 12:00:00,2025-03-10 12:00:00,60,11,25,24,147,Y,Y,0,Y,267,0.0
+S0598,69,34.3,Multiple,Knee Replacement,Dr. Patel,Dr. Smith,Nurse B,Monday,2025-03-10 16:00:00,2025-03-10 16:29:00,64,9,25,21,88,Y,Y,0,N,207,29.0
+S0599,76,35.5,Diabetes,Shoulder Repair,Dr. Kim,Dr. Green,Nurse A,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,65,9,22,23,97,Y,Y,0,N,216,0.0
+S0600,85,36.5,Diabetes,Hip Replacement,Dr. Patel,Dr. Smith,Nurse B,Friday,2025-03-10 16:00:00,2025-03-10 16:17:00,55,13,25,27,119,Y,Y,0,N,239,17.0
+S0601,61,36.8,Diabetes,Spine Fusion,Dr. Kim,Dr. Black,Nurse A,Friday,2025-03-10 15:00:00,2025-03-10 15:00:00,51,13,26,21,140,Y,Y,0,N,251,0.0
+S0602,53,26.3,Obesity,Hip Replacement,Dr. Kim,Dr. White,Nurse E,Wednesday,2025-03-10 14:00:00,2025-03-10 14:00:00,55,14,28,23,106,Y,Y,0,N,226,0.0
+S0603,57,33.0,Multiple,ACL Repair,Dr. Nguyen,Dr. Smith,Nurse E,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,51,15,25,26,63,Y,Y,0,N,180,0.0
+S0604,65,32.0,Hypertension,Shoulder Repair,Dr. Nguyen,Dr. Brown,Nurse E,Wednesday,2025-03-10 12:00:00,2025-03-10 12:14:00,59,10,30,20,93,Y,Y,0,N,212,14.0
+S0605,63,31.7,Multiple,Spine Fusion,Dr. Patel,Dr. Green,Nurse A,Monday,2025-03-10 09:00:00,2025-03-10 09:44:00,56,11,22,21,151,Y,Y,0,N,261,44.0
+S0606,52,22.2,Multiple,Knee Replacement,Dr. Patel,Dr. Brown,Nurse D,Friday,2025-03-10 12:00:00,2025-03-10 12:45:00,42,14,30,19,96,Y,N,27,N,201,45.0
+S0607,83,37.1,Multiple,Knee Replacement,Dr. Johnson,Dr. Green,Nurse D,Wednesday,2025-03-10 12:00:00,2025-03-10 12:00:00,46,15,22,27,107,N,Y,0,N,217,0.0
+S0608,73,24.7,Heart Disease,Spine Fusion,Dr. Nguyen,Dr. Brown,Nurse E,Monday,2025-03-10 11:00:00,2025-03-10 11:14:00,40,15,30,19,152,Y,N,27,Y,256,14.0
+S0609,78,22.6,Multiple,Knee Replacement,Dr. Kim,Dr. Green,Nurse A,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,51,14,22,16,90,Y,Y,0,N,193,0.0
+S0610,48,28.3,Multiple,Shoulder Repair,Dr. Nguyen,Dr. Smith,Nurse C,Friday,2025-03-10 08:00:00,2025-03-10 08:00:00,41,8,25,17,95,Y,Y,0,N,186,0.0
+S0611,59,24.7,Diabetes,ACL Repair,Dr. Johnson,Dr. Smith,Nurse A,Wednesday,2025-03-10 07:00:00,2025-03-10 07:00:00,49,9,25,19,69,Y,Y,0,N,171,0.0
+S0612,69,26.3,Diabetes,Hip Replacement,Dr. Johnson,Dr. Green,Nurse A,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,58,14,22,25,103,Y,Y,0,N,222,0.0
+S0613,60,31.2,Multiple,Shoulder Repair,Dr. Patel,Dr. White,Nurse D,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,54,9,28,25,92,Y,Y,0,N,208,0.0
+S0614,58,33.1,None,Shoulder Repair,Dr. Kim,Dr. Brown,Nurse A,Tuesday,2025-03-10 14:00:00,2025-03-10 14:00:00,46,15,30,21,103,Y,Y,0,N,215,0.0
+S0615,77,35.7,Heart Disease,Shoulder Repair,Dr. Lee,Dr. Black,Nurse A,Tuesday,2025-03-10 10:00:00,2025-03-10 10:34:00,59,11,26,26,93,Y,Y,0,N,215,34.0
+S0616,64,37.2,Hypertension,Knee Replacement,Dr. Lee,Dr. Green,Nurse A,Monday,2025-03-10 10:00:00,2025-03-10 10:12:00,50,12,22,20,96,Y,Y,0,N,200,12.0
+S0617,80,23.3,Obesity,Hip Replacement,Dr. Lee,Dr. Green,Nurse E,Thursday,2025-03-10 15:00:00,2025-03-10 15:00:00,54,12,22,20,132,N,Y,0,N,240,0.0
+S0618,72,25.1,Diabetes,Shoulder Repair,Dr. Lee,Dr. Black,Nurse C,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,53,9,26,25,101,N,N,11,N,214,0.0
+S0619,81,26.3,None,Spine Fusion,Dr. Kim,Dr. White,Nurse B,Friday,2025-03-10 13:00:00,2025-03-10 13:00:00,38,11,28,19,145,Y,Y,0,Y,241,0.0
+S0620,67,32.2,Multiple,Spine Fusion,Dr. Patel,Dr. Smith,Nurse A,Tuesday,2025-03-10 15:00:00,2025-03-10 15:40:00,54,11,25,22,142,Y,Y,0,N,254,40.0
+S0621,66,36.4,Diabetes,Knee Replacement,Dr. Nguyen,Dr. Green,Nurse C,Monday,2025-03-10 09:00:00,2025-03-10 09:21:00,45,13,22,27,95,Y,Y,0,N,202,21.0
+S0622,47,35.1,Hypertension,ACL Repair,Dr. Lee,Dr. Black,Nurse E,Tuesday,2025-03-10 09:00:00,2025-03-10 09:16:00,54,13,26,27,61,Y,Y,0,N,181,16.0
+S0623,61,32.6,Heart Disease,ACL Repair,Dr. Nguyen,Dr. Smith,Nurse C,Wednesday,2025-03-10 12:00:00,2025-03-10 12:40:00,48,12,25,30,70,Y,Y,0,Y,185,40.0
+S0624,71,35.7,Multiple,Hip Replacement,Dr. Patel,Dr. Green,Nurse A,Tuesday,2025-03-10 16:00:00,2025-03-10 16:00:00,58,13,22,23,106,Y,Y,0,N,222,0.0
+S0625,69,32.2,Heart Disease,Spine Fusion,Dr. Nguyen,Dr. Black,Nurse B,Wednesday,2025-03-10 12:00:00,2025-03-10 12:35:00,63,14,26,24,141,Y,Y,0,N,268,35.0
+S0626,66,35.3,None,Shoulder Repair,Dr. Nguyen,Dr. Black,Nurse C,Wednesday,2025-03-10 08:00:00,2025-03-10 08:41:00,44,15,26,30,94,Y,Y,0,N,209,41.0
+S0627,55,26.9,Heart Disease,Knee Replacement,Dr. Patel,Dr. Smith,Nurse D,Monday,2025-03-10 10:00:00,2025-03-10 10:14:00,43,8,25,22,93,Y,Y,0,N,191,14.0
+S0628,48,26.0,Heart Disease,ACL Repair,Dr. Johnson,Dr. Black,Nurse B,Monday,2025-03-10 11:00:00,2025-03-10 11:08:00,53,9,26,19,65,Y,Y,0,N,172,8.0
+S0629,85,28.2,Obesity,Knee Replacement,Dr. Patel,Dr. White,Nurse E,Wednesday,2025-03-10 09:00:00,2025-03-10 09:00:00,50,10,28,25,88,Y,Y,0,N,201,0.0
+S0630,80,25.2,Heart Disease,Knee Replacement,Dr. Patel,Dr. Black,Nurse D,Friday,2025-03-10 09:00:00,2025-03-10 09:00:00,53,9,26,17,90,Y,Y,0,N,195,0.0
+S0631,67,29.5,Obesity,Shoulder Repair,Dr. Nguyen,Dr. Green,Nurse D,Monday,2025-03-10 15:00:00,2025-03-10 15:11:00,42,10,22,24,92,Y,Y,0,N,190,11.0
+S0632,84,30.7,Hypertension,ACL Repair,Dr. Kim,Dr. Green,Nurse B,Thursday,2025-03-10 07:00:00,2025-03-10 07:00:00,61,15,22,20,84,N,Y,0,N,202,0.0
+S0633,83,23.6,Heart Disease,Spine Fusion,Dr. Nguyen,Dr. White,Nurse A,Monday,2025-03-10 16:00:00,2025-03-10 16:05:00,46,10,28,23,155,Y,N,30,Y,262,5.0
+S0634,54,26.8,Heart Disease,Knee Replacement,Dr. Nguyen,Dr. Black,Nurse B,Monday,2025-03-10 08:00:00,2025-03-10 08:14:00,43,9,26,18,95,Y,N,26,N,191,14.0
+S0635,48,36.8,Heart Disease,Shoulder Repair,Dr. Nguyen,Dr. Brown,Nurse B,Friday,2025-03-10 11:00:00,2025-03-10 11:38:00,64,9,30,26,85,Y,N,17,N,214,38.0
+S0636,79,25.2,Obesity,ACL Repair,Dr. Patel,Dr. Smith,Nurse E,Thursday,2025-03-10 12:00:00,2025-03-10 12:00:00,52,14,25,16,63,Y,Y,0,N,170,0.0
+S0637,63,29.3,Hypertension,Shoulder Repair,Dr. Kim,Dr. Black,Nurse C,Monday,2025-03-10 16:00:00,2025-03-10 16:10:00,44,15,26,22,90,Y,Y,0,N,197,10.0
+S0638,77,25.4,Multiple,Spine Fusion,Dr. Nguyen,Dr. Black,Nurse A,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,58,13,26,22,144,Y,Y,0,Y,263,0.0
+S0639,62,34.6,Multiple,ACL Repair,Dr. Nguyen,Dr. Smith,Nurse D,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,50,12,25,22,68,Y,Y,0,N,177,0.0
+S0640,67,31.4,Obesity,Knee Replacement,Dr. Kim,Dr. Smith,Nurse B,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,60,15,25,25,87,Y,Y,0,N,212,0.0
+S0641,56,33.7,Obesity,Shoulder Repair,Dr. Kim,Dr. Smith,Nurse E,Wednesday,2025-03-10 08:00:00,2025-03-10 08:00:00,47,15,25,25,85,Y,Y,0,N,197,0.0
+S0642,65,23.7,Obesity,Shoulder Repair,Dr. Lee,Dr. Black,Nurse E,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,54,12,26,18,90,Y,Y,0,N,200,0.0
+S0643,78,34.9,Diabetes,Knee Replacement,Dr. Johnson,Dr. Smith,Nurse A,Tuesday,2025-03-10 07:00:00,2025-03-10 07:00:00,45,13,25,26,82,Y,Y,0,N,191,0.0
+S0644,78,29.9,Diabetes,Spine Fusion,Dr. Nguyen,Dr. Black,Nurse C,Wednesday,2025-03-10 16:00:00,2025-03-10 16:18:00,42,15,26,21,142,Y,Y,0,Y,246,18.0
+S0645,81,23.3,Hypertension,ACL Repair,Dr. Kim,Dr. Smith,Nurse D,Tuesday,2025-03-10 07:00:00,2025-03-10 07:00:00,50,8,25,18,59,Y,Y,0,N,160,0.0
+S0646,61,28.2,Heart Disease,Knee Replacement,Dr. Lee,Dr. White,Nurse A,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,56,12,28,21,97,Y,Y,0,N,214,0.0
+S0647,75,37.0,Heart Disease,Knee Replacement,Dr. Kim,Dr. White,Nurse D,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,46,10,28,23,90,Y,Y,0,N,197,0.0
+S0648,48,25.8,None,Spine Fusion,Dr. Johnson,Dr. Smith,Nurse C,Monday,2025-03-10 13:00:00,2025-03-10 13:14:00,37,15,25,17,141,Y,N,25,N,235,14.0
+S0649,67,28.9,Heart Disease,Hip Replacement,Dr. Kim,Dr. Smith,Nurse A,Tuesday,2025-03-10 15:00:00,2025-03-10 15:00:00,52,8,25,23,112,Y,Y,0,N,220,0.0
+S0650,53,28.9,Obesity,Spine Fusion,Dr. Lee,Dr. Smith,Nurse D,Monday,2025-03-10 16:00:00,2025-03-10 16:43:00,46,13,25,21,147,Y,N,28,Y,252,43.0
+S0651,71,34.0,Hypertension,Spine Fusion,Dr. Kim,Dr. Smith,Nurse B,Monday,2025-03-10 08:00:00,2025-03-10 08:12:00,50,12,25,20,159,Y,Y,0,Y,266,12.0
+S0652,60,38.0,Diabetes,Spine Fusion,Dr. Nguyen,Dr. Green,Nurse A,Monday,2025-03-10 08:00:00,2025-03-10 08:13:00,51,15,22,25,147,Y,Y,0,N,260,13.0
+S0653,68,34.5,Heart Disease,Hip Replacement,Dr. Johnson,Dr. White,Nurse C,Friday,2025-03-10 15:00:00,2025-03-10 15:00:00,56,14,28,29,102,Y,N,14,N,229,0.0
+S0654,78,25.7,Multiple,Spine Fusion,Dr. Lee,Dr. Smith,Nurse C,Tuesday,2025-03-10 07:00:00,2025-03-10 07:38:00,60,15,25,16,158,N,Y,0,Y,274,38.0
+S0655,62,31.4,Heart Disease,Knee Replacement,Dr. Kim,Dr. White,Nurse E,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,57,14,28,27,105,N,Y,0,N,231,0.0
+S0656,72,30.5,Multiple,ACL Repair,Dr. Kim,Dr. Black,Nurse C,Monday,2025-03-10 16:00:00,2025-03-10 16:10:00,53,11,26,20,69,Y,Y,0,N,179,10.0
+S0657,48,34.9,Hypertension,Shoulder Repair,Dr. Patel,Dr. Black,Nurse D,Thursday,2025-03-10 16:00:00,2025-03-10 16:00:00,61,12,26,22,99,Y,Y,0,N,220,0.0
+S0658,60,24.1,None,ACL Repair,Dr. Patel,Dr. Smith,Nurse B,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,47,8,25,24,58,Y,Y,0,N,162,0.0
+S0659,83,22.2,Heart Disease,Spine Fusion,Dr. Patel,Dr. White,Nurse B,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,40,15,28,15,155,Y,Y,0,Y,253,0.0
+S0660,85,35.5,Diabetes,Shoulder Repair,Dr. Kim,Dr. Black,Nurse A,Wednesday,2025-03-10 16:00:00,2025-03-10 16:00:00,47,15,26,22,93,Y,Y,0,N,203,0.0
+S0661,76,24.0,Multiple,Hip Replacement,Dr. Lee,Dr. Black,Nurse A,Tuesday,2025-03-10 08:00:00,2025-03-10 08:21:00,56,15,26,24,117,Y,Y,0,N,238,21.0
+S0662,48,37.2,Heart Disease,ACL Repair,Dr. Kim,Dr. White,Nurse E,Monday,2025-03-10 16:00:00,2025-03-10 16:06:00,47,15,28,21,57,Y,N,28,N,168,6.0
+S0663,71,23.1,Obesity,ACL Repair,Dr. Lee,Dr. Smith,Nurse C,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,53,13,25,22,59,Y,Y,0,N,172,0.0
+S0664,47,26.7,Diabetes,Spine Fusion,Dr. Kim,Dr. Smith,Nurse E,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,56,13,25,18,158,Y,Y,0,Y,270,0.0
+S0665,54,28.1,Multiple,Knee Replacement,Dr. Kim,Dr. Brown,Nurse E,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,53,9,30,23,99,Y,Y,0,N,214,0.0
+S0666,73,27.1,Diabetes,Spine Fusion,Dr. Patel,Dr. Brown,Nurse C,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,50,9,30,18,153,Y,Y,0,Y,260,0.0
+S0667,68,23.3,Hypertension,Spine Fusion,Dr. Kim,Dr. White,Nurse D,Friday,2025-03-10 10:00:00,2025-03-10 10:00:00,53,11,28,24,144,Y,Y,0,N,260,0.0
+S0668,71,32.8,Multiple,Hip Replacement,Dr. Johnson,Dr. White,Nurse C,Wednesday,2025-03-10 12:00:00,2025-03-10 12:00:00,58,14,28,28,118,Y,Y,0,N,246,0.0
+S0669,57,36.4,Obesity,Knee Replacement,Dr. Lee,Dr. Smith,Nurse D,Wednesday,2025-03-10 15:00:00,2025-03-10 15:40:00,48,10,25,20,80,Y,Y,0,N,183,40.0
+S0670,49,24.1,Hypertension,Shoulder Repair,Dr. Nguyen,Dr. White,Nurse B,Thursday,2025-03-10 15:00:00,2025-03-10 15:00:00,49,9,28,20,95,Y,Y,0,N,201,0.0
+S0671,84,23.7,Multiple,Knee Replacement,Dr. Kim,Dr. White,Nurse D,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,53,12,28,22,85,Y,Y,0,N,200,0.0
+S0672,82,36.7,Hypertension,Knee Replacement,Dr. Lee,Dr. Smith,Nurse E,Friday,2025-03-10 12:00:00,2025-03-10 12:39:00,57,13,25,27,98,Y,N,13,N,220,39.0
+S0673,76,27.5,Hypertension,Spine Fusion,Dr. Johnson,Dr. Black,Nurse E,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,50,10,26,17,166,N,Y,0,Y,269,0.0
+S0674,78,26.5,Hypertension,ACL Repair,Dr. Kim,Dr. White,Nurse C,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,55,15,28,18,59,Y,Y,0,N,175,0.0
+S0675,61,37.8,None,Hip Replacement,Dr. Patel,Dr. Brown,Nurse A,Tuesday,2025-03-10 15:00:00,2025-03-10 15:20:00,40,8,30,28,106,Y,Y,0,Y,212,20.0
+S0676,46,27.9,Heart Disease,Spine Fusion,Dr. Nguyen,Dr. Green,Nurse E,Tuesday,2025-03-10 14:00:00,2025-03-10 14:00:00,43,9,22,22,155,Y,Y,0,N,251,0.0
+S0677,53,37.9,Multiple,Knee Replacement,Dr. Patel,Dr. Smith,Nurse B,Monday,2025-03-10 12:00:00,2025-03-10 12:10:00,53,15,25,30,82,Y,Y,0,N,205,10.0
+S0678,47,28.9,Multiple,Spine Fusion,Dr. Patel,Dr. Brown,Nurse E,Monday,2025-03-10 07:00:00,2025-03-10 07:14:00,52,11,30,25,155,Y,N,15,N,273,14.0
+S0679,63,24.1,Multiple,Knee Replacement,Dr. Johnson,Dr. Brown,Nurse A,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,59,11,30,17,113,N,Y,0,N,230,0.0
+S0680,82,25.8,Heart Disease,Shoulder Repair,Dr. Johnson,Dr. Brown,Nurse C,Tuesday,2025-03-10 11:00:00,2025-03-10 11:00:00,55,14,30,24,100,Y,Y,0,N,223,0.0
+S0681,59,23.8,Heart Disease,Shoulder Repair,Dr. Nguyen,Dr. White,Nurse B,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,50,9,28,20,89,Y,Y,0,N,196,0.0
+S0682,75,35.4,Obesity,Spine Fusion,Dr. Nguyen,Dr. Brown,Nurse A,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,58,8,30,28,148,Y,Y,0,Y,272,0.0
+S0683,65,28.6,Obesity,Shoulder Repair,Dr. Nguyen,Dr. White,Nurse A,Wednesday,2025-03-10 14:00:00,2025-03-10 14:00:00,50,8,28,19,92,Y,Y,0,N,197,0.0
+S0684,55,30.6,Multiple,Knee Replacement,Dr. Johnson,Dr. Black,Nurse C,Tuesday,2025-03-10 16:00:00,2025-03-10 16:00:00,45,14,26,21,90,Y,Y,0,N,196,0.0
+S0685,80,23.0,None,Spine Fusion,Dr. Lee,Dr. White,Nurse E,Tuesday,2025-03-10 09:00:00,2025-03-10 09:35:00,42,12,28,17,150,Y,Y,0,Y,249,35.0
+S0686,71,25.4,Multiple,Hip Replacement,Dr. Kim,Dr. Smith,Nurse A,Friday,2025-03-10 08:00:00,2025-03-10 08:00:00,55,8,25,17,100,Y,N,17,Y,205,0.0
+S0687,52,35.0,Obesity,Shoulder Repair,Dr. Lee,Dr. White,Nurse A,Monday,2025-03-10 08:00:00,2025-03-10 08:11:00,45,8,28,28,89,Y,N,28,N,198,11.0
+S0688,57,35.3,Heart Disease,ACL Repair,Dr. Nguyen,Dr. Black,Nurse A,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,48,12,26,30,62,Y,Y,0,N,178,0.0
+S0689,50,25.6,Obesity,Spine Fusion,Dr. Patel,Dr. Green,Nurse C,Friday,2025-03-10 15:00:00,2025-03-10 15:00:00,40,15,22,21,157,Y,Y,0,N,255,0.0
+S0690,81,37.6,Obesity,Hip Replacement,Dr. Nguyen,Dr. White,Nurse D,Friday,2025-03-10 08:00:00,2025-03-10 08:00:00,55,10,28,30,103,Y,Y,0,N,226,0.0
+S0691,76,31.5,None,Hip Replacement,Dr. Nguyen,Dr. Black,Nurse D,Friday,2025-03-10 16:00:00,2025-03-10 16:13:00,55,12,26,26,110,Y,Y,0,Y,229,13.0
+S0692,81,31.6,None,ACL Repair,Dr. Lee,Dr. Black,Nurse D,Friday,2025-03-10 14:00:00,2025-03-10 14:00:00,60,11,26,25,65,Y,Y,0,N,187,0.0
+S0693,50,36.7,Obesity,Knee Replacement,Dr. Nguyen,Dr. Brown,Nurse A,Tuesday,2025-03-10 15:00:00,2025-03-10 15:00:00,50,11,30,27,83,Y,Y,0,Y,201,0.0
+S0694,72,29.9,Multiple,Spine Fusion,Dr. Nguyen,Dr. Brown,Nurse E,Thursday,2025-03-10 13:00:00,2025-03-10 13:00:00,43,14,30,19,148,Y,Y,0,Y,254,0.0
+S0695,78,27.2,Heart Disease,Spine Fusion,Dr. Lee,Dr. Brown,Nurse C,Friday,2025-03-10 10:00:00,2025-03-10 10:33:00,56,12,30,22,150,Y,Y,0,Y,270,33.0
+S0696,53,24.6,Multiple,Shoulder Repair,Dr. Kim,Dr. White,Nurse D,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,40,12,28,18,88,Y,Y,0,N,186,0.0
+S0697,66,23.5,Hypertension,Shoulder Repair,Dr. Johnson,Dr. Brown,Nurse A,Wednesday,2025-03-10 15:00:00,2025-03-10 15:00:00,51,8,30,18,98,Y,Y,0,N,205,0.0
+S0698,64,27.9,Obesity,ACL Repair,Dr. Johnson,Dr. Black,Nurse B,Monday,2025-03-10 16:00:00,2025-03-10 16:08:00,48,10,26,19,54,Y,Y,0,N,157,8.0
+S0699,69,27.3,Hypertension,Spine Fusion,Dr. Patel,Dr. Black,Nurse D,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,47,11,26,16,159,Y,Y,0,N,259,0.0
+S0700,55,29.6,None,ACL Repair,Dr. Kim,Dr. Smith,Nurse B,Friday,2025-03-10 14:00:00,2025-03-10 14:00:00,50,13,25,19,53,Y,N,22,N,160,0.0
+S0701,69,33.3,Heart Disease,ACL Repair,Dr. Johnson,Dr. White,Nurse E,Monday,2025-03-10 16:00:00,2025-03-10 16:07:00,65,12,28,22,67,Y,Y,0,N,194,7.0
+S0702,61,33.0,Hypertension,Shoulder Repair,Dr. Patel,Dr. Brown,Nurse A,Wednesday,2025-03-10 14:00:00,2025-03-10 14:00:00,56,14,30,23,91,Y,Y,0,N,214,0.0
+S0703,56,36.9,None,Hip Replacement,Dr. Nguyen,Dr. White,Nurse E,Tuesday,2025-03-10 07:00:00,2025-03-10 07:00:00,50,9,28,25,116,Y,Y,0,N,228,0.0
+S0704,83,26.4,Multiple,ACL Repair,Dr. Nguyen,Dr. Green,Nurse A,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,58,8,22,22,70,Y,Y,0,N,180,0.0
+S0705,56,29.6,Multiple,Spine Fusion,Dr. Kim,Dr. Smith,Nurse C,Monday,2025-03-10 16:00:00,2025-03-10 16:26:00,44,9,25,21,143,Y,N,30,N,242,26.0
+S0706,65,23.6,Hypertension,ACL Repair,Dr. Lee,Dr. Black,Nurse A,Wednesday,2025-03-10 12:00:00,2025-03-10 12:20:00,58,13,26,23,82,N,Y,0,N,202,20.0
+S0707,48,23.0,Hypertension,Hip Replacement,Dr. Patel,Dr. Smith,Nurse B,Thursday,2025-03-10 07:00:00,2025-03-10 07:00:00,46,14,25,17,100,Y,Y,0,N,202,0.0
+S0708,80,27.6,Heart Disease,Shoulder Repair,Dr. Johnson,Dr. Smith,Nurse E,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,42,10,25,16,103,Y,Y,0,N,196,0.0
+S0709,46,34.3,None,Hip Replacement,Dr. Patel,Dr. Green,Nurse A,Tuesday,2025-03-10 11:00:00,2025-03-10 11:22:00,44,12,22,20,109,Y,Y,0,N,207,22.0
+S0710,53,31.0,Obesity,Hip Replacement,Dr. Lee,Dr. White,Nurse B,Tuesday,2025-03-10 11:00:00,2025-03-10 11:00:00,59,12,28,21,118,Y,Y,0,N,238,0.0
+S0711,78,29.2,Multiple,Hip Replacement,Dr. Kim,Dr. Black,Nurse D,Tuesday,2025-03-10 15:00:00,2025-03-10 15:00:00,53,13,26,25,109,Y,Y,0,N,226,0.0
+S0712,77,30.8,Multiple,ACL Repair,Dr. Kim,Dr. Black,Nurse B,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,46,9,26,28,55,Y,Y,0,N,164,0.0
+S0713,74,31.4,Heart Disease,Spine Fusion,Dr. Nguyen,Dr. Black,Nurse A,Wednesday,2025-03-10 08:00:00,2025-03-10 08:00:00,45,10,26,26,150,Y,Y,0,Y,257,0.0
+S0714,51,25.0,Heart Disease,ACL Repair,Dr. Lee,Dr. Green,Nurse E,Tuesday,2025-03-10 07:00:00,2025-03-10 07:00:00,59,15,22,24,63,Y,Y,0,N,183,0.0
+S0715,75,35.3,Heart Disease,ACL Repair,Dr. Johnson,Dr. White,Nurse D,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,52,9,28,26,58,Y,Y,0,N,173,0.0
+S0716,70,31.5,Diabetes,Spine Fusion,Dr. Lee,Dr. White,Nurse E,Friday,2025-03-10 10:00:00,2025-03-10 10:18:00,49,13,28,20,149,Y,Y,0,N,259,18.0
+S0717,67,29.3,Diabetes,Shoulder Repair,Dr. Kim,Dr. Brown,Nurse B,Tuesday,2025-03-10 11:00:00,2025-03-10 11:00:00,45,11,30,18,92,Y,Y,0,N,196,0.0
+S0718,80,35.5,Heart Disease,Knee Replacement,Dr. Nguyen,Dr. Brown,Nurse C,Monday,2025-03-10 14:00:00,2025-03-10 14:11:00,51,15,30,30,94,Y,Y,0,N,220,11.0
+S0719,51,28.2,Heart Disease,Hip Replacement,Dr. Nguyen,Dr. White,Nurse C,Thursday,2025-03-10 16:00:00,2025-03-10 16:00:00,42,13,28,22,118,Y,Y,0,Y,223,0.0
+S0720,83,24.9,Diabetes,ACL Repair,Dr. Patel,Dr. White,Nurse E,Monday,2025-03-10 16:00:00,2025-03-10 16:11:00,42,11,28,17,51,Y,N,23,N,149,11.0
+S0721,69,32.5,Obesity,Hip Replacement,Dr. Patel,Dr. White,Nurse D,Thursday,2025-03-10 07:00:00,2025-03-10 07:00:00,58,10,28,22,116,Y,Y,0,N,234,0.0
+S0722,74,34.9,Heart Disease,Knee Replacement,Dr. Nguyen,Dr. Smith,Nurse B,Wednesday,2025-03-10 09:00:00,2025-03-10 09:00:00,57,15,25,20,92,Y,Y,0,N,209,0.0
+S0723,48,26.8,Heart Disease,Knee Replacement,Dr. Johnson,Dr. Green,Nurse E,Wednesday,2025-03-10 14:00:00,2025-03-10 14:00:00,57,13,22,16,93,Y,Y,0,N,201,0.0
+S0724,69,35.9,None,Hip Replacement,Dr. Kim,Dr. White,Nurse E,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,59,15,28,26,115,N,Y,0,N,243,0.0
+S0725,76,29.4,None,Spine Fusion,Dr. Patel,Dr. White,Nurse D,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,35,12,28,17,153,Y,Y,0,Y,245,0.0
+S0726,46,29.1,Heart Disease,Knee Replacement,Dr. Johnson,Dr. Smith,Nurse C,Monday,2025-03-10 15:00:00,2025-03-10 15:08:00,45,9,25,23,112,N,Y,0,N,214,8.0
+S0727,67,37.5,Multiple,Spine Fusion,Dr. Lee,Dr. Black,Nurse E,Thursday,2025-03-10 07:00:00,2025-03-10 07:00:00,56,8,26,22,160,Y,Y,0,N,272,0.0
+S0728,51,28.1,Multiple,Knee Replacement,Dr. Patel,Dr. White,Nurse D,Thursday,2025-03-10 07:00:00,2025-03-10 07:00:00,48,9,28,21,86,Y,Y,0,N,192,0.0
+S0729,64,31.8,Hypertension,Hip Replacement,Dr. Kim,Dr. White,Nurse E,Thursday,2025-03-10 10:00:00,2025-03-10 10:00:00,58,12,28,22,101,Y,Y,0,N,221,0.0
+S0730,56,32.9,Heart Disease,Knee Replacement,Dr. Nguyen,Dr. Brown,Nurse A,Thursday,2025-03-10 09:00:00,2025-03-10 09:00:00,59,13,30,21,80,Y,Y,0,N,203,0.0
+S0731,59,23.0,Heart Disease,Spine Fusion,Dr. Nguyen,Dr. Black,Nurse D,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,55,8,26,20,151,Y,Y,0,N,260,0.0
+S0732,76,25.4,Multiple,Hip Replacement,Dr. Nguyen,Dr. White,Nurse D,Monday,2025-03-10 16:00:00,2025-03-10 16:54:00,51,9,28,18,116,Y,Y,0,N,222,54.0
+S0733,65,29.2,Obesity,Knee Replacement,Dr. Lee,Dr. Black,Nurse E,Tuesday,2025-03-10 16:00:00,2025-03-10 16:00:00,53,14,26,15,89,Y,Y,0,N,197,0.0
+S0734,76,37.8,Obesity,Spine Fusion,Dr. Lee,Dr. Green,Nurse E,Monday,2025-03-10 08:00:00,2025-03-10 08:08:00,48,12,22,22,152,Y,Y,0,Y,256,8.0
+S0735,67,34.0,Obesity,Spine Fusion,Dr. Patel,Dr. White,Nurse C,Monday,2025-03-10 12:00:00,2025-03-10 12:13:00,57,11,28,26,154,Y,N,24,N,276,13.0
+S0736,56,28.4,None,Spine Fusion,Dr. Patel,Dr. Green,Nurse B,Monday,2025-03-10 13:00:00,2025-03-10 13:11:00,48,14,22,18,159,Y,N,29,N,261,11.0
+S0737,50,31.6,Multiple,Shoulder Repair,Dr. Kim,Dr. White,Nurse E,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,60,9,28,25,124,N,Y,0,N,246,0.0
+S0738,77,35.8,Diabetes,Shoulder Repair,Dr. Patel,Dr. Brown,Nurse B,Thursday,2025-03-10 10:00:00,2025-03-10 10:00:00,54,9,30,20,99,Y,Y,0,N,212,0.0
+S0739,83,29.1,Diabetes,Hip Replacement,Dr. Nguyen,Dr. Black,Nurse A,Friday,2025-03-10 12:00:00,2025-03-10 12:20:00,47,15,26,16,123,N,Y,0,N,227,20.0
+S0740,69,23.1,Obesity,ACL Repair,Dr. Johnson,Dr. Smith,Nurse E,Friday,2025-03-10 07:00:00,2025-03-10 07:00:00,41,12,25,21,51,Y,Y,0,N,150,0.0
+S0741,77,32.1,Obesity,Shoulder Repair,Dr. Kim,Dr. Smith,Nurse B,Wednesday,2025-03-10 16:00:00,2025-03-10 16:00:00,48,10,25,25,95,Y,Y,0,N,203,0.0
+S0742,60,34.7,Diabetes,ACL Repair,Dr. Kim,Dr. White,Nurse A,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,53,13,28,24,60,Y,Y,0,N,178,0.0
+S0743,61,31.1,Hypertension,Knee Replacement,Dr. Lee,Dr. Brown,Nurse E,Wednesday,2025-03-10 07:00:00,2025-03-10 07:00:00,56,13,30,24,85,Y,Y,0,N,208,0.0
+S0744,64,29.6,Obesity,ACL Repair,Dr. Lee,Dr. Brown,Nurse B,Friday,2025-03-10 11:00:00,2025-03-10 11:26:00,60,11,30,15,68,Y,Y,0,N,184,26.0
+S0745,61,27.8,Hypertension,Spine Fusion,Dr. Nguyen,Dr. Green,Nurse E,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,58,13,22,23,155,Y,Y,0,N,271,0.0
+S0746,78,29.7,Obesity,Shoulder Repair,Dr. Kim,Dr. Smith,Nurse C,Tuesday,2025-03-10 11:00:00,2025-03-10 11:00:00,44,12,25,24,88,Y,Y,0,N,193,0.0
+S0747,67,30.0,Hypertension,Knee Replacement,Dr. Johnson,Dr. Brown,Nurse B,Wednesday,2025-03-10 07:00:00,2025-03-10 07:00:00,43,13,30,23,115,N,Y,0,N,224,0.0
+S0748,79,36.0,None,Shoulder Repair,Dr. Johnson,Dr. Black,Nurse B,Tuesday,2025-03-10 11:00:00,2025-03-10 11:00:00,45,11,26,23,99,Y,Y,0,N,204,0.0
+S0749,83,26.3,Heart Disease,Knee Replacement,Dr. Lee,Dr. Smith,Nurse B,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,47,11,25,24,95,Y,Y,0,N,202,0.0
+S0750,48,27.1,Multiple,Knee Replacement,Dr. Lee,Dr. Green,Nurse A,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,43,11,22,24,98,Y,Y,0,Y,198,0.0
+S0751,72,35.8,None,Shoulder Repair,Dr. Lee,Dr. Black,Nurse E,Thursday,2025-03-10 07:00:00,2025-03-10 07:00:00,53,12,26,27,95,Y,Y,0,N,213,0.0
+S0752,77,26.5,Multiple,ACL Repair,Dr. Patel,Dr. Black,Nurse B,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,56,12,26,25,55,Y,Y,0,N,174,0.0
+S0753,65,36.3,Hypertension,Shoulder Repair,Dr. Nguyen,Dr. Brown,Nurse B,Monday,2025-03-10 13:00:00,2025-03-10 13:06:00,59,13,30,30,90,Y,N,13,N,222,6.0
+S0754,58,26.9,Heart Disease,ACL Repair,Dr. Johnson,Dr. Green,Nurse A,Wednesday,2025-03-10 16:00:00,2025-03-10 16:00:00,44,13,22,17,62,Y,Y,0,N,158,0.0
+S0755,55,31.8,Diabetes,ACL Repair,Dr. Johnson,Dr. Green,Nurse E,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,53,15,22,24,59,Y,Y,0,N,173,0.0
+S0756,67,35.3,Heart Disease,Shoulder Repair,Dr. Patel,Dr. Green,Nurse E,Thursday,2025-03-10 13:00:00,2025-03-10 13:00:00,57,8,22,26,89,Y,Y,0,N,202,0.0
+S0757,62,22.3,Multiple,Hip Replacement,Dr. Lee,Dr. White,Nurse C,Wednesday,2025-03-10 07:00:00,2025-03-10 07:00:00,52,13,28,23,106,Y,Y,0,N,222,0.0
+S0758,84,30.0,Heart Disease,Knee Replacement,Dr. Kim,Dr. Brown,Nurse B,Wednesday,2025-03-10 14:00:00,2025-03-10 14:40:00,41,14,30,22,99,Y,Y,0,N,206,40.0
+S0759,48,23.6,Multiple,ACL Repair,Dr. Patel,Dr. Black,Nurse C,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,44,9,26,20,63,Y,Y,0,N,162,0.0
+S0760,54,31.4,Hypertension,Hip Replacement,Dr. Johnson,Dr. Smith,Nurse D,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,53,12,25,20,102,Y,Y,0,N,212,0.0
+S0761,65,37.3,Heart Disease,Shoulder Repair,Dr. Lee,Dr. Brown,Nurse C,Thursday,2025-03-10 10:00:00,2025-03-10 10:00:00,55,11,30,30,93,Y,Y,0,N,219,0.0
+S0762,46,24.2,Multiple,Shoulder Repair,Dr. Nguyen,Dr. Green,Nurse D,Monday,2025-03-10 15:00:00,2025-03-10 15:13:00,51,8,22,24,86,Y,Y,0,N,191,13.0
+S0763,65,34.6,Obesity,ACL Repair,Dr. Johnson,Dr. White,Nurse A,Monday,2025-03-10 16:00:00,2025-03-10 16:13:00,48,10,28,28,52,Y,Y,0,N,166,13.0
+S0764,57,34.0,Multiple,Shoulder Repair,Dr. Patel,Dr. Green,Nurse D,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,65,13,22,27,98,Y,Y,0,N,225,0.0
+S0765,70,31.2,None,Spine Fusion,Dr. Nguyen,Dr. Smith,Nurse A,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,48,11,25,29,150,Y,Y,0,N,263,0.0
+S0766,57,34.3,Hypertension,ACL Repair,Dr. Johnson,Dr. Brown,Nurse B,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,48,8,30,28,51,Y,Y,0,N,165,0.0
+S0767,79,27.6,None,ACL Repair,Dr. Patel,Dr. Brown,Nurse B,Tuesday,2025-03-10 11:00:00,2025-03-10 11:00:00,43,11,30,18,50,Y,Y,0,N,152,0.0
+S0768,73,24.0,Obesity,Knee Replacement,Dr. Nguyen,Dr. Brown,Nurse D,Monday,2025-03-10 14:00:00,2025-03-10 14:08:00,46,14,30,24,82,Y,Y,0,N,196,8.0
+S0769,82,33.6,None,Hip Replacement,Dr. Lee,Dr. Smith,Nurse D,Friday,2025-03-10 12:00:00,2025-03-10 12:30:00,53,11,25,23,116,Y,Y,0,N,228,30.0
+S0770,52,37.1,None,Knee Replacement,Dr. Nguyen,Dr. Green,Nurse D,Monday,2025-03-10 12:00:00,2025-03-10 12:09:00,42,14,22,30,82,Y,Y,0,N,190,9.0
+S0771,75,22.3,Heart Disease,ACL Repair,Dr. Kim,Dr. Brown,Nurse B,Tuesday,2025-03-10 16:00:00,2025-03-10 16:00:00,56,10,30,17,51,Y,Y,0,N,164,0.0
+S0772,58,35.9,Multiple,ACL Repair,Dr. Patel,Dr. Black,Nurse D,Tuesday,2025-03-10 13:00:00,2025-03-10 13:00:00,61,10,26,30,53,Y,Y,0,N,180,0.0
+S0773,46,30.0,Heart Disease,Shoulder Repair,Dr. Patel,Dr. White,Nurse E,Wednesday,2025-03-10 07:00:00,2025-03-10 07:00:00,50,8,28,22,110,N,Y,0,Y,218,0.0
+S0774,69,34.2,Multiple,Spine Fusion,Dr. Lee,Dr. Brown,Nurse A,Monday,2025-03-10 12:00:00,2025-03-10 12:26:00,47,9,30,27,153,Y,Y,0,N,266,26.0
+S0775,53,35.7,Multiple,Knee Replacement,Dr. Patel,Dr. Green,Nurse D,Wednesday,2025-03-10 09:00:00,2025-03-10 09:00:00,62,13,22,29,83,Y,Y,0,N,209,0.0
+S0776,81,25.1,Diabetes,Spine Fusion,Dr. Lee,Dr. Brown,Nurse B,Monday,2025-03-10 08:00:00,2025-03-10 08:42:00,43,11,30,18,149,Y,Y,0,Y,251,42.0
+S0777,74,32.7,Hypertension,Spine Fusion,Dr. Johnson,Dr. White,Nurse B,Wednesday,2025-03-10 13:00:00,2025-03-10 13:00:00,49,8,28,26,146,Y,Y,0,Y,257,0.0
+S0778,56,22.2,Multiple,Knee Replacement,Dr. Lee,Dr. Brown,Nurse D,Wednesday,2025-03-10 07:00:00,2025-03-10 07:00:00,55,13,30,18,98,Y,Y,0,N,214,0.0
+S0779,58,29.3,Heart Disease,Spine Fusion,Dr. Nguyen,Dr. Smith,Nurse C,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,45,12,25,20,155,Y,Y,0,N,257,0.0
+S0780,51,32.7,Heart Disease,Spine Fusion,Dr. Patel,Dr. Smith,Nurse C,Thursday,2025-03-10 07:00:00,2025-03-10 07:18:00,48,11,25,27,143,Y,Y,0,N,254,18.0
+S0781,63,24.0,Heart Disease,ACL Repair,Dr. Nguyen,Dr. Green,Nurse E,Monday,2025-03-10 15:00:00,2025-03-10 15:13:00,46,10,22,25,50,Y,N,21,N,153,13.0
+S0782,54,31.0,Hypertension,Spine Fusion,Dr. Kim,Dr. Black,Nurse C,Friday,2025-03-10 10:00:00,2025-03-10 10:00:00,61,10,26,25,145,Y,Y,0,N,267,0.0
+S0783,59,35.5,Multiple,Hip Replacement,Dr. Johnson,Dr. Black,Nurse D,Tuesday,2025-03-10 11:00:00,2025-03-10 11:00:00,57,12,26,26,113,Y,Y,0,N,234,0.0
+S0784,74,27.2,Multiple,ACL Repair,Dr. Kim,Dr. Smith,Nurse C,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,59,9,25,15,54,Y,N,15,N,162,0.0
+S0785,60,28.3,Diabetes,Shoulder Repair,Dr. Nguyen,Dr. Black,Nurse B,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,48,10,26,21,103,Y,Y,0,N,208,0.0
+S0786,54,25.3,Diabetes,ACL Repair,Dr. Patel,Dr. Smith,Nurse A,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,60,15,25,18,59,Y,Y,0,N,177,0.0
+S0787,84,29.3,None,ACL Repair,Dr. Patel,Dr. Smith,Nurse D,Wednesday,2025-03-10 08:00:00,2025-03-10 08:00:00,48,10,25,22,57,Y,Y,0,N,162,0.0
+S0788,50,38.0,Hypertension,Spine Fusion,Dr. Patel,Dr. Brown,Nurse D,Thursday,2025-03-10 13:00:00,2025-03-10 13:00:00,48,12,30,24,160,Y,Y,0,N,274,0.0
+S0789,71,32.7,Heart Disease,ACL Repair,Dr. Kim,Dr. Smith,Nurse A,Thursday,2025-03-10 10:00:00,2025-03-10 10:00:00,52,14,25,30,65,Y,Y,0,N,186,0.0
+S0790,81,28.0,Hypertension,Shoulder Repair,Dr. Kim,Dr. Black,Nurse A,Friday,2025-03-10 08:00:00,2025-03-10 08:00:00,43,11,26,20,104,Y,Y,0,N,204,0.0
+S0791,47,27.6,Obesity,Shoulder Repair,Dr. Johnson,Dr. Black,Nurse A,Thursday,2025-03-10 13:00:00,2025-03-10 13:00:00,40,11,26,24,105,Y,Y,0,N,206,0.0
+S0792,51,26.7,Obesity,Knee Replacement,Dr. Nguyen,Dr. White,Nurse C,Wednesday,2025-03-10 12:00:00,2025-03-10 12:25:00,48,15,28,15,100,Y,Y,0,N,206,25.0
+S0793,55,25.4,Hypertension,ACL Repair,Dr. Nguyen,Dr. White,Nurse B,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,59,11,28,20,53,Y,Y,0,N,171,0.0
+S0794,50,32.2,Heart Disease,Spine Fusion,Dr. Nguyen,Dr. Brown,Nurse D,Tuesday,2025-03-10 11:00:00,2025-03-10 11:41:00,56,13,30,27,145,Y,Y,0,N,271,41.0
+S0795,65,22.3,Diabetes,Spine Fusion,Dr. Patel,Dr. Black,Nurse E,Wednesday,2025-03-10 15:00:00,2025-03-10 15:00:00,52,9,26,18,171,N,Y,0,N,276,0.0
+S0796,54,33.5,Hypertension,ACL Repair,Dr. Nguyen,Dr. Brown,Nurse D,Monday,2025-03-10 11:00:00,2025-03-10 11:06:00,55,11,30,27,57,Y,Y,0,N,180,6.0
+S0797,62,22.4,Diabetes,Hip Replacement,Dr. Lee,Dr. Brown,Nurse D,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,47,8,30,24,114,Y,Y,0,N,223,0.0
+S0798,80,38.0,Diabetes,Shoulder Repair,Dr. Lee,Dr. Black,Nurse E,Thursday,2025-03-10 16:00:00,2025-03-10 16:34:00,53,13,26,24,96,Y,Y,0,N,212,34.0
+S0799,60,27.1,Heart Disease,Knee Replacement,Dr. Lee,Dr. White,Nurse B,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,56,15,28,23,99,Y,N,21,N,221,0.0
+S0800,80,35.1,Diabetes,Shoulder Repair,Dr. Patel,Dr. Black,Nurse A,Thursday,2025-03-10 16:00:00,2025-03-10 16:00:00,63,14,26,21,90,Y,Y,0,Y,214,0.0
+S0801,73,30.9,None,ACL Repair,Dr. Nguyen,Dr. Brown,Nurse A,Wednesday,2025-03-10 08:00:00,2025-03-10 08:27:00,58,12,30,20,65,Y,Y,0,N,185,27.0
+S0802,53,37.8,Diabetes,Shoulder Repair,Dr. Patel,Dr. Black,Nurse C,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,61,14,26,22,103,Y,Y,0,N,226,0.0
+S0803,45,37.5,None,ACL Repair,Dr. Johnson,Dr. Smith,Nurse A,Friday,2025-03-10 08:00:00,2025-03-10 08:00:00,45,11,25,23,55,Y,Y,0,Y,159,0.0
+S0804,76,33.7,Heart Disease,Knee Replacement,Dr. Kim,Dr. Green,Nurse E,Thursday,2025-03-10 13:00:00,2025-03-10 13:00:00,60,10,22,25,89,Y,Y,0,N,206,0.0
+S0805,72,36.1,Obesity,Knee Replacement,Dr. Lee,Dr. White,Nurse D,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,65,9,28,25,83,Y,Y,0,N,210,0.0
+S0806,46,36.1,None,Spine Fusion,Dr. Kim,Dr. White,Nurse A,Tuesday,2025-03-10 07:00:00,2025-03-10 07:43:00,40,8,28,25,140,Y,Y,0,N,241,43.0
+S0807,81,31.0,None,Hip Replacement,Dr. Lee,Dr. Black,Nurse D,Tuesday,2025-03-10 15:00:00,2025-03-10 15:00:00,51,9,26,30,119,Y,Y,0,N,235,0.0
+S0808,56,36.3,Multiple,Hip Replacement,Dr. Johnson,Dr. Brown,Nurse D,Monday,2025-03-10 16:00:00,2025-03-10 16:13:00,48,12,30,24,105,Y,Y,0,N,219,13.0
+S0809,51,30.0,Hypertension,Hip Replacement,Dr. Johnson,Dr. White,Nurse D,Friday,2025-03-10 13:00:00,2025-03-10 13:00:00,43,9,28,20,104,Y,N,25,N,204,0.0
+S0810,70,22.7,None,Shoulder Repair,Dr. Johnson,Dr. Smith,Nurse E,Monday,2025-03-10 12:00:00,2025-03-10 12:57:00,47,11,25,19,99,Y,Y,0,N,201,57.0
+S0811,85,28.8,Obesity,Shoulder Repair,Dr. Kim,Dr. Green,Nurse A,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,55,14,22,19,94,Y,Y,0,N,204,0.0
+S0812,48,30.4,None,Hip Replacement,Dr. Kim,Dr. White,Nurse E,Friday,2025-03-10 15:00:00,2025-03-10 15:00:00,50,8,28,28,126,N,N,27,N,240,0.0
+S0813,72,33.8,Hypertension,Hip Replacement,Dr. Johnson,Dr. White,Nurse A,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,50,11,28,25,128,N,Y,0,N,242,0.0
+S0814,85,31.8,None,Shoulder Repair,Dr. Lee,Dr. Smith,Nurse C,Monday,2025-03-10 10:00:00,2025-03-10 10:38:00,52,11,25,25,97,Y,N,14,N,210,38.0
+S0815,84,32.7,Obesity,Spine Fusion,Dr. Patel,Dr. Brown,Nurse C,Thursday,2025-03-10 07:00:00,2025-03-10 07:00:00,58,14,30,24,146,Y,Y,0,Y,272,0.0
+S0816,76,26.1,None,Shoulder Repair,Dr. Kim,Dr. Green,Nurse B,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,38,10,22,22,113,N,Y,0,N,205,0.0
+S0817,61,37.3,Multiple,Shoulder Repair,Dr. Patel,Dr. Black,Nurse C,Wednesday,2025-03-10 16:00:00,2025-03-10 16:00:00,48,14,26,23,102,Y,Y,0,N,213,0.0
+S0818,57,24.0,None,Shoulder Repair,Dr. Nguyen,Dr. Smith,Nurse A,Tuesday,2025-03-10 07:00:00,2025-03-10 07:21:00,37,9,25,18,96,Y,Y,0,N,185,21.0
+S0819,54,29.1,None,Spine Fusion,Dr. Lee,Dr. Brown,Nurse C,Monday,2025-03-10 16:00:00,2025-03-10 16:07:00,45,12,30,17,146,Y,Y,0,N,250,7.0
+S0820,69,24.4,Heart Disease,Spine Fusion,Dr. Kim,Dr. Brown,Nurse B,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,54,8,30,22,172,N,Y,0,N,286,0.0
+S0821,80,24.6,Hypertension,ACL Repair,Dr. Kim,Dr. Smith,Nurse A,Thursday,2025-03-10 15:00:00,2025-03-10 15:00:00,59,10,25,20,54,Y,Y,0,N,168,0.0
+S0822,59,22.1,None,Spine Fusion,Dr. Kim,Dr. Green,Nurse E,Monday,2025-03-10 10:00:00,2025-03-10 10:05:00,53,9,22,15,155,Y,Y,0,N,254,5.0
+S0823,63,33.0,Obesity,Shoulder Repair,Dr. Lee,Dr. Green,Nurse E,Wednesday,2025-03-10 12:00:00,2025-03-10 12:39:00,60,10,22,27,96,Y,Y,0,N,215,39.0
+S0824,63,32.2,Diabetes,Shoulder Repair,Dr. Patel,Dr. Brown,Nurse C,Monday,2025-03-10 13:00:00,2025-03-10 13:24:00,59,14,30,28,97,Y,N,30,N,228,24.0
+S0825,70,28.7,Obesity,Shoulder Repair,Dr. Nguyen,Dr. Green,Nurse D,Thursday,2025-03-10 12:00:00,2025-03-10 12:00:00,52,10,22,23,91,Y,Y,0,N,198,0.0
+S0826,81,25.1,Multiple,Spine Fusion,Dr. Patel,Dr. Green,Nurse E,Thursday,2025-03-10 12:00:00,2025-03-10 12:00:00,46,14,22,17,157,Y,Y,0,Y,256,0.0
+S0827,73,26.8,Hypertension,Shoulder Repair,Dr. Kim,Dr. Brown,Nurse B,Wednesday,2025-03-10 15:00:00,2025-03-10 15:34:00,56,14,30,17,85,Y,Y,0,N,202,34.0
+S0828,69,31.1,Diabetes,ACL Repair,Dr. Johnson,Dr. Brown,Nurse D,Friday,2025-03-10 10:00:00,2025-03-10 10:00:00,55,15,30,23,54,Y,Y,0,N,177,0.0
+S0829,84,36.9,Hypertension,Spine Fusion,Dr. Kim,Dr. Smith,Nurse A,Monday,2025-03-10 07:00:00,2025-03-10 07:05:00,55,9,25,25,151,Y,N,14,Y,265,5.0
+S0830,58,26.9,None,ACL Repair,Dr. Johnson,Dr. White,Nurse E,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,40,12,28,19,67,Y,Y,0,N,166,0.0
+S0831,54,24.6,None,Spine Fusion,Dr. Johnson,Dr. Green,Nurse B,Friday,2025-03-10 15:00:00,2025-03-10 15:00:00,43,11,22,16,144,Y,Y,0,N,236,0.0
+S0832,47,24.2,Obesity,Shoulder Repair,Dr. Nguyen,Dr. Green,Nurse B,Monday,2025-03-10 16:00:00,2025-03-10 16:10:00,54,10,22,22,100,Y,Y,0,N,208,10.0
+S0833,66,37.8,Heart Disease,Knee Replacement,Dr. Lee,Dr. Brown,Nurse E,Wednesday,2025-03-10 13:00:00,2025-03-10 13:17:00,51,13,30,24,82,Y,Y,0,N,200,17.0
+S0834,76,22.3,Hypertension,Shoulder Repair,Dr. Lee,Dr. White,Nurse C,Tuesday,2025-03-10 15:00:00,2025-03-10 15:00:00,56,8,28,22,90,Y,Y,0,N,204,0.0
+S0835,60,33.2,Heart Disease,Shoulder Repair,Dr. Nguyen,Dr. White,Nurse A,Wednesday,2025-03-10 14:00:00,2025-03-10 14:00:00,55,8,28,22,104,Y,Y,0,Y,217,0.0
+S0836,81,22.3,Obesity,Hip Replacement,Dr. Nguyen,Dr. Green,Nurse D,Monday,2025-03-10 11:00:00,2025-03-10 11:10:00,51,14,22,21,104,Y,Y,0,N,212,10.0
+S0837,80,25.1,Heart Disease,ACL Repair,Dr. Kim,Dr. Green,Nurse A,Wednesday,2025-03-10 15:00:00,2025-03-10 15:11:00,44,9,22,18,67,N,Y,0,N,160,11.0
+S0838,60,34.5,None,Knee Replacement,Dr. Kim,Dr. White,Nurse E,Monday,2025-03-10 09:00:00,2025-03-10 09:12:00,60,13,28,30,83,Y,N,14,N,214,12.0
+S0839,50,25.0,Multiple,Knee Replacement,Dr. Kim,Dr. Green,Nurse B,Tuesday,2025-03-10 07:00:00,2025-03-10 07:00:00,52,13,22,25,95,Y,Y,0,N,207,0.0
+S0840,76,31.7,Diabetes,Shoulder Repair,Dr. Patel,Dr. Black,Nurse A,Thursday,2025-03-10 09:00:00,2025-03-10 09:00:00,47,10,26,23,102,Y,Y,0,N,208,0.0
+S0841,57,33.2,Multiple,Knee Replacement,Dr. Lee,Dr. Brown,Nurse C,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,63,12,30,29,100,Y,Y,0,N,234,0.0
+S0842,72,26.0,Heart Disease,Hip Replacement,Dr. Johnson,Dr. Smith,Nurse C,Wednesday,2025-03-10 09:00:00,2025-03-10 09:00:00,42,15,25,20,101,Y,Y,0,N,203,0.0
+S0843,72,23.3,Multiple,Shoulder Repair,Dr. Kim,Dr. Smith,Nurse C,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,59,9,25,24,95,Y,Y,0,N,212,0.0
+S0844,75,27.9,Heart Disease,Shoulder Repair,Dr. Patel,Dr. Black,Nurse B,Tuesday,2025-03-10 16:00:00,2025-03-10 16:00:00,51,14,26,22,95,Y,Y,0,N,208,0.0
+S0845,70,29.4,Obesity,Shoulder Repair,Dr. Lee,Dr. Brown,Nurse D,Thursday,2025-03-10 07:00:00,2025-03-10 07:30:00,52,10,30,21,98,Y,Y,0,N,211,30.0
+S0846,56,24.4,Diabetes,Hip Replacement,Dr. Kim,Dr. Smith,Nurse D,Thursday,2025-03-10 09:00:00,2025-03-10 09:00:00,46,8,25,22,109,Y,Y,0,N,210,0.0
+S0847,80,26.4,Diabetes,Shoulder Repair,Dr. Johnson,Dr. Green,Nurse D,Thursday,2025-03-10 09:00:00,2025-03-10 09:00:00,41,13,22,16,115,N,Y,0,N,207,0.0
+S0848,54,25.8,Obesity,Hip Replacement,Dr. Nguyen,Dr. Green,Nurse A,Wednesday,2025-03-10 09:00:00,2025-03-10 09:00:00,49,14,22,24,104,Y,Y,0,N,213,0.0
+S0849,66,33.6,Multiple,Hip Replacement,Dr. Patel,Dr. Black,Nurse D,Monday,2025-03-10 07:00:00,2025-03-10 07:11:00,52,11,26,25,110,Y,Y,0,N,224,11.0
+S0850,75,34.6,Hypertension,ACL Repair,Dr. Johnson,Dr. White,Nurse B,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,63,11,28,29,57,Y,Y,0,N,188,0.0
+S0851,75,36.2,Heart Disease,Spine Fusion,Dr. Kim,Dr. Green,Nurse B,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,60,15,22,29,148,Y,N,22,Y,274,0.0
+S0852,57,34.7,Heart Disease,Hip Replacement,Dr. Patel,Dr. Smith,Nurse D,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,55,13,25,29,104,Y,Y,0,N,226,0.0
+S0853,65,29.8,Heart Disease,Spine Fusion,Dr. Johnson,Dr. Brown,Nurse B,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,41,11,30,23,149,Y,N,22,N,254,0.0
+S0854,45,26.8,Diabetes,Hip Replacement,Dr. Patel,Dr. Smith,Nurse A,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,44,15,25,25,105,Y,Y,0,N,214,0.0
+S0855,65,23.7,Heart Disease,Shoulder Repair,Dr. Patel,Dr. Brown,Nurse E,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,44,13,30,15,95,Y,Y,0,N,197,0.0
+S0856,68,24.3,Multiple,Shoulder Repair,Dr. Johnson,Dr. Smith,Nurse D,Wednesday,2025-03-10 13:00:00,2025-03-10 13:00:00,59,8,25,25,103,Y,Y,0,N,220,0.0
+S0857,47,36.1,None,Hip Replacement,Dr. Nguyen,Dr. Smith,Nurse A,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,45,11,25,21,111,Y,Y,0,N,213,0.0
+S0858,71,27.5,None,Shoulder Repair,Dr. Nguyen,Dr. Black,Nurse A,Friday,2025-03-10 13:00:00,2025-03-10 13:00:00,47,10,26,23,91,Y,Y,0,N,197,0.0
+S0859,61,25.6,None,Spine Fusion,Dr. Kim,Dr. Smith,Nurse B,Thursday,2025-03-10 07:00:00,2025-03-10 07:00:00,42,10,25,17,150,Y,Y,0,N,244,0.0
+S0860,85,32.7,None,Spine Fusion,Dr. Patel,Dr. Green,Nurse A,Thursday,2025-03-10 15:00:00,2025-03-10 15:00:00,46,8,22,23,155,Y,Y,0,Y,254,0.0
+S0861,45,27.6,None,Spine Fusion,Dr. Patel,Dr. Black,Nurse B,Thursday,2025-03-10 10:00:00,2025-03-10 10:00:00,35,12,26,19,156,Y,Y,0,N,248,0.0
+S0862,57,34.1,Heart Disease,ACL Repair,Dr. Lee,Dr. White,Nurse C,Thursday,2025-03-10 08:00:00,2025-03-10 08:38:00,45,15,28,29,66,Y,Y,0,N,183,38.0
+S0863,58,25.0,None,Shoulder Repair,Dr. Kim,Dr. Brown,Nurse B,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,41,12,30,20,105,Y,Y,0,N,208,0.0
+S0864,61,25.5,None,ACL Repair,Dr. Kim,Dr. Brown,Nurse B,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,47,13,30,22,69,Y,Y,0,N,181,0.0
+S0865,76,29.7,Hypertension,ACL Repair,Dr. Lee,Dr. Smith,Nurse E,Monday,2025-03-10 07:00:00,2025-03-10 07:18:00,48,8,25,19,68,Y,Y,0,N,168,18.0
+S0866,68,25.4,Diabetes,Shoulder Repair,Dr. Patel,Dr. Smith,Nurse C,Thursday,2025-03-10 07:00:00,2025-03-10 07:00:00,41,9,25,19,99,Y,Y,0,N,193,0.0
+S0867,58,23.9,Multiple,Knee Replacement,Dr. Nguyen,Dr. Brown,Nurse A,Monday,2025-03-10 08:00:00,2025-03-10 08:12:00,58,12,30,19,114,N,N,14,N,233,12.0
+S0868,70,32.8,None,Knee Replacement,Dr. Nguyen,Dr. Green,Nurse D,Thursday,2025-03-10 09:00:00,2025-03-10 09:12:00,42,12,22,24,86,Y,Y,0,N,186,12.0
+S0869,46,32.7,Diabetes,Hip Replacement,Dr. Nguyen,Dr. Smith,Nurse A,Friday,2025-03-10 13:00:00,2025-03-10 13:00:00,60,11,25,20,102,Y,Y,0,N,218,0.0
+S0870,75,30.7,Heart Disease,ACL Repair,Dr. Johnson,Dr. Black,Nurse B,Wednesday,2025-03-10 12:00:00,2025-03-10 12:00:00,63,14,26,25,61,Y,Y,0,N,189,0.0
+S0871,54,35.0,Obesity,Spine Fusion,Dr. Nguyen,Dr. White,Nurse D,Monday,2025-03-10 16:00:00,2025-03-10 16:07:00,55,13,28,30,157,Y,Y,0,N,283,7.0
+S0872,47,27.5,Multiple,Hip Replacement,Dr. Johnson,Dr. White,Nurse E,Tuesday,2025-03-10 16:00:00,2025-03-10 16:00:00,46,14,28,16,103,Y,Y,0,N,207,0.0
+S0873,79,22.7,None,Spine Fusion,Dr. Kim,Dr. White,Nurse E,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,45,15,28,16,151,Y,Y,0,Y,255,0.0
+S0874,80,37.0,Hypertension,Shoulder Repair,Dr. Lee,Dr. Black,Nurse C,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,65,15,26,22,91,Y,Y,0,N,219,0.0
+S0875,77,34.8,Obesity,Hip Replacement,Dr. Kim,Dr. White,Nurse B,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,62,9,28,23,119,N,Y,0,N,241,0.0
+S0876,56,35.2,Multiple,Knee Replacement,Dr. Kim,Dr. White,Nurse D,Monday,2025-03-10 13:00:00,2025-03-10 13:40:00,64,12,28,25,86,Y,Y,0,N,215,40.0
+S0877,75,32.2,Hypertension,Knee Replacement,Dr. Nguyen,Dr. Smith,Nurse D,Wednesday,2025-03-10 12:00:00,2025-03-10 12:00:00,60,14,25,28,93,Y,Y,0,N,220,0.0
+S0878,84,36.1,Multiple,Shoulder Repair,Dr. Kim,Dr. Green,Nurse A,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,62,9,22,21,105,Y,Y,0,N,219,0.0
+S0879,74,28.1,Heart Disease,Hip Replacement,Dr. Johnson,Dr. Green,Nurse A,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,54,11,22,24,100,Y,Y,0,N,211,0.0
+S0880,82,35.8,None,Spine Fusion,Dr. Nguyen,Dr. Smith,Nurse E,Tuesday,2025-03-10 14:00:00,2025-03-10 14:00:00,58,14,25,28,141,Y,Y,0,Y,266,0.0
+S0881,61,31.4,Multiple,Spine Fusion,Dr. Nguyen,Dr. Brown,Nurse D,Wednesday,2025-03-10 09:00:00,2025-03-10 09:00:00,64,13,30,26,144,Y,Y,0,N,277,0.0
+S0882,49,25.2,Obesity,Hip Replacement,Dr. Kim,Dr. Green,Nurse B,Thursday,2025-03-10 07:00:00,2025-03-10 07:00:00,47,13,22,25,115,Y,Y,0,N,222,0.0
+S0883,73,34.9,None,Knee Replacement,Dr. Lee,Dr. Brown,Nurse B,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,55,13,30,26,109,N,Y,0,N,233,0.0
+S0884,75,22.5,Obesity,Spine Fusion,Dr. Nguyen,Dr. Smith,Nurse A,Monday,2025-03-10 11:00:00,2025-03-10 11:44:00,52,11,25,17,145,Y,N,15,Y,250,44.0
+S0885,57,29.1,Hypertension,ACL Repair,Dr. Johnson,Dr. White,Nurse D,Monday,2025-03-10 09:00:00,2025-03-10 09:06:00,57,8,28,18,59,Y,N,22,Y,170,6.0
+S0886,48,30.2,None,Knee Replacement,Dr. Johnson,Dr. White,Nurse E,Friday,2025-03-10 07:00:00,2025-03-10 07:00:00,44,13,28,23,86,Y,N,25,N,194,0.0
+S0887,58,23.6,Obesity,Spine Fusion,Dr. Johnson,Dr. Smith,Nurse B,Tuesday,2025-03-10 15:00:00,2025-03-10 15:00:00,42,15,25,23,142,Y,Y,0,N,247,0.0
+S0888,60,32.0,Obesity,ACL Repair,Dr. Lee,Dr. White,Nurse D,Monday,2025-03-10 13:00:00,2025-03-10 13:10:00,57,8,28,23,61,Y,Y,0,N,177,10.0
+S0889,59,34.0,Diabetes,Shoulder Repair,Dr. Johnson,Dr. Black,Nurse D,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,54,15,26,21,85,Y,Y,0,N,201,0.0
+S0890,80,23.4,Diabetes,Knee Replacement,Dr. Patel,Dr. White,Nurse D,Wednesday,2025-03-10 14:00:00,2025-03-10 14:00:00,50,12,28,23,89,Y,Y,0,N,202,0.0
+S0891,75,30.2,Obesity,Spine Fusion,Dr. Johnson,Dr. Black,Nurse E,Friday,2025-03-10 09:00:00,2025-03-10 09:00:00,47,15,26,25,159,Y,Y,0,Y,272,0.0
+S0892,61,32.1,Heart Disease,ACL Repair,Dr. Johnson,Dr. Black,Nurse B,Wednesday,2025-03-10 12:00:00,2025-03-10 12:22:00,56,12,26,23,66,Y,Y,0,N,183,22.0
+S0893,62,26.2,Obesity,Hip Replacement,Dr. Johnson,Dr. Brown,Nurse C,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,57,13,30,18,118,Y,Y,0,N,236,0.0
+S0894,52,33.6,Heart Disease,Hip Replacement,Dr. Lee,Dr. Black,Nurse C,Tuesday,2025-03-10 14:00:00,2025-03-10 14:00:00,57,15,26,24,114,Y,Y,0,N,236,0.0
+S0895,54,26.1,None,ACL Repair,Dr. Kim,Dr. Green,Nurse E,Thursday,2025-03-10 07:00:00,2025-03-10 07:00:00,43,15,22,22,67,Y,Y,0,N,169,0.0
+S0896,62,30.2,Obesity,Hip Replacement,Dr. Patel,Dr. Smith,Nurse D,Thursday,2025-03-10 16:00:00,2025-03-10 16:00:00,58,14,25,25,105,Y,Y,0,N,227,0.0
+S0897,48,22.7,None,ACL Repair,Dr. Kim,Dr. Black,Nurse E,Wednesday,2025-03-10 09:00:00,2025-03-10 09:00:00,48,11,26,15,68,Y,Y,0,N,168,0.0
+S0898,52,27.4,Hypertension,ACL Repair,Dr. Patel,Dr. Green,Nurse B,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,58,12,22,23,57,Y,Y,0,N,172,0.0
+S0899,80,31.3,Diabetes,Hip Replacement,Dr. Nguyen,Dr. Brown,Nurse E,Friday,2025-03-10 07:00:00,2025-03-10 07:15:00,63,12,30,27,107,Y,Y,0,N,239,15.0
+S0900,74,31.8,Diabetes,Hip Replacement,Dr. Patel,Dr. Smith,Nurse A,Tuesday,2025-03-10 11:00:00,2025-03-10 11:00:00,64,14,25,27,103,Y,Y,0,N,233,0.0
+S0901,71,33.4,Obesity,Hip Replacement,Dr. Nguyen,Dr. Black,Nurse D,Monday,2025-03-10 15:00:00,2025-03-10 15:38:00,60,14,26,28,100,Y,Y,0,N,228,38.0
+S0902,73,31.7,Heart Disease,Hip Replacement,Dr. Kim,Dr. Black,Nurse D,Tuesday,2025-03-10 13:00:00,2025-03-10 13:00:00,55,13,26,26,109,Y,Y,0,N,229,0.0
+S0903,69,31.6,Obesity,Knee Replacement,Dr. Johnson,Dr. Brown,Nurse A,Thursday,2025-03-10 07:00:00,2025-03-10 07:00:00,56,13,30,26,110,N,Y,0,N,235,0.0
+S0904,50,29.0,Heart Disease,Hip Replacement,Dr. Patel,Dr. White,Nurse C,Thursday,2025-03-10 09:00:00,2025-03-10 09:00:00,58,11,28,15,111,Y,Y,0,Y,223,0.0
+S0905,59,23.4,Diabetes,Knee Replacement,Dr. Johnson,Dr. Black,Nurse A,Wednesday,2025-03-10 08:00:00,2025-03-10 08:00:00,48,15,26,17,93,Y,Y,0,N,199,0.0
+S0906,56,25.7,Heart Disease,Hip Replacement,Dr. Johnson,Dr. Smith,Nurse B,Monday,2025-03-10 16:00:00,2025-03-10 16:15:00,45,12,25,23,113,Y,Y,0,N,218,15.0
+S0907,57,31.6,None,Knee Replacement,Dr. Kim,Dr. White,Nurse B,Friday,2025-03-10 08:00:00,2025-03-10 08:00:00,57,13,28,22,85,Y,N,10,N,205,0.0
+S0908,55,34.3,Hypertension,Knee Replacement,Dr. Johnson,Dr. Black,Nurse A,Thursday,2025-03-10 09:00:00,2025-03-10 09:00:00,60,10,26,22,99,Y,Y,0,N,217,0.0
+S0909,81,34.5,Obesity,Hip Replacement,Dr. Nguyen,Dr. Brown,Nurse A,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,46,9,30,26,109,Y,Y,0,N,220,0.0
+S0910,76,32.8,Obesity,Spine Fusion,Dr. Johnson,Dr. Green,Nurse E,Thursday,2025-03-10 15:00:00,2025-03-10 15:00:00,64,14,22,24,153,Y,Y,0,Y,277,0.0
+S0911,55,30.1,Obesity,Hip Replacement,Dr. Kim,Dr. Brown,Nurse A,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,48,14,30,26,111,Y,N,25,N,229,0.0
+S0912,46,25.4,Multiple,Hip Replacement,Dr. Nguyen,Dr. Black,Nurse B,Wednesday,2025-03-10 13:00:00,2025-03-10 13:00:00,40,11,26,22,112,Y,Y,0,N,211,0.0
+S0913,74,27.9,Diabetes,Shoulder Repair,Dr. Lee,Dr. Green,Nurse A,Tuesday,2025-03-10 09:00:00,2025-03-10 09:16:00,49,13,22,15,97,Y,Y,0,N,196,16.0
+S0914,72,23.2,Heart Disease,ACL Repair,Dr. Johnson,Dr. Black,Nurse D,Monday,2025-03-10 14:00:00,2025-03-10 14:10:00,46,12,26,23,53,Y,N,27,N,160,10.0
+S0915,46,30.2,Multiple,Spine Fusion,Dr. Patel,Dr. Smith,Nurse D,Thursday,2025-03-10 12:00:00,2025-03-10 12:00:00,59,13,25,29,151,Y,Y,0,N,277,0.0
+S0916,78,31.4,Obesity,Shoulder Repair,Dr. Nguyen,Dr. Black,Nurse A,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,49,14,26,25,99,Y,Y,0,N,213,0.0
+S0917,54,24.3,Diabetes,Knee Replacement,Dr. Johnson,Dr. Green,Nurse C,Thursday,2025-03-10 10:00:00,2025-03-10 10:00:00,49,8,22,17,98,Y,Y,0,N,194,0.0
+S0918,54,28.8,Hypertension,ACL Repair,Dr. Lee,Dr. Smith,Nurse A,Tuesday,2025-03-10 07:00:00,2025-03-10 07:00:00,55,9,25,18,55,Y,Y,0,N,162,0.0
+S0919,76,23.8,Multiple,Shoulder Repair,Dr. Patel,Dr. Black,Nurse C,Thursday,2025-03-10 11:00:00,2025-03-10 11:00:00,57,13,26,25,101,Y,Y,0,N,222,0.0
+S0920,82,30.3,Heart Disease,Spine Fusion,Dr. Lee,Dr. Brown,Nurse A,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,61,12,30,27,152,Y,Y,0,Y,282,0.0
+S0921,48,37.2,Heart Disease,ACL Repair,Dr. Kim,Dr. Brown,Nurse E,Tuesday,2025-03-10 10:00:00,2025-03-10 10:25:00,59,10,30,21,66,Y,Y,0,N,186,25.0
+S0922,70,28.7,Heart Disease,ACL Repair,Dr. Kim,Dr. Brown,Nurse B,Friday,2025-03-10 14:00:00,2025-03-10 14:14:00,50,8,30,21,63,Y,N,25,N,172,14.0
+S0923,66,37.0,None,ACL Repair,Dr. Lee,Dr. Green,Nurse D,Thursday,2025-03-10 16:00:00,2025-03-10 16:00:00,53,11,22,24,55,Y,Y,0,N,165,0.0
+S0924,83,27.2,Obesity,Knee Replacement,Dr. Kim,Dr. Smith,Nurse A,Monday,2025-03-10 09:00:00,2025-03-10 09:12:00,42,10,25,15,93,N,N,21,N,185,12.0
+S0925,67,32.7,None,Knee Replacement,Dr. Lee,Dr. White,Nurse C,Monday,2025-03-10 07:00:00,2025-03-10 07:20:00,59,8,28,23,92,Y,Y,0,N,210,20.0
+S0926,62,31.5,Hypertension,Spine Fusion,Dr. Kim,Dr. Black,Nurse C,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,53,10,26,30,156,Y,Y,0,N,275,0.0
+S0927,83,25.6,Heart Disease,Knee Replacement,Dr. Nguyen,Dr. White,Nurse B,Thursday,2025-03-10 14:00:00,2025-03-10 14:00:00,56,12,28,19,92,Y,Y,0,N,207,0.0
+S0928,60,34.7,Heart Disease,ACL Repair,Dr. Lee,Dr. Brown,Nurse D,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,46,9,30,22,64,Y,Y,0,N,171,0.0
+S0929,49,26.5,Heart Disease,ACL Repair,Dr. Johnson,Dr. Brown,Nurse D,Thursday,2025-03-10 13:00:00,2025-03-10 13:00:00,60,12,30,18,70,Y,Y,0,Y,190,0.0
+S0930,55,28.3,Heart Disease,Knee Replacement,Dr. Kim,Dr. Smith,Nurse C,Thursday,2025-03-10 09:00:00,2025-03-10 09:00:00,54,14,25,20,90,Y,Y,0,N,203,0.0
+S0931,72,32.5,Hypertension,Hip Replacement,Dr. Kim,Dr. Brown,Nurse C,Thursday,2025-03-10 08:00:00,2025-03-10 08:00:00,55,10,30,20,107,Y,Y,0,N,222,0.0
+S0932,76,37.3,Diabetes,Hip Replacement,Dr. Nguyen,Dr. Smith,Nurse A,Wednesday,2025-03-10 12:00:00,2025-03-10 12:33:00,55,8,25,21,116,Y,Y,0,N,225,33.0
+S0933,54,27.3,Multiple,Spine Fusion,Dr. Patel,Dr. Black,Nurse D,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,59,11,26,21,141,Y,Y,0,N,258,0.0
+S0934,80,26.6,Obesity,Knee Replacement,Dr. Patel,Dr. White,Nurse A,Thursday,2025-03-10 16:00:00,2025-03-10 16:00:00,42,15,28,21,99,Y,Y,0,N,205,0.0
+S0935,65,35.4,Diabetes,Shoulder Repair,Dr. Patel,Dr. White,Nurse A,Tuesday,2025-03-10 16:00:00,2025-03-10 16:00:00,53,8,28,28,92,Y,Y,0,N,209,0.0
+S0936,73,25.8,None,Shoulder Repair,Dr. Kim,Dr. Smith,Nurse C,Friday,2025-03-10 15:00:00,2025-03-10 15:11:00,51,12,25,24,100,Y,Y,0,N,212,11.0
+S0937,80,26.6,None,Hip Replacement,Dr. Nguyen,Dr. Black,Nurse C,Tuesday,2025-03-10 15:00:00,2025-03-10 15:00:00,35,14,26,16,107,Y,Y,0,N,198,0.0
+S0938,46,23.6,Multiple,ACL Repair,Dr. Lee,Dr. White,Nurse C,Thursday,2025-03-10 09:00:00,2025-03-10 09:23:00,45,13,28,16,59,Y,Y,0,N,161,23.0
+S0939,79,33.1,Multiple,Knee Replacement,Dr. Kim,Dr. Brown,Nurse A,Monday,2025-03-10 10:00:00,2025-03-10 10:09:00,50,9,30,27,96,Y,Y,0,N,212,9.0
+S0940,74,30.2,Obesity,Spine Fusion,Dr. Patel,Dr. Smith,Nurse C,Monday,2025-03-10 12:00:00,2025-03-10 12:08:00,62,12,25,20,159,Y,Y,0,Y,278,8.0
+S0941,50,37.9,Diabetes,Hip Replacement,Dr. Patel,Dr. Brown,Nurse E,Friday,2025-03-10 10:00:00,2025-03-10 10:00:00,65,13,30,20,112,Y,Y,0,N,240,0.0
+S0942,77,34.4,Obesity,Hip Replacement,Dr. Lee,Dr. Brown,Nurse E,Thursday,2025-03-10 16:00:00,2025-03-10 16:14:00,52,15,30,28,112,Y,Y,0,N,237,14.0
+S0943,68,25.2,None,Knee Replacement,Dr. Nguyen,Dr. Brown,Nurse A,Friday,2025-03-10 12:00:00,2025-03-10 12:00:00,46,13,30,21,80,Y,Y,0,N,190,0.0
+S0944,50,24.1,None,Spine Fusion,Dr. Johnson,Dr. Black,Nurse A,Friday,2025-03-10 09:00:00,2025-03-10 09:00:00,52,13,26,16,141,Y,Y,0,N,248,0.0
+S0945,60,27.0,Obesity,ACL Repair,Dr. Kim,Dr. Smith,Nurse A,Wednesday,2025-03-10 09:00:00,2025-03-10 09:00:00,52,10,25,19,63,Y,Y,0,N,169,0.0
+S0946,78,27.8,Obesity,ACL Repair,Dr. Patel,Dr. Green,Nurse A,Monday,2025-03-10 11:00:00,2025-03-10 11:06:00,44,9,22,20,58,Y,Y,0,N,153,6.0
+S0947,52,24.9,Diabetes,Spine Fusion,Dr. Kim,Dr. Brown,Nurse A,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,57,9,30,23,157,Y,Y,0,N,276,0.0
+S0948,80,32.5,None,Shoulder Repair,Dr. Kim,Dr. White,Nurse D,Monday,2025-03-10 12:00:00,2025-03-10 12:05:00,44,9,28,21,103,Y,N,25,Y,205,5.0
+S0949,68,28.5,None,ACL Repair,Dr. Lee,Dr. Black,Nurse E,Tuesday,2025-03-10 08:00:00,2025-03-10 08:00:00,40,9,26,25,65,Y,Y,0,N,165,0.0
+S0950,53,24.7,Multiple,Spine Fusion,Dr. Lee,Dr. Green,Nurse A,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,46,15,22,23,153,Y,N,22,N,259,0.0
+S0951,78,26.7,Diabetes,Shoulder Repair,Dr. Johnson,Dr. Green,Nurse E,Wednesday,2025-03-10 11:00:00,2025-03-10 11:00:00,43,14,22,19,100,Y,Y,0,Y,198,0.0
+S0952,52,28.5,Diabetes,ACL Repair,Dr. Lee,Dr. Black,Nurse B,Friday,2025-03-10 08:00:00,2025-03-10 08:25:00,44,8,26,18,51,Y,Y,0,N,147,25.0
+S0953,53,37.4,Heart Disease,Knee Replacement,Dr. Johnson,Dr. Smith,Nurse B,Monday,2025-03-10 07:00:00,2025-03-10 07:10:00,51,15,25,22,100,Y,Y,0,N,213,10.0
+S0954,65,37.6,Obesity,Spine Fusion,Dr. Patel,Dr. Green,Nurse B,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,51,11,22,27,148,Y,Y,0,N,259,0.0
+S0955,61,22.0,Obesity,Hip Replacement,Dr. Kim,Dr. Smith,Nurse D,Friday,2025-03-10 11:00:00,2025-03-10 11:00:00,43,12,25,17,105,Y,Y,0,Y,202,0.0
+S0956,78,23.0,Obesity,ACL Repair,Dr. Patel,Dr. Brown,Nurse D,Tuesday,2025-03-10 11:00:00,2025-03-10 11:34:00,48,10,30,22,54,Y,Y,0,Y,164,34.0
+S0957,60,32.3,Obesity,Hip Replacement,Dr. Johnson,Dr. Black,Nurse B,Monday,2025-03-10 11:00:00,2025-03-10 11:13:00,53,9,26,24,116,Y,Y,0,N,228,13.0
+S0958,46,23.0,None,Hip Replacement,Dr. Patel,Dr. White,Nurse B,Friday,2025-03-10 16:00:00,2025-03-10 16:00:00,51,10,28,25,116,Y,N,10,N,230,0.0
+S0959,80,28.7,Heart Disease,Knee Replacement,Dr. Nguyen,Dr. Brown,Nurse B,Monday,2025-03-10 11:00:00,2025-03-10 11:11:00,48,12,30,24,92,Y,Y,0,N,206,11.0
+S0960,81,31.0,None,Shoulder Repair,Dr. Nguyen,Dr. Black,Nurse B,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,50,13,26,27,102,Y,Y,0,N,218,0.0
+S0961,59,28.9,Hypertension,Knee Replacement,Dr. Kim,Dr. Smith,Nurse E,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,41,11,25,22,82,Y,Y,0,N,181,0.0
+S0962,80,29.1,Diabetes,Hip Replacement,Dr. Lee,Dr. Brown,Nurse C,Monday,2025-03-10 07:00:00,2025-03-10 07:14:00,53,9,30,19,114,Y,Y,0,N,225,14.0
+S0963,60,31.8,None,ACL Repair,Dr. Johnson,Dr. Black,Nurse B,Monday,2025-03-10 14:00:00,2025-03-10 14:13:00,45,8,26,27,56,Y,Y,0,N,162,13.0
+S0964,51,23.4,Hypertension,Hip Replacement,Dr. Johnson,Dr. White,Nurse A,Thursday,2025-03-10 12:00:00,2025-03-10 12:38:00,57,10,28,15,120,Y,Y,0,N,230,38.0
+S0965,62,25.1,Diabetes,Hip Replacement,Dr. Kim,Dr. Brown,Nurse B,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,54,8,30,25,119,Y,Y,0,N,236,0.0
+S0966,52,33.6,Multiple,Hip Replacement,Dr. Patel,Dr. White,Nurse D,Tuesday,2025-03-10 08:00:00,2025-03-10 08:20:00,60,14,28,20,101,Y,Y,0,N,223,20.0
+S0967,71,23.7,Diabetes,Hip Replacement,Dr. Kim,Dr. Brown,Nurse D,Monday,2025-03-10 13:00:00,2025-03-10 13:07:00,48,13,30,22,119,Y,Y,0,N,232,7.0
+S0968,73,28.8,Hypertension,Shoulder Repair,Dr. Patel,Dr. White,Nurse C,Friday,2025-03-10 10:00:00,2025-03-10 10:11:00,46,14,28,19,102,Y,Y,0,N,209,11.0
+S0969,82,23.8,Multiple,Hip Replacement,Dr. Kim,Dr. Brown,Nurse E,Monday,2025-03-10 15:00:00,2025-03-10 15:15:00,58,10,30,15,117,Y,Y,0,N,230,15.0
+S0970,60,36.5,Hypertension,Spine Fusion,Dr. Johnson,Dr. Smith,Nurse B,Friday,2025-03-10 15:00:00,2025-03-10 15:00:00,61,9,25,24,157,Y,N,15,Y,276,0.0
+S0971,76,35.6,Diabetes,Hip Replacement,Dr. Lee,Dr. Smith,Nurse E,Tuesday,2025-03-10 16:00:00,2025-03-10 16:00:00,58,9,25,25,108,Y,Y,0,N,225,0.0
+S0972,66,22.5,None,Knee Replacement,Dr. Kim,Dr. Smith,Nurse A,Wednesday,2025-03-10 09:00:00,2025-03-10 09:00:00,55,9,25,16,95,Y,Y,0,N,200,0.0
+S0973,51,29.0,Hypertension,ACL Repair,Dr. Kim,Dr. Black,Nurse A,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,43,12,26,19,52,Y,Y,0,N,152,0.0
+S0974,54,31.6,Hypertension,Spine Fusion,Dr. Nguyen,Dr. White,Nurse D,Friday,2025-03-10 08:00:00,2025-03-10 08:00:00,54,8,28,25,141,Y,Y,0,N,256,0.0
+S0975,47,31.6,None,ACL Repair,Dr. Lee,Dr. Green,Nurse C,Wednesday,2025-03-10 08:00:00,2025-03-10 08:00:00,56,12,22,28,62,Y,Y,0,N,180,0.0
+S0976,60,28.6,Heart Disease,Spine Fusion,Dr. Lee,Dr. White,Nurse C,Monday,2025-03-10 12:00:00,2025-03-10 12:07:00,58,14,28,15,141,Y,Y,0,N,256,7.0
+S0977,58,25.8,Hypertension,Spine Fusion,Dr. Johnson,Dr. Green,Nurse E,Wednesday,2025-03-10 07:00:00,2025-03-10 07:00:00,60,10,22,17,155,N,Y,0,N,264,0.0
+S0978,70,26.0,Hypertension,Knee Replacement,Dr. Johnson,Dr. Black,Nurse A,Wednesday,2025-03-10 11:00:00,2025-03-10 11:21:00,57,15,26,22,87,Y,Y,0,N,207,21.0
+S0979,69,33.5,Diabetes,Spine Fusion,Dr. Kim,Dr. Green,Nurse C,Tuesday,2025-03-10 09:00:00,2025-03-10 09:00:00,49,14,22,29,145,Y,Y,0,N,259,0.0
+S0980,64,28.5,Diabetes,Knee Replacement,Dr. Lee,Dr. Green,Nurse B,Wednesday,2025-03-10 15:00:00,2025-03-10 15:00:00,43,12,22,19,102,N,Y,0,N,198,0.0
+S0981,85,28.2,Heart Disease,ACL Repair,Dr. Patel,Dr. Smith,Nurse B,Thursday,2025-03-10 10:00:00,2025-03-10 10:00:00,51,13,25,23,59,Y,Y,0,N,171,0.0
+S0982,46,32.7,Obesity,Shoulder Repair,Dr. Patel,Dr. Green,Nurse C,Wednesday,2025-03-10 15:00:00,2025-03-10 15:00:00,61,8,22,23,96,Y,Y,0,N,210,0.0
+S0983,77,30.3,Heart Disease,ACL Repair,Dr. Lee,Dr. Green,Nurse E,Monday,2025-03-10 12:00:00,2025-03-10 12:15:00,65,8,22,24,56,Y,N,21,N,175,15.0
+S0984,78,26.1,Heart Disease,Knee Replacement,Dr. Nguyen,Dr. Brown,Nurse B,Monday,2025-03-10 08:00:00,2025-03-10 08:14:00,54,15,30,16,99,Y,Y,0,N,214,14.0
+S0985,50,32.1,Diabetes,Shoulder Repair,Dr. Lee,Dr. Brown,Nurse D,Wednesday,2025-03-10 10:00:00,2025-03-10 10:00:00,58,8,30,21,104,Y,Y,0,N,221,0.0
+S0986,76,34.1,Heart Disease,Shoulder Repair,Dr. Kim,Dr. Green,Nurse E,Thursday,2025-03-10 15:00:00,2025-03-10 15:00:00,61,8,22,20,91,Y,Y,0,N,202,0.0
+S0987,46,31.4,Heart Disease,Shoulder Repair,Dr. Kim,Dr. Black,Nurse B,Friday,2025-03-10 15:00:00,2025-03-10 15:25:00,57,13,26,27,100,Y,N,19,N,223,25.0
+S0988,83,23.9,Multiple,Shoulder Repair,Dr. Kim,Dr. Black,Nurse B,Thursday,2025-03-10 12:00:00,2025-03-10 12:00:00,51,10,26,15,106,N,Y,0,N,208,0.0
+S0989,78,32.2,Hypertension,ACL Repair,Dr. Kim,Dr. Black,Nurse C,Tuesday,2025-03-10 10:00:00,2025-03-10 10:00:00,60,13,26,20,63,Y,Y,0,N,182,0.0
+S0990,55,37.1,Hypertension,Spine Fusion,Dr. Johnson,Dr. Brown,Nurse A,Tuesday,2025-03-10 14:00:00,2025-03-10 14:00:00,55,14,30,21,159,N,Y,0,N,279,0.0
+S0991,79,28.5,Multiple,Knee Replacement,Dr. Patel,Dr. Smith,Nurse C,Tuesday,2025-03-10 14:00:00,2025-03-10 14:37:00,53,8,25,23,83,Y,Y,0,N,192,37.0
+S0992,72,34.5,None,Knee Replacement,Dr. Lee,Dr. Smith,Nurse E,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,59,9,25,20,94,Y,Y,0,N,207,0.0
+S0993,58,23.6,Diabetes,Hip Replacement,Dr. Patel,Dr. White,Nurse C,Monday,2025-03-10 13:00:00,2025-03-10 13:07:00,53,9,28,22,115,Y,Y,0,N,227,7.0
+S0994,54,31.9,Hypertension,ACL Repair,Dr. Patel,Dr. Smith,Nurse A,Tuesday,2025-03-10 11:00:00,2025-03-10 11:10:00,61,15,25,23,57,Y,Y,0,N,181,10.0
+S0995,80,33.8,Hypertension,Hip Replacement,Dr. Nguyen,Dr. Smith,Nurse B,Tuesday,2025-03-10 12:00:00,2025-03-10 12:00:00,48,8,25,21,114,Y,Y,0,N,216,0.0
+S0996,46,31.7,None,Spine Fusion,Dr. Patel,Dr. Black,Nurse E,Monday,2025-03-10 11:00:00,2025-03-10 11:07:00,40,15,26,24,145,Y,Y,0,N,250,7.0
+S0997,81,32.0,Multiple,Shoulder Repair,Dr. Johnson,Dr. Black,Nurse D,Wednesday,2025-03-10 15:00:00,2025-03-10 15:00:00,64,15,26,21,94,Y,Y,0,N,220,0.0
+S0998,68,31.3,Multiple,Spine Fusion,Dr. Lee,Dr. Brown,Nurse C,Friday,2025-03-10 08:00:00,2025-03-10 08:00:00,61,12,30,29,146,Y,Y,0,N,278,0.0
+S0999,51,25.0,Diabetes,ACL Repair,Dr. Lee,Dr. Green,Nurse D,Friday,2025-03-10 15:00:00,2025-03-10 15:13:00,53,8,22,23,62,Y,Y,0,N,168,13.0
+S1000,71,37.6,None,Shoulder Repair,Dr. Lee,Dr. Brown,Nurse C,Friday,2025-03-10 10:00:00,2025-03-10 10:00:00,47,13,30,30,96,Y,Y,0,N,216,0.0
