@@ -1,7 +1,11 @@
 import axios from 'axios';
 import { Surgery, Prediction, ScheduleResponse, BatchImportResponse } from '../types';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8003';
+// For GitHub Pages deployment, you'll need to configure this to point to a hosted backend API
+// For local development, it will use localhost:8003
+const API_BASE_URL = process.env.NODE_ENV === 'production' 
+    ? 'https://your-deployed-backend-api-url.com' // Replace with your actual deployed backend URL
+    : 'http://localhost:8003';
 
 const api = axios.create({
     baseURL: API_BASE_URL,
@@ -9,6 +13,9 @@ const api = axios.create({
         'Content-Type': 'application/json',
     },
 });
+
+// Add a comment in the console to know which API endpoint is being used
+console.log(`Using API endpoint: ${API_BASE_URL}`);
 
 export const predictSurgery = async (surgery: Surgery): Promise<Prediction> => {
     const response = await api.post<Prediction>('/predict', surgery);
