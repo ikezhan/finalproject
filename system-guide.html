@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surgery Scheduler - Next Generation OR Management</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .section {
+            min-height: 100vh;
+            padding: 80px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 120px 0;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #64B5F6, #2196F3, #1976D2);
+            background-size: 200% 200%;
+            animation: gradientMove 10s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: transform 0.3s ease;
+        }
+
+        .hero h1:hover {
+            transform: scale(1.03);
+        }
+
+        .hero p {
+            font-size: 24px;
+            line-height: 1.5;
+            color: #888;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 20px;
+            fill: #2196F3;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gradient-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(33, 150, 243, 0.1), transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(33, 150, 243, 0.05), transparent);
+            transform: translateZ(-10px);
+            pointer-events: none;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px) scale(1.01);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.05);
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: #2196F3;
+        }
+
+        .feature-card p {
+            color: #888;
+            line-height: 1.6;
+        }
+
+        .workflow {
+            position: relative;
+            padding: 120px 0;
+        }
+
+        .workflow-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: all 0.5s ease;
+        }
+
+        .workflow-step.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .workflow-step:nth-child(even) {
+            transform: translateX(20px);
+        }
+
+        .workflow-step:nth-child(even).visible {
+            transform: translateX(0);
+        }
+
+        .step-number {
+            font-size: 64px;
+            font-weight: 700;
+            color: #2196F3;
+            margin-right: 40px;
+            opacity: 0.5;
+        }
+
+        .step-content h3 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .step-content p {
+            color: #888;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        .workflow-connection {
+            position: absolute;
+            left: 32px;
+            top: 80px;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #2196F3 50%, transparent 50%);
+            background-size: 100% 20px;
+            animation: flowDown 2s linear infinite;
+        }
+
+        @keyframes flowDown {
+            from { background-position: 0 0; }
+            to { background-position: 0 20px; }
+        }
+
+        .interactive-demo {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            margin: 40px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .demo-surgery {
+            position: absolute;
+            width: 100px;
+            height: 60px;
+            background: rgba(33, 150, 243, 0.2);
+            border: 2px solid #2196F3;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .demo-surgery:hover {
+            transform: scale(1.1);
+            background: rgba(33, 150, 243, 0.3);
+            box-shadow: 0 0 20px rgba(33, 150, 243, 0.3);
+        }
+
+        .timeline {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-marker {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #2196F3;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-marker:hover {
+            transform: translateY(-50%) scale(1.5);
+            box-shadow: 0 0 10px rgba(33, 150, 243, 0.5);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: #2196F3;
+            margin-bottom: 16px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-block;
+        }
+
+        .stat-card:hover .stat-number {
+            transform: scale(1.1);
+            text-shadow: 0 0 20px rgba(33, 150, 243, 0.5);
+        }
+
+        .stat-label {
+            color: #888;
+            font-size: 18px;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating-image {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .workflow-illustration {
+            position: absolute;
+            right: -100px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 400px;
+            height: 400px;
+            opacity: 0.1;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        #hero-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        @media (max-width: 768px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+        }
+
+        /* Add watermark style */
+        .watermark {
+            position: fixed;
+            z-index: 9;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+        
+        .watermark span {
+            color: rgba(33, 150, 243, 0.08);
+            font-size: 5vw;
+            font-weight: 800;
+            transform: rotate(-30deg);
+            white-space: nowrap;
+            letter-spacing: 0.5vw;
+            user-select: none;
+        }
+        
+        /* Style for the navigation button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 15px 30px;
+            border-radius: 50px;
+            margin-top: 40px;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,0.2) 100%);
+            transform: translateX(-100%);
+            transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(33, 150, 243, 0.5);
+        }
+        
+        .cta-button:hover:before {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Add watermark div -->
+    <div class="watermark">
+        <span>FINALPROJECT_IKEZHAN</span>
+    </div>
+    
+    <div class="section">
+        <canvas id="hero-canvas"></canvas>
+        <div class="container" id="hero">
+            <div class="hero">
+                <h1>Surgery Scheduler</h1>
+                <p>Efficient operating room management system that optimizes scheduling and resource allocation</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M12 3L1 9L12 15L21 10.09V17H23V9M5 13.18V17.18L12 21L19 17.18V13.18L12 17L5 13.18Z"/>
+                    </svg>
+                    <h3>Smart Optimization</h3>
+                    <p>Efficient scheduling algorithms organize surgeries based on type, duration, and time preferences to maximize operating room utilization.</p>
+                </div>
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2M15.59 16L12 12.41L8.41 16L7 14.59L10.59 11L7 7.41L8.41 6L12 9.59L15.59 6L17 7.41L13.41 11L17 14.59L15.59 16Z"/>
+                    </svg>
+                    <h3>Data Processing</h3>
+                    <p>The system processes surgery data from Excel files, validating inputs and organizing information for effective scheduling decisions.</p>
+                </div>
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M19 3H5C3.89 3 3 3.89 3 5V19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V5C21 3.89 20.11 3 19 3M19 19H5V5H19V19M17 17H7V7H17V17Z"/>
+                    </svg>
+                    <h3>Resource Allocation</h3>
+                    <p>Strategic assignment of operating rooms based on surgery type, duration, and availability to ensure optimal resource utilization.</p>
+                </div>
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24">
+                        <path d="M21 11C21 16.55 17.16 21.74 12 23C6.84 21.74 3 16.55 3 11V5L12 1L21 5V11M12 21C15.75 20 19 15.54 19 11.22V6.3L12 3.18L5 6.3V11.22C5 15.54 8.25 20 12 21M15.05 16L11.97 14.15L8.9 16L9.71 12.5L7 10.16L10.58 9.85L11.97 6.55L13.37 9.85L16.95 10.16L14.23 12.5L15.05 16"/>
+                    </svg>
+                    <h3>Visual Scheduling</h3>
+                    <p>Interactive calendar interface displays schedules in an intuitive format, making it easy to view and manage operating room assignments.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container" id="workflow">
+            <div class="workflow">
+                <div class="workflow-connection"></div>
+                <div class="workflow-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Smart Data Processing</h3>
+                        <p>Our system works like a highly skilled medical assistant with a photographic memory. Here's how:</p>
+                        <div class="data-processing-visual" style="margin: 30px 0; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 15px;">
+                            <div style="margin-bottom: 30px;">
+                                <h4 style="color: #2196F3; margin-bottom: 15px;">📋 Data Collection</h4>
+                                <p style="color: #aaa;">We gather information from the uploaded Excel file:</p>
+                                <div style="display: flex; justify-content: space-around; margin-top: 15px;">
+                                    <div style="text-align: center;">
+                                        <div style="font-size: 24px;">👤</div>
+                                        <p>Patient Info<br><span style="font-size: 12px; color: #888;">(Age, Name)</span></p>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <div style="font-size: 24px;">💉</div>
+                                        <p>Surgery Details<br><span style="font-size: 12px; color: #888;">(Type, Duration)</span></p>
+                                    </div>
+                                    <div style="text-align: center;">
+                                        <div style="font-size: 24px;">⏱️</div>
+                                        <p>Time Preferences<br><span style="font-size: 12px; color: #888;">(Morning/Afternoon)</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 30px;">
+                                <h4 style="color: #2196F3; margin-bottom: 15px;">⏱️ Duration Estimation</h4>
+                                <p style="color: #aaa;">Our system uses historical data to estimate surgery durations:</p>
+                                <div style="margin: 20px 0; padding: 15px; background: rgba(33, 150, 243, 0.1); border-radius: 8px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                                        <div style="text-align: center; flex: 1;">
+                                            <div style="font-size: 24px;">📊</div>
+                                            <p style="color: #2196F3;">Historical Data</p>
+                                            <p style="font-size: 12px; color: #888;">1000 case dataset</p>
+                                        </div>
+                                        <div style="font-size: 24px;">➕</div>
+                                        <div style="text-align: center; flex: 1;">
+                                            <div style="font-size: 24px;">⚙️</div>
+                                            <p style="color: #2196F3;">Random Forest</p>
+                                            <p style="font-size: 12px; color: #888;">Machine learning model</p>
+                                        </div>
+                                        <div style="font-size: 24px;">=</div>
+                                        <div style="text-align: center; flex: 1;">
+                                            <div style="font-size: 24px;">⌛</div>
+                                            <p style="color: #2196F3;">Duration Estimates</p>
+                                            <p style="font-size: 12px; color: #888;">For scheduling efficiency</p>
+                                        </div>
+                                    </div>
+                                    <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 8px;">
+                                        <p style="color: #aaa; margin-bottom: 10px;">Features Used in Model:</p>
+                                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                                            <div style="display: flex; align-items: center;">
+                                                <span style="color: #2196F3; margin-right: 10px;">●</span>
+                                                <div>
+                                                    <p style="color: #fff;">Surgery Type</p>
+                                                    <p style="font-size: 12px; color: #888;">Categorized procedures</p>
+                                                </div>
+                                            </div>
+                                            <div style="display: flex; align-items: center;">
+                                                <span style="color: #2196F3; margin-right: 10px;">●</span>
+                                                <div>
+                                                    <p style="color: #fff;">Patient Age</p>
+                                                    <p style="font-size: 12px; color: #888;">Risk factor calculation</p>
+                                                </div>
+                                            </div>
+                                            <div style="display: flex; align-items: center;">
+                                                <span style="color: #2196F3; margin-right: 10px;">●</span>
+                                                <div>
+                                                    <p style="color: #fff;">Pre-op Metrics</p>
+                                                    <p style="font-size: 12px; color: #888;">Preparation times</p>
+                                                </div>
+                                            </div>
+                                            <div style="display: flex; align-items: center;">
+                                                <span style="color: #2196F3; margin-right: 10px;">●</span>
+                                                <div>
+                                                    <p style="color: #fff;">Complexity Score</p>
+                                                    <p style="font-size: 12px; color: #888;">Case difficulty rating</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- New section with model performance details -->
+                                    <div style="margin-top: 20px; background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 8px;">
+                                        <p style="color: #aaa; margin-bottom: 10px;">Model Performance & Details:</p>
+                                        
+                                        <div style="margin-bottom: 15px;">
+                                            <h5 style="color: #2196F3; font-size: 14px; margin-bottom: 8px;">📏 Error Metrics</h5>
+                                            <div style="display: flex; justify-content: space-between; gap: 10px;">
+                                                <div style="flex: 1; background: rgba(33, 150, 243, 0.1); padding: 10px; border-radius: 5px;">
+                                                    <p style="font-size: 12px; color: #888;">Mean Absolute Error</p>
+                                                    <p style="font-size: 18px; color: #fff;">~15 minutes</p>
+                                                </div>
+                                                <div style="flex: 1; background: rgba(33, 150, 243, 0.1); padding: 10px; border-radius: 5px;">
+                                                    <p style="font-size: 12px; color: #888;">CV Score</p>
+                                                    <p style="font-size: 18px; color: #fff;">0.76 ± 0.08</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div style="margin-bottom: 15px;">
+                                            <h5 style="color: #2196F3; font-size: 14px; margin-bottom: 8px;">🧮 Baseline Calculation</h5>
+                                            <div style="background: rgba(33, 150, 243, 0.1); padding: 10px; border-radius: 5px;">
+                                                <p style="font-size: 13px; color: #fff;">Base Duration = Pre-op + Transfer + Anesthesia + Positioning</p>
+                                                <p style="font-size: 12px; color: #888; margin-top: 5px;">Machine learning predictions adjust this baseline</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <h5 style="color: #2196F3; font-size: 14px; margin-bottom: 8px;">🔝 Top Duration Factors</h5>
+                                            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                                                <div style="background: rgba(33, 150, 243, 0.1); padding: 10px; border-radius: 5px;">
+                                                    <p style="font-size: 13px; color: #fff;">Surgery Type</p>
+                                                    <p style="font-size: 12px; color: #888;">+40-120 min (varies)</p>
+                                                </div>
+                                                <div style="background: rgba(33, 150, 243, 0.1); padding: 10px; border-radius: 5px;">
+                                                    <p style="font-size: 13px; color: #fff;">Complexity Score</p>
+                                                    <p style="font-size: 12px; color: #888;">+5-30 min per point</p>
+                                                </div>
+                                                <div style="background: rgba(33, 150, 243, 0.1); padding: 10px; border-radius: 5px;">
+                                                    <p style="font-size: 13px; color: #fff;">Patient Age > 70</p>
+                                                    <p style="font-size: 12px; color: #888;">+10-15 min</p>
+                                                </div>
+                                                <div style="background: rgba(33, 150, 243, 0.1); padding: 10px; border-radius: 5px;">
+                                                    <p style="font-size: 13px; color: #fff;">Comorbidities</p>
+                                                    <p style="font-size: 12px; color: #888;">+5-20 min per condition</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 style="color: #2196F3; margin-bottom: 15px;">🎯 Priority Assignment</h4>
+                                <p style="color: #aaa;">Our scheduling algorithm considers key factors:</p>
+                                <div class="risk-factors" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 15px;">
+                                    <div style="text-align: center; padding: 10px; background: rgba(33, 150, 243, 0.1); border-radius: 8px;">
+                                        <div style="font-size: 20px;">👵</div>
+                                        <p style="font-size: 14px;">Patient Age</p>
+                                    </div>
+                                    <div style="text-align: center; padding: 10px; background: rgba(33, 150, 243, 0.1); border-radius: 8px;">
+                                        <div style="font-size: 20px;">🔍</div>
+                                        <p style="font-size: 14px;">Surgery Type</p>
+                                    </div>
+                                    <div style="text-align: center; padding: 10px; background: rgba(33, 150, 243, 0.1); border-radius: 8px;">
+                                        <div style="font-size: 20px;">⏰</div>
+                                        <p style="font-size: 14px;">Time Preference</p>
+                                    </div>
+                                    <div style="text-align: center; padding: 10px; background: rgba(33, 150, 243, 0.1); border-radius: 8px;">
+                                        <div style="font-size: 20px;">📅</div>
+                                        <p style="font-size: 14px;">Room Availability</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Intelligent Scheduling</h3>
+                        <p>Our system analyzes the input data to create an efficient surgery schedule:</p>
+                        <div class="risk-assessment-visual" style="margin: 30px 0; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 15px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                                <div style="flex: 1; text-align: center; padding: 15px;">
+                                    <div style="font-size: 24px;">📋</div>
+                                    <p style="color: #2196F3; margin-top: 10px;">Data Validation</p>
+                                    <p style="font-size: 14px; color: #888;">Input verification</p>
+                                </div>
+                                <div style="font-size: 24px;">➡️</div>
+                                <div style="flex: 1; text-align: center; padding: 15px;">
+                                    <div style="font-size: 24px;">⏱️</div>
+                                    <p style="color: #2196F3; margin-top: 10px;">Time Allocation</p>
+                                    <p style="font-size: 14px; color: #888;">Based on preferences</p>
+                                </div>
+                                <div style="font-size: 24px;">➡️</div>
+                                <div style="flex: 1; text-align: center; padding: 15px;">
+                                    <div style="font-size: 24px;">📊</div>
+                                    <p style="color: #2196F3; margin-top: 10px;">Room Assignment</p>
+                                    <p style="font-size: 14px; color: #888;">Optimized placement</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Smart Scheduling</h3>
+                        <p>Our system organizes surgeries in a logical and efficient way:</p>
+                        <div class="scheduling-visual" style="margin: 30px 0; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 15px;">
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                                <div style="text-align: center; padding: 15px; background: rgba(33, 150, 243, 0.1); border-radius: 8px;">
+                                    <div style="font-size: 24px;">🕒</div>
+                                    <p style="color: #2196F3; margin-top: 10px;">Time-Based Grouping</p>
+                                    <p style="font-size: 14px; color: #888;">Morning & afternoon slots</p>
+                                </div>
+                                <div style="text-align: center; padding: 15px; background: rgba(33, 150, 243, 0.1); border-radius: 8px;">
+                                    <div style="font-size: 24px;">🏥</div>
+                                    <p style="color: #2196F3; margin-top: 10px;">Room Assignment</p>
+                                    <p style="font-size: 14px; color: #888;">Efficient distribution</p>
+                                </div>
+                                <div style="text-align: center; padding: 15px; background: rgba(33, 150, 243, 0.1); border-radius: 8px;">
+                                    <div style="font-size: 24px;">📅</div>
+                                    <p style="color: #2196F3; margin-top: 10px;">Calendar View</p>
+                                    <p style="font-size: 14px; color: #888;">Visual scheduling</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container" id="technical-details">
+            <div class="workflow">
+                <h2 style="color: #2196F3; font-size: 36px; margin-bottom: 40px;">How It Works</h2>
+                <div class="workflow-step">
+                    <div class="step-content" style="width: 100%;">
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
+                            <div style="padding: 20px; background: rgba(255,255,255,0.05); border-radius: 15px;">
+                                <h3 style="color: #2196F3; margin-bottom: 15px;">🔧 System Design</h3>
+                                <p style="color: #aaa; margin-bottom: 10px;">Built with modern technology:</p>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin: 10px 0;">
+                                        <span style="color: #2196F3;">●</span> Fast backend API (FastAPI)
+                                    </li>
+                                    <li style="margin: 10px 0;">
+                                        <span style="color: #2196F3;">●</span> Responsive interface (React)
+                                    </li>
+                                    <li style="margin: 10px 0;">
+                                        <span style="color: #2196F3;">●</span> Interactive calendar view
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="padding: 20px; background: rgba(255,255,255,0.05); border-radius: 15px;">
+                                <h3 style="color: #2196F3; margin-bottom: 15px;">📌 Key Features</h3>
+                                <p style="color: #aaa; margin-bottom: 10px;">What makes our system special:</p>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin: 10px 0;">
+                                        <span style="color: #2196F3;">●</span> Batch import from Excel
+                                    </li>
+                                    <li style="margin: 10px 0;">
+                                        <span style="color: #2196F3;">●</span> Time preference support
+                                    </li>
+                                    <li style="margin: 10px 0;">
+                                        <span style="color: #2196F3;">●</span> Visual calendar interface
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container" id="conclusion">
+            <div class="hero" style="padding: 60px 0;">
+                <h2 style="color: #2196F3; font-size: 36px; margin-bottom: 30px;">Transforming Operating Room Management</h2>
+                <p style="font-size: 20px; line-height: 1.6; color: #aaa; max-width: 800px; margin: 0 auto 40px auto;">
+                    The Surgery Scheduler streamlines the operating room scheduling process, helping hospitals optimize resources and improve patient care through efficient management.
+                </p>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <div style="background: rgba(33, 150, 243, 0.1); padding: 20px; border-radius: 10px; width: 200px; text-align: center;">
+                        <div style="font-size: 32px; margin-bottom: 10px;">⏱️</div>
+                        <p style="color: #2196F3; font-weight: 600;">Reduced Wait Times</p>
+                    </div>
+                    <div style="background: rgba(33, 150, 243, 0.1); padding: 20px; border-radius: 10px; width: 200px; text-align: center;">
+                        <div style="font-size: 32px; margin-bottom: 10px;">🏥</div>
+                        <p style="color: #2196F3; font-weight: 600;">Optimized OR Usage</p>
+                    </div>
+                    <div style="background: rgba(33, 150, 243, 0.1); padding: 20px; border-radius: 10px; width: 200px; text-align: center;">
+                        <div style="font-size: 32px; margin-bottom: 10px;">👨‍⚕️</div>
+                        <p style="color: #2196F3; font-weight: 600;">Enhanced Patient Care</p>
+                    </div>
+                </div>
+                
+                <!-- Add navigation button -->
+                <a href="./index.html" class="cta-button">
+                    View Surgery Schedule &rarr;
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.container').forEach(container => {
+            observer.observe(container);
+        });
+
+        const animateValue = (element, start, end, duration) => {
+            const range = end - start;
+            const increment = range / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                element.textContent = Math.round(current) + '%';
+                
+                if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+                    element.textContent = end + '%';
+                    clearInterval(timer);
+                }
+            }, 16);
+        };
+
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumber = entry.target.querySelector('.stat-number');
+                    const endValue = parseInt(statNumber.textContent);
+                    statNumber.textContent = '0%';
+                    animateValue(statNumber, 0, endValue, 2000);
+                    statObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.stat-card').forEach(card => {
+            statObserver.observe(card);
+        });
+
+        // Three.js background animation
+        const canvas = document.getElementById('hero-canvas');
+        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+        const particles = new THREE.BufferGeometry();
+        const particleCount = 500;
+        const positions = new Float32Array(particleCount * 3);
+
+        for (let i = 0; i < particleCount * 3; i += 3) {
+            positions[i] = (Math.random() - 0.5) * 10;
+            positions[i + 1] = (Math.random() - 0.5) * 10;
+            positions[i + 2] = (Math.random() - 0.5) * 10;
+        }
+
+        particles.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+        const material = new THREE.PointsMaterial({
+            color: 0x2196F3,
+            size: 0.03,
+            transparent: true,
+            opacity: 0.3
+        });
+
+        const particleSystem = new THREE.Points(particles, material);
+        scene.add(particleSystem);
+        camera.position.z = 5;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            particleSystem.rotation.x += 0.0005;
+            particleSystem.rotation.y += 0.0007;
+            renderer.render(scene, camera);
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        window.addEventListener('resize', onWindowResize);
+        onWindowResize();
+        animate();
+
+        // Interactive demo animations
+        const surgeries = document.querySelectorAll('.demo-surgery');
+        surgeries.forEach(surgery => {
+            surgery.addEventListener('click', () => {
+                const currentLeft = parseFloat(surgery.style.left);
+                const currentTop = parseFloat(surgery.style.top);
+                
+                surgery.style.transition = 'all 0.5s ease';
+                surgery.style.left = `${currentLeft + (Math.random() - 0.5) * 50}px`;
+                surgery.style.top = `${currentTop + (Math.random() - 0.5) * 50}px`;
+            });
+        });
+
+        // Workflow step animations
+        const workflowSteps = document.querySelectorAll('.workflow-step');
+        const workflowObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        workflowSteps.forEach(step => {
+            workflowObserver.observe(step);
+        });
+    </script>
+</body>
+</html> 
