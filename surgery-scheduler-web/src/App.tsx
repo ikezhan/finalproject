@@ -43,11 +43,20 @@ const App: React.FC = () => {
     useEffect(() => {
         const checkConnection = async () => {
             try {
+                console.log('App: Initiating API connectivity check');
                 const isConnected = await checkApiConnectivity();
+                console.log('App: API connectivity check result:', isConnected);
                 setApiConnected(isConnected);
             } catch (error) {
-                console.error('Error checking API connectivity:', error);
-                setApiConnected(false);
+                console.error('App: Error checking API connectivity:', error);
+                
+                // Force apiConnected to true when in local environment
+                if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                    console.log('App: Running in local environment, forcing apiConnected to true');
+                    setApiConnected(true);
+                } else {
+                    setApiConnected(false);
+                }
             }
         };
         
