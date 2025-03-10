@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surgery Scheduler - Direct Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        /* Add watermark style */
+        .watermark {
+            position: fixed;
+            z-index: 9;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+        
+        .watermark span {
+            color: rgba(33, 150, 243, 0.08);
+            font-size: 5vw;
+            font-weight: 800;
+            transform: rotate(-30deg);
+            white-space: nowrap;
+            letter-spacing: 0.5vw;
+            user-select: none;
+        }
+        
+        h1, h2 {
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .high-risk {
+            background-color: #ffcccc;
+        }
+        .low-risk {
+            background-color: #ccffcc;
+        }
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            border-radius: 4px 4px 0 0;
+            margin-right: 5px;
+        }
+        .tab.active {
+            background-color: #007bff;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        /* Navigation button style */
+        .instruction-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #2196F3, #1976D2);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 25px;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(33, 150, 243, 0.3);
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+      
+        .instruction-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(33, 150, 243, 0.4);
+        }
+      
+        .instruction-button svg {
+            margin-right: 8px;
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Add watermark div -->
+    <div class="watermark">
+        <span>FINALPROJECT_IKEZHAN</span>
+    </div>
+    
+    <!-- Add instruction button -->
+    <a href="/system-overview.html" class="instruction-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+        </svg>
+        Instructions
+    </a>
+    
+    <div class="container">
+        <h1>Surgery Scheduler - Direct Test</h1>
+        
+        <div class="tabs">
+            <div class="tab active" data-tab="schedule">Schedule</div>
+            <div class="tab" data-tab="add">Add Surgery</div>
+            <div class="tab" data-tab="import">Batch Import</div>
+        </div>
+        
+        <div id="status" class="status"></div>
+        
+        <!-- Schedule Tab -->
+        <div id="schedule-tab" class="tab-content active">
+            <div class="card">
+                <h2>Surgery Schedule</h2>
+                <button id="refreshSchedule">Refresh Schedule</button>
+                <div id="scheduleContainer">
+                    <table id="scheduleTable">
+                        <thead>
+                            <tr>
+                                <th>Surgery Type</th>
+                                <th>Patient Age</th>
+                                <th>Surgeon</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>OR</th>
+                                <th>Duration (min)</th>
+                                <th>Delay Risk</th>
+                            </tr>
+                        </thead>
+                        <tbody id="scheduleBody">
+                            <!-- Schedule data will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Add Surgery Tab -->
+        <div id="add-tab" class="tab-content">
+            <div class="card">
+                <h2>Add Surgery</h2>
+                <form id="surgeryForm">
+                    <div class="form-group">
+                        <label for="patientAge">Patient Age</label>
+                        <input type="number" id="patientAge" required min="0" value="45">
+                    </div>
+                    <div class="form-group">
+                        <label for="bmi">BMI</label>
+                        <input type="number" id="bmi" required min="10" step="0.1" value="24.5">
+                    </div>
+                    <div class="form-group">
+                        <label for="surgeryType">Surgery Type</label>
+                        <select id="surgeryType" required>
+                            <option value="Hip Replacement">Hip Replacement</option>
+                            <option value="Knee Replacement">Knee Replacement</option>
+                            <option value="ACL Repair">ACL Repair</option>
+                            <option value="Arthroscopy">Arthroscopy</option>
+                            <option value="Cataract Surgery">Cataract Surgery</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="surgeon">Surgeon</label>
+                        <select id="surgeon" required>
+                            <option value="Dr. Smith">Dr. Smith</option>
+                            <option value="Dr. Johnson">Dr. Johnson</option>
+                            <option value="Dr. Wilson">Dr. Wilson</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="anesthesiologist">Anesthesiologist</label>
+                        <select id="anesthesiologist" required>
+                            <option value="Dr. Brown">Dr. Brown</option>
+                            <option value="Dr. Davis">Dr. Davis</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="nurse">Nurse</label>
+                        <select id="nurse" required>
+                            <option value="Nurse A">Nurse A</option>
+                            <option value="Nurse B">Nurse B</option>
+                            <option value="Nurse C">Nurse C</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dayOfWeek">Preferred Day</label>
+                        <select id="dayOfWeek" required>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="timePreference">Time Preference</label>
+                        <select id="timePreference" required>
+                            <option value="Morning">Morning</option>
+                            <option value="Afternoon">Afternoon</option>
+                            <option value="No Preference">No Preference</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="comorbidities">Comorbidities</label>
+                        <select id="comorbidities" required>
+                            <option value="None">None</option>
+                            <option value="Hypertension">Hypertension</option>
+                            <option value="Diabetes">Diabetes</option>
+                            <option value="Obesity">Obesity</option>
+                            <option value="Heart Disease">Heart Disease</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="instrumentReady">Instruments Ready</label>
+                        <select id="instrumentReady" required>
+                            <option value="Y">Yes</option>
+                            <option value="N">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="pacuBedReady">PACU Bed Ready</label>
+                        <select id="pacuBedReady" required>
+                            <option value="Y">Yes</option>
+                            <option value="N">No</option>
+                        </select>
+                    </div>
+                    <button type="submit">Schedule Surgery</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Batch Import Tab -->
+        <div id="import-tab" class="tab-content">
+            <div class="card">
+                <h2>Batch Import</h2>
+                <div class="form-group">
+                    <label for="fileInput">Excel File</label>
+                    <input type="file" id="fileInput" accept=".xlsx, .xls">
+                </div>
+                <div class="form-group">
+                    <label for="startDate">Start Date</label>
+                    <input type="date" id="startDate" value="2025-03-10">
+                </div>
+                <button id="downloadTemplate">Download Template</button>
+                <button id="importButton">Import Surgeries</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab switching
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(`${tabId}-tab`).classList.add('active');
+            });
+        });
+        
+        // Status message
+        function showStatus(message, type) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.textContent = message;
+            statusDiv.className = `status ${type}`;
+            
+            // Clear after 5 seconds
+            setTimeout(() => {
+                statusDiv.textContent = '';
+                statusDiv.className = 'status';
+            }, 5000);
+        }
+        
+        // Fetch schedule
+        async function fetchSchedule() {
+            const scheduleBody = document.getElementById('scheduleBody');
+            
+            try {
+                // Create a test surgery
+                const testSurgery = {
+                    patient_age: 45,
+                    bmi: 24.5,
+                    surgery_type: 'Hip Replacement',
+                    surgeon: 'Dr. Smith',
+                    anesthesiologist: 'Dr. Brown',
+                    nurse: 'Nurse A',
+                    day_of_week: 'Monday',
+                    time_preference: 'Morning',
+                    pre_op_prep_time: 30,
+                    transfer_to_or_time: 15,
+                    anesthesia_time: 20,
+                    positioning_time: 10,
+                    comorbidities: 'Hypertension',
+                    instrument_ready: 'Y',
+                    pacu_bed_ready: 'Y',
+                    scheduled_start: '09:00'
+                };
+                
+                // Create schedule request
+                const scheduleRequest = {
+                    surgeries: [testSurgery],
+                    start_date: '2025-03-10'
+                };
+                
+                // Send request to backend
+                const response = await fetch('http://localhost:8003/schedule', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(scheduleRequest)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                console.log('Schedule data:', data);
+                
+                // Clear existing rows
+                scheduleBody.innerHTML = '';
+                
+                // Check if we have schedule data
+                if (data && data.schedule && Array.isArray(data.schedule)) {
+                    // Add rows for each surgery
+                    data.schedule.forEach(surgery => {
+                        const row = document.createElement('tr');
+                        row.className = surgery.delay_risk.toLowerCase().includes('high') ? 'high-risk' : 'low-risk';
+                        
+                        row.innerHTML = `
+                            <td>${surgery.surgery_type}</td>
+                            <td>${surgery.patient_age}</td>
+                            <td>${surgery.surgeon}</td>
+                            <td>${surgery.scheduled_date}</td>
+                            <td>${surgery.scheduled_time}</td>
+                            <td>${surgery.operating_room}</td>
+                            <td>${surgery.estimated_duration}</td>
+                            <td>${surgery.delay_risk}</td>
+                        `;
+                        
+                        scheduleBody.appendChild(row);
+                    });
+                    
+                    showStatus(`Successfully loaded ${data.schedule.length} surgeries.`, 'success');
+                } else {
+                    showStatus('No schedule data found in response.', 'error');
+                }
+            } catch (error) {
+                console.error('Error fetching schedule:', error);
+                showStatus(`Error: ${error.message}`, 'error');
+            }
+        }
+        
+        // Add surgery
+        async function addSurgery(event) {
+            event.preventDefault();
+            
+            try {
+                // Get form values
+                const surgery = {
+                    patient_age: parseInt(document.getElementById('patientAge').value),
+                    bmi: parseFloat(document.getElementById('bmi').value),
+                    surgery_type: document.getElementById('surgeryType').value,
+                    surgeon: document.getElementById('surgeon').value,
+                    anesthesiologist: document.getElementById('anesthesiologist').value,
+                    nurse: document.getElementById('nurse').value,
+                    day_of_week: document.getElementById('dayOfWeek').value,
+                    time_preference: document.getElementById('timePreference').value,
+                    comorbidities: document.getElementById('comorbidities').value,
+                    instrument_ready: document.getElementById('instrumentReady').value,
+                    pacu_bed_ready: document.getElementById('pacuBedReady').value,
+                    pre_op_prep_time: 30,
+                    transfer_to_or_time: 15,
+                    anesthesia_time: 20,
+                    positioning_time: 10,
+                    scheduled_start: document.getElementById('timePreference').value === 'Morning' ? '09:00' : '13:00'
+                };
+                
+                // Create schedule request
+                const scheduleRequest = {
+                    surgeries: [surgery],
+                    start_date: new Date().toISOString().split('T')[0]
+                };
+                
+                // Send request to backend
+                const response = await fetch('http://localhost:8003/schedule', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(scheduleRequest)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                console.log('Schedule response:', data);
+                
+                showStatus('Surgery scheduled successfully!', 'success');
+                
+                // Switch to schedule tab and refresh
+                document.querySelector('.tab[data-tab="schedule"]').click();
+                fetchSchedule();
+            } catch (error) {
+                console.error('Error scheduling surgery:', error);
+                showStatus(`Error: ${error.message}`, 'error');
+            }
+        }
+        
+        // Batch import
+        async function importSurgeries() {
+            const fileInput = document.getElementById('fileInput');
+            const startDate = document.getElementById('startDate').value;
+            
+            if (!fileInput.files || fileInput.files.length === 0) {
+                showStatus('Please select a file to upload', 'error');
+                return;
+            }
+            
+            const file = fileInput.files[0];
+            
+            try {
+                const formData = new FormData();
+                formData.append('file', file);
+                formData.append('start_date', startDate);
+                
+                const response = await fetch('http://localhost:8003/batch-import', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                console.log('Batch import response:', data);
+                
+                if (data && data.schedule && Array.isArray(data.schedule)) {
+                    showStatus(`Successfully imported ${data.imported_count} surgeries.`, 'success');
+                    
+                    // Switch to schedule tab and refresh
+                    document.querySelector('.tab[data-tab="schedule"]').click();
+                    fetchSchedule();
+                } else {
+                    showStatus('No schedule data found in response.', 'error');
+                }
+            } catch (error) {
+                console.error('Error importing surgeries:', error);
+                showStatus(`Error: ${error.message}`, 'error');
+            }
+        }
+        
+        // Download template
+        function downloadTemplate() {
+            window.open('http://localhost:8003/template', '_blank');
+        }
+        
+        // Event listeners
+        document.getElementById('refreshSchedule').addEventListener('click', fetchSchedule);
+        document.getElementById('surgeryForm').addEventListener('submit', addSurgery);
+        document.getElementById('importButton').addEventListener('click', importSurgeries);
+        document.getElementById('downloadTemplate').addEventListener('click', downloadTemplate);
+        
+        // Initial load
+        fetchSchedule();
+    </script>
+</body>
+</html> 
